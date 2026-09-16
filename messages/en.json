@@ -16,6 +16,62 @@
     "llamada": "Begin a reading",
     "secundaria": "Browse all 78 cards"
   },
+  "tiradas": {
+    "una-carta": {
+      "nombre": "One card",
+      "descripcion": "A direct answer to an open question.",
+      "posiciones": {
+        "1": "The answer"
+      }
+    },
+    "si-no": {
+      "nombre": "Yes / No",
+      "descripcion": "A closed question, and the nuance it is missing.",
+      "posiciones": {
+        "1": "The answer"
+      }
+    },
+    "pasado-presente-futuro": {
+      "nombre": "Past · Present · Future",
+      "descripcion": "How it got here, where it stands and which way it leans.",
+      "posiciones": {
+        "1": "Past",
+        "2": "Present",
+        "3": "Future"
+      }
+    },
+    "situacion-obstaculo-consejo": {
+      "nombre": "Situation · Obstacle · Advice",
+      "descripcion": "What is going on, what holds it back and where the path runs.",
+      "posiciones": {
+        "1": "The situation",
+        "2": "The obstacle",
+        "3": "The advice"
+      }
+    },
+    "general-de-cinco": {
+      "nombre": "Five-card general",
+      "descripcion": "Where you stand, what holds you back, strengths, shadows and potential.",
+      "posiciones": {
+        "1": "Where you stand now",
+        "2": "What may hold you back",
+        "3": "Your strengths",
+        "4": "What needs attending to",
+        "5": "Your potential"
+      }
+    },
+    "amor-de-cinco": {
+      "nombre": "Five-card love",
+      "descripcion": "What you bring, what you carry and what needs working on.",
+      "posiciones": {
+        "1": "What you bring",
+        "2": "What you carry",
+        "3": "The bond as it stands",
+        "4": "What needs working on",
+        "5": "Which way it leans"
+      }
+    }
+  },
   "lectura": {
     "pregunta": {
       "etiqueta": "What do you want to ask?",

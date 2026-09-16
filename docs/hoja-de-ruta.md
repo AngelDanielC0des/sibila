@@ -34,8 +34,9 @@ multiidioma con slug traducido, tokens de diseño, primera prueba.
 - [x] Proyecto que compila y sirve en `es`, `pt`, `en` como HTML estático
 - [x] `npm run verificar` en verde
 - [x] Convenciones en `CLAUDE.md`
-- [ ] **Commitear.** Todo esto vive en un árbol sucio sobre un único commit de
-      andamiaje. Es la tarea más urgente del proyecto
+- [x] **Commiteado.** `3befe8c`, 116 ficheros. `.gitattributes` fija LF en el
+      repositorio y en el árbol de trabajo, que es lo que ya pedía
+      `.editorconfig` y lo que `core.autocrlf` contradecía
 
 ### A1 · Sistema de diseño
 
@@ -55,14 +56,14 @@ no probados obliga a rehacerlos.
 TypeScript puro. Sin interfaz. Es donde vive toda la lógica y donde se gana la
 tranquilidad del resto del proyecto.
 
-|      | Tarea                  | Terminado cuando                                                                                                                                       |
-| ---- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| A2.1 | Tipos del dominio      | ✅ `Carta`, `Orientacion`, `Arcano`, `Palo` inmutables y las 78 cartas en orden canónico, en `baraja.ts`. Las once familias de lente, en `familias.ts` |
-| A2.2 | Barajado               | Fisher-Yates con `crypto.getRandomValues`. **Prueba de distribución**, no de igualdad                                                                  |
-| A2.3 | Definiciones de tirada | Las tiradas de la v1 declarativas: posiciones, familia de cada posición, disposición                                                                   |
-| A2.4 | Máquina de estados     | Todas las transiciones cubiertas por prueba, incluidas las inválidas, que devuelven resultado y no lanzan                                              |
-| A2.5 | Bus de eventos         | Dirección única motor → renderizador, con los eventos del glosario                                                                                     |
-| A2.6 | Repositorio de corpus  | Interfaz más implementación sobre ficheros. El dominio no sabe de dónde sale el texto                                                                  |
+|      | Tarea                  | Terminado cuando                                                                                                                                                                                                                                                                                                                                |
+| ---- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A2.1 | Tipos del dominio      | ✅ `Carta`, `Orientacion`, `Arcano`, `Palo` inmutables y las 78 cartas en orden canónico, en `baraja.ts`. Las once familias de lente, en `familias.ts`                                                                                                                                                                                          |
+| A2.2 | Barajado               | ✅ Fisher-Yates en `mazo-de-cartas.ts`, con la fuente de azar inyectada. El entero uniforme se saca por **muestreo por rechazo**: `sorteo % 78` sesgaría siempre a favor de las mismas cartas. Probado por ji-cuadrado, y verificado que el estadístico caza el fallo clásico de Fisher-Yates (78,6 correcto frente a 238.200 roto, umbral 130) |
+| A2.3 | Definiciones de tirada | ✅ **Seis tiradas** declarativas con su modo de lectura (base, matiz o valencia), familia por posición y sitio en la mesa. Nombres visibles en los tres catálogos, atados al motor en ambas direcciones por prueba. La Cruz Celta queda fuera: ver D2                                                                                           |
+| A2.4 | Máquina de estados     | ✅ `avanzar()` es pura y **ninguna transición lanza**: devuelve `Resultado` con el motivo exacto del rechazo. Cubierta como matriz completa de ocho situaciones por ocho acciones. El muro de pago no es una fase sino un predicado, `estaEnElMuro()`                                                                                           |
+| A2.5 | Bus de eventos         | ✅ La dirección única la imponen los tipos, no la disciplina: el motor recibe un `Emisor` que sólo emite y el renderizador una `Escucha` que sólo escucha. **La pregunta del usuario no viaja por el bus**, sólo si la hay. Un suscriptor que revienta no corta el ritual                                                                       |
+| A2.6 | Repositorio de corpus  | ✅ Compone las tres capas según el modo de la tirada. **Toda pieza que falte es situación de dominio con su motivo propio**, nunca una excepción: el corpus estará incompleto durante meses y no puede tumbar una lectura ya pagada                                                                                                             |
 
 **Criterio global de A2:** las pruebas corren en Node sin jsdom y tardan menos
 de un segundo. Si necesitan DOM, la lógica está mal colocada.
@@ -157,14 +158,14 @@ descubrirlo con tres clips hechos que con el catálogo entero.
 
 Ninguna bloquea hoy. Se anotan para resolverlas cuando toque y no antes.
 
-|     | Decisión                                                                                                                                                                                                               | Bloquea a   | Cuándo hay que resolverla        |
-| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------- |
-| D1  | **Interacción táctil del abanico.** La aritmética descarta «el mismo abanico más pequeño»: 78 cartas sobre 110° dan franjas de 6–19px frente a los 44px mínimos. Recomendación: rotación tipo rolodex con zona de foco | A3.3        | Antes de empezar A3              |
-| D2  | **Cuántas tiradas al lanzamiento**, cuatro o siete                                                                                                                                                                     | B3          | Cuando B2 esté cerca de terminar |
-| D3  | **Proveedor de modelo**                                                                                                                                                                                                | A5.3        | Antes de A5                      |
-| D4  | **Pasarela de pago** y si acepta pago sin cuenta con el flujo que queremos                                                                                                                                             | A5.4        | Antes de A5                      |
-| D5  | **Voseo** para Argentina                                                                                                                                                                                               | A7, o nunca | Solo si entra ese mercado        |
-| D6  | **Postura ante Raka**, que ya ocupa la tesis de tarot informado por carta natal. ¿La astrología sigue en la v2 o se adelanta algo?                                                                                     | Nada hoy    | Tras lanzar el tarot             |
+|     | Decisión                                                                                                                                                                                                                                                                                                                       | Bloquea a   | Cuándo hay que resolverla        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | -------------------------------- |
+| D1  | **Interacción táctil del abanico.** La aritmética descarta «el mismo abanico más pequeño»: 78 cartas sobre 110° dan franjas de 6–19px frente a los 44px mínimos. Recomendación: rotación tipo rolodex con zona de foco                                                                                                         | A3.3        | Antes de empezar A3              |
+| D2  | **La Cruz Celta, ¿entra?** Auditada: tres de sus diez posiciones no tienen familia —lo que corona, la actitud propia y el pasado reciente, que hoy chocaría con la raíz y repetiría texto—. Crearlas cuesta **468 piezas por idioma**, un 27 % más de capa de matiz. Las otras seis tiradas ya están y no cuestan corpus nuevo | B3          | Cuando B2 esté cerca de terminar |
+| D3  | **Proveedor de modelo**                                                                                                                                                                                                                                                                                                        | A5.3        | Antes de A5                      |
+| D4  | **Pasarela de pago** y si acepta pago sin cuenta con el flujo que queremos                                                                                                                                                                                                                                                     | A5.4        | Antes de A5                      |
+| D5  | **Voseo** para Argentina                                                                                                                                                                                                                                                                                                       | A7, o nunca | Solo si entra ese mercado        |
+| D6  | **Postura ante Raka**, que ya ocupa la tesis de tarot informado por carta natal. ¿La astrología sigue en la v2 o se adelanta algo?                                                                                                                                                                                             | Nada hoy    | Tras lanzar el tarot             |
 
 ---
 

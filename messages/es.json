@@ -16,6 +16,62 @@
     "llamada": "Empezar una lectura",
     "secundaria": "Ver las 78 cartas"
   },
+  "tiradas": {
+    "una-carta": {
+      "nombre": "Una carta",
+      "descripcion": "Una respuesta directa a una pregunta abierta.",
+      "posiciones": {
+        "1": "La respuesta"
+      }
+    },
+    "si-no": {
+      "nombre": "Sí / No",
+      "descripcion": "Una pregunta cerrada, y el matiz que le falta.",
+      "posiciones": {
+        "1": "La respuesta"
+      }
+    },
+    "pasado-presente-futuro": {
+      "nombre": "Pasado · Presente · Futuro",
+      "descripcion": "Cómo llegó, dónde está y hacia dónde se inclina.",
+      "posiciones": {
+        "1": "Pasado",
+        "2": "Presente",
+        "3": "Futuro"
+      }
+    },
+    "situacion-obstaculo-consejo": {
+      "nombre": "Situación · Obstáculo · Consejo",
+      "descripcion": "Qué pasa, qué lo frena y por dónde va el camino.",
+      "posiciones": {
+        "1": "La situación",
+        "2": "El obstáculo",
+        "3": "El consejo"
+      }
+    },
+    "general-de-cinco": {
+      "nombre": "General de cinco",
+      "descripcion": "Dónde estás, qué te frena, fortalezas, sombras y potencial.",
+      "posiciones": {
+        "1": "Dónde estás ahora",
+        "2": "Qué puede frenarte",
+        "3": "Tus fortalezas",
+        "4": "Lo que toca atender",
+        "5": "Tu potencial"
+      }
+    },
+    "amor-de-cinco": {
+      "nombre": "Amor de cinco",
+      "descripcion": "Lo que aportas, lo que arrastras y lo que toca trabajar.",
+      "posiciones": {
+        "1": "Lo que aportas",
+        "2": "Lo que arrastras",
+        "3": "El vínculo ahora",
+        "4": "Lo que toca trabajar",
+        "5": "Hacia dónde se inclina"
+      }
+    }
+  },
   "lectura": {
     "pregunta": {
       "etiqueta": "¿Qué quieres preguntar?",

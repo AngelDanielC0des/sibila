@@ -16,6 +16,62 @@
     "llamada": "Começar uma leitura",
     "secundaria": "Ver as 78 cartas"
   },
+  "tiradas": {
+    "una-carta": {
+      "nombre": "Uma carta",
+      "descripcion": "Uma resposta direta a uma pergunta aberta.",
+      "posiciones": {
+        "1": "A resposta"
+      }
+    },
+    "si-no": {
+      "nombre": "Sim / Não",
+      "descripcion": "Uma pergunta fechada, e a nuance que lhe falta.",
+      "posiciones": {
+        "1": "A resposta"
+      }
+    },
+    "pasado-presente-futuro": {
+      "nombre": "Passado · Presente · Futuro",
+      "descripcion": "Como chegou, onde está e para onde se inclina.",
+      "posiciones": {
+        "1": "Passado",
+        "2": "Presente",
+        "3": "Futuro"
+      }
+    },
+    "situacion-obstaculo-consejo": {
+      "nombre": "Situação · Obstáculo · Conselho",
+      "descripcion": "O que se passa, o que o trava e por onde segue o caminho.",
+      "posiciones": {
+        "1": "A situação",
+        "2": "O obstáculo",
+        "3": "O conselho"
+      }
+    },
+    "general-de-cinco": {
+      "nombre": "Geral de cinco",
+      "descripcion": "Onde estás, o que te trava, forças, sombras e potencial.",
+      "posiciones": {
+        "1": "Onde estás agora",
+        "2": "O que te pode travar",
+        "3": "As tuas forças",
+        "4": "O que há a atender",
+        "5": "O teu potencial"
+      }
+    },
+    "amor-de-cinco": {
+      "nombre": "Amor de cinco",
+      "descripcion": "O que trazes, o que arrastas e o que há a trabalhar.",
+      "posiciones": {
+        "1": "O que trazes",
+        "2": "O que arrastas",
+        "3": "O vínculo agora",
+        "4": "O que há a trabalhar",
+        "5": "Para onde se inclina"
+      }
+    }
+  },
   "lectura": {
     "pregunta": {
       "etiqueta": "O que queres perguntar?",

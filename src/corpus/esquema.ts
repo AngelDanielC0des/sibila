@@ -10,40 +10,31 @@
  * que los importa.
  */
 
-import { ORIENTACIONES, type Orientacion } from "@/motor-de-lectura/baraja";
+import { ORIENTACIONES } from "@/motor-de-lectura/baraja";
 
-/** Las dos versiones de una misma carta. */
-export type TextoPorOrientacion = {
-  readonly derecha: string;
-  readonly invertida: string;
-};
-
-/**
- * Una capa de texto indexada por identificador de carta.
+/*
+ * La forma del corpus se declara en el motor, no aquí.
  *
- * Es la forma de `base.json` y de cada fichero de `matices/`.
+ * «El texto de una carta según su orientación» es vocabulario de tarot, o sea
+ * dominio, y además el motor necesita esos tipos para componer un significado
+ * sin poder importar nada del proyecto. Se reexportan para que quien ya los
+ * usaba desde aquí —el validador, el informe de avance— siga haciéndolo: el
+ * sitio donde se declaran es un detalle de capas, no del corpus.
  */
-export type CapaDeTexto = Readonly<Record<string, TextoPorOrientacion>>;
+export type {
+  CapaDeTexto,
+  CapaDeValencias,
+  EntradaDeValencia,
+  TextoPorOrientacion,
+  Valencia,
+} from "@/motor-de-lectura/repositorio-de-corpus";
 
-/** El veredicto de la tirada de sí/no. */
-export type Valencia = "si" | "no" | "quiza";
-
-/** Un veredicto con su justificación de una frase. */
-export type EntradaDeValencia = {
-  readonly valencia: Valencia;
-  readonly motivo: string;
-};
-
-/**
- * La capa de valencias, indexada por carta y orientación.
- *
- * Se guarda por orientación y no solo por carta porque una carta que responde
- * «sí» derecha responde a menudo «no» o «quizá» invertida. Tratarlas igual sería
- * un error visible para el usuario.
- */
-export type CapaDeValencias = Readonly<
-  Record<string, Readonly<Record<Orientacion, EntradaDeValencia>>>
->;
+import type {
+  CapaDeTexto,
+  CapaDeValencias,
+  EntradaDeValencia,
+  TextoPorOrientacion,
+} from "@/motor-de-lectura/repositorio-de-corpus";
 
 const VALENCIAS_VALIDAS: readonly string[] = ["si", "no", "quiza"];
 

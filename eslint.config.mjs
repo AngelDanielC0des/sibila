@@ -130,7 +130,18 @@ const eslintConfig = defineConfig([
         {
           patterns: [
             {
-              group: ["@/renderizadores/*", "@/app/*", "../renderizadores/*", "../app/*"],
+              /*
+               * Todo el proyecto salvo el propio motor. La guía dice «no importa
+               * de NADIE», así que enumerar las capas conocidas no basta: una
+               * carpeta nueva quedaría permitida por omisión, que es justo como
+               * se cuela la primera dependencia.
+               */
+              group: ["@/*", "!@/motor-de-lectura/*"],
+              message:
+                "El motor no importa nada del proyecto: es TypeScript puro. Si necesita algo de fuera, se le pasa como parámetro, y si es quien lo pinta, que escuche el bus de eventos.",
+            },
+            {
+              group: ["../renderizadores/*", "../app/*", "../componentes/*"],
               message:
                 "El motor no puede depender de quien lo pinta. Invierte la dependencia: que el renderizador escuche el bus de eventos.",
             },
