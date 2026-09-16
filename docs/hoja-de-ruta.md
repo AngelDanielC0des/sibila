@@ -316,6 +316,21 @@ contra la guía de voz.
 tandas y revisar cada tanda antes de seguir es lo que impide descubrir en la
 pieza 140 que la voz se torció en la 40.
 
+**Los 22 arcanos mayores están escritos.** Quedan los 56 menores. Las tandas se
+midieron sobre el conjunto y no pieza a pieza, que es la única forma de ver
+deriva, y eso hizo aparecer dos reglas que ahora están en la guía de voz:
+
+- **El rango de §5 es lo permitido, no el objetivo.** La primera tanda salió en
+  68–82 palabras y se reescribió a 61–69 sin perder nada. Una pieza larga casi
+  siempre lleva relleno, y el relleno es por donde se cuela el horóscopo.
+- **La cadencia también deriva.** Veinticuatro de las primeras veintiséis piezas
+  tenían exactamente cuatro frases. Ninguna incumplía nada y todas estaban bien
+  por separado; leídas seguidas sonaban a molde. El rango de frases se usa
+  entero.
+
+Ambas son deriva que el validador **no puede** ver, porque sólo mira una pieza
+cada vez. Por eso la revisión del lote no se puede automatizar.
+
 ---
 
 ## Vía C · Assets — bloqueada en ti
