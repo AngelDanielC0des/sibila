@@ -237,9 +237,15 @@ export function buscarFamiliaPorId(id: string): Familia | undefined {
 /**
  * Indica si existe una familia con ese identificador.
  *
+ * Devuelve un predicado de tipo y no un booleano suelto porque para eso existe:
+ * quien pregunta viene de fuera —el nombre de un fichero, un parámetro— y lo que
+ * necesita a continuación es usar ese texto **como** `IdFamilia`. Con un
+ * booleano tendría que afirmarlo con un `as`, que es exactamente la forma de
+ * decir «confía en mí» que esta función evita.
+ *
  * @param id Identificador a comprobar.
- * @returns `true` si la familia existe.
+ * @returns `true`, y estrecha el tipo, si la familia existe.
  */
-export function existeFamilia(id: string): boolean {
+export function existeFamilia(id: string): id is IdFamilia {
   return FAMILIAS_POR_ID.has(id);
 }

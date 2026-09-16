@@ -91,7 +91,10 @@
     "revelado": {
       "voltear": "Turn the card",
       "invertida": "Reversed",
-      "siguiente": "Next card"
+      "siguiente": "Next card",
+      "sinSignificado": "This meaning isn't written yet. Come back when the corpus reaches it.",
+      "encabezadoDerecha": "{carta}",
+      "encabezadoInvertida": "{carta}, reversed"
     },
     "sintesis": {
       "titulo": "What they say together",

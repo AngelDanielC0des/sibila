@@ -1,0 +1,101 @@
+import { expect, test } from "@playwright/test";
+import { esperarAQueSeAsiente, medirDesbordeHorizontal } from "./apoyo/pantalla";
+
+/**
+ * El revelado de una carta · A3.4.
+ *
+ * La carta y la orientación se fijan por URL a propósito. Una prueba de
+ * ceremonia que dependiera del barajado sería una prueba que a veces comprueba
+ * otra cosa, y esas son peores que no tener prueba.
+ *
+ * `la-torre` es una de las tres cartas con significado escrito hoy, así que
+ * estas pruebas ejercitan el camino completo —motor, corpus y panel— y no sólo
+ * el estado vacío.
+ */
+
+const CARTA_ESCRITA = "/es/lectura?carta=la-torre&orientacion=derecha";
+const CARTA_INVERTIDA = "/es/lectura?carta=la-torre&orientacion=invertida";
+/* El Loco tiene núcleo pero todavía no tiene significado base escrito. */
+const CARTA_SIN_TEXTO = "/es/lectura?carta=el-loco&orientacion=derecha";
+
+test("la posición se nombra antes de voltear", async ({ page }) => {
+  await page.goto(CARTA_ESCRITA);
+  await esperarAQueSeAsiente(page);
+
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("La respuesta");
+  await expect(page.getByRole("button", { name: /Voltea la carta/ })).toBeVisible();
+});
+
+test("la identidad de la carta no está en el DOM hasta el volteo", async ({ page }) => {
+  await page.goto(CARTA_ESCRITA);
+  await esperarAQueSeAsiente(page);
+
+  /*
+   * Es la garantía que da `Carta` y la razón de que su propiedad `carta` sea
+   * opcional. Si el nombre estuviera aquí, la ceremonia entera sería teatro.
+   */
+  const antes = await page.locator("body").innerText();
+  expect(antes).not.toContain("La Torre");
+
+  await page.getByRole("button", { name: /Voltea la carta/ }).click();
+  await expect(page.getByText("La Torre").first()).toBeVisible();
+});
+
+test("el significado llega después del volteo, no antes", async ({ page }) => {
+  await page.goto(CARTA_ESCRITA);
+  await esperarAQueSeAsiente(page);
+
+  const panel = page.getByText("La Torre no avisa");
+  await expect(panel).toHaveCount(0);
+
+  await page.getByRole("button", { name: /Voltea la carta/ }).click();
+  await expect(panel).toBeVisible();
+});
+
+test("la carta invertida se distingue sin depender del color", async ({ page }) => {
+  await page.goto(CARTA_INVERTIDA);
+  await esperarAQueSeAsiente(page);
+  await page.getByRole("button", { name: /Voltea la carta/ }).click();
+  await expect(page.getByText("La Torre").first()).toBeVisible();
+
+  /* Tres señales, y ninguna es el color: rótulo, giro y anuncio hablado. */
+  await expect(page.getByText("Invertida", { exact: true })).toBeVisible();
+  await expect(page.locator('[data-orientacion="invertida"]')).toHaveCount(1);
+  await expect(page.getByRole("img", { name: "La Torre, invertida" })).toBeVisible();
+});
+
+test("una carta sin significado escrito lo dice y no rompe la lectura", async ({
+  page,
+}) => {
+  await page.goto(CARTA_SIN_TEXTO);
+  await esperarAQueSeAsiente(page);
+  await page.getByRole("button", { name: /Voltea la carta/ }).click();
+
+  await expect(page.getByText(/todavía no está escrito/)).toBeVisible();
+  await expect(page.getByText("El Loco").first()).toBeVisible();
+});
+
+test("se voltea con el teclado y el foco no se pierde", async ({ page }) => {
+  await page.goto(CARTA_ESCRITA);
+  await esperarAQueSeAsiente(page);
+
+  await page.getByRole("button", { name: /Voltea la carta/ }).focus();
+  await page.keyboard.press("Enter");
+
+  await expect(page.getByText("La Torre no avisa")).toBeVisible();
+  expect(await medirDesbordeHorizontal(page)).toBe(0);
+});
+
+test("con movimiento reducido el significado sigue llegando", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  await page.goto(CARTA_ESCRITA);
+  await esperarAQueSeAsiente(page);
+  await page.getByRole("button", { name: /Voltea la carta/ }).click();
+
+  /*
+   * El volteo se resuelve en un instante por CSS, así que el guion tampoco puede
+   * esperar sus 600 ms: sin esto el significado se quedaría colgando sobre una
+   * carta que ya está quieta.
+   */
+  await expect(page.getByText("La Torre no avisa")).toBeVisible({ timeout: 250 });
+});

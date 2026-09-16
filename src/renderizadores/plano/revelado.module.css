@@ -1,0 +1,111 @@
+/*
+ * Revelado · renderizador plano.
+ *
+ * Una sola columna centrada. En esta pantalla no hay nada que distribuir: hay
+ * algo que mirar, y todo lo demás se aparta.
+ */
+
+.revelado {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-6);
+  align-items: center;
+  max-width: var(--ancho-lectura);
+  margin: 0 auto;
+  padding: var(--esp-6) var(--esp-4) var(--esp-8);
+  text-align: center;
+}
+
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  align-items: center;
+}
+
+.posicion {
+  font-size: var(--texto-2xl);
+  color: var(--pergamino);
+}
+
+/*
+ * La instrucción desaparece cuando deja de ser cierta, pero **no se desmonta**:
+ * quitarla del árbol movería la carta hacia arriba justo cuando el usuario
+ * acaba de pulsarla. Se apaga y conserva su sitio.
+ */
+.instruccion {
+  margin: 0;
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+  opacity: 1;
+  transition: opacity var(--dur-agencia) var(--curva-salida);
+}
+
+.instruccion[data-oculta="true"] {
+  opacity: 0;
+}
+
+/*
+ * La carta no tiene ancho propio —lo decide quien la coloca— y sin base se
+ * estiraría hasta el contenedor. Lo aprendimos midiendo en B1b; ver la hoja de
+ * ruta.
+ */
+.hueco {
+  width: min(64vw, 240px);
+}
+
+@media (width >= 48rem) {
+  .hueco {
+    width: 280px;
+  }
+}
+
+/*
+ * El significado entra subiendo un poco y apareciendo. Sólo `transform` y
+ * `opacity`, que son las dos únicas propiedades que este proyecto anima.
+ *
+ * **Y se alinea a la izquierda.** El centrado de la pantalla es para los
+ * rótulos, que son una o dos palabras; un significado son de 45 a 90 y centrado
+ * obliga a buscar el comienzo de cada línea. Es justo el texto que esta pantalla
+ * existe para dejar leer.
+ */
+.significado {
+  width: 100%;
+  text-align: start;
+  animation: entrada var(--dur-revelacion) var(--curva-entrada) both;
+}
+
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(var(--esp-4));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*
+ * Sin movimiento, el significado se funde en su sitio. La ceremonia se conserva
+ * —sigue habiendo una llegada—; lo que desaparece es el desplazamiento.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .significado {
+    animation-name: fundido;
+  }
+}
+
+@keyframes fundido {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

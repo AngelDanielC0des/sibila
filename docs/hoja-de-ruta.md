@@ -204,8 +204,61 @@ cumplir, y además es el camino de respaldo si los clips no llegan.
 | A3.1 | Pantalla de pregunta                          | Contador, validación, estados de error, teclado móvil sin tapar el campo          |
 | A3.2 | Barajado                                      | Coreografía completa, con sonido, saltable tras verla una vez                     |
 | A3.3 | Selección                                     | 44px de objetivo real, navegable por teclado, con lectura para lector de pantalla |
-| A3.4 | Revelado y significado                        | Volteo CSS 3D, decodificación del texto, carta invertida distinguible sin color   |
+| A3.4 | Revelado y significado                        | ✅ Ver abajo                                                                      |
 | A3.5 | Muro                                          | Los dos caminos: compra suelta sin cuenta y suscripción                           |
+
+#### A3.4 · hecho — la rebanada vertical
+
+Se adelanta al resto de A3 a propósito. A3.1, A3.2 y A3.3 no existen, así que
+`/es/lectura` empieza donde empezaría el revelado y se salta lo anterior. Sirve
+para contestar la única pregunta de la que depende el negocio: **un significado
+curado, leído en su panel después de un volteo, ¿se siente como una lectura?**
+
+Nada de lo que pinta es de mentira: la carta la reparte `barajarMazo` y el texto
+lo compone `repositorio-de-corpus` leyendo `corpus/es/base.json`.
+
+**El guion, y por qué es ese:**
+
+1. **La posición se nombra antes del volteo.** Es lo único del ritmo de Tarotoo
+   que conviene copiar tal cual, y además ellos lo pierden justo al final: tras
+   voltear la última carta, sus rótulos de posición desaparecen y quedan tres
+   cartas sin saber cuál es cuál. Ver `docs/investigacion/tarotoo-en-vivo.md` §5.
+2. **El volteo bloquea la entrada mientras dura**, y el guion respeta
+   `prefers-reduced-motion`: con la preferencia activa el volteo se resuelve en
+   un instante por CSS, así que el temporizador de JavaScript también baja a
+   cero. Sin eso, el significado se quedaría colgando sobre una carta quieta.
+3. **El significado entra después**, subiendo y apareciendo — sólo `transform` y
+   `opacity`— y **alineado a la izquierda**. El centrado vale para un rótulo de
+   dos palabras; noventa centradas obligan a buscar el comienzo de cada línea, y
+   es justo el texto que esta pantalla existe para dejar leer.
+
+**Qué se decodifica y qué no.** Los rótulos ceremoniales se condensan desde
+glifos. El cuerpo del significado **no**: un párrafo que se revuelve mientras
+intentas leerlo no es ceremonia, es un obstáculo. La decodificación adorna lo
+que se mira, nunca lo que se lee.
+
+**La carta invertida se distingue por tres señales y ninguna es el color:**
+el rótulo «Invertida», el giro de media vuelta de la lámina, y el anuncio
+—«La Torre, invertida»— para quien no la ve.
+
+**Dos cosas que quedan dichas y no resueltas:**
+
+- **Mientras el corpus está a medias, el mazo se limita a las cartas escritas.**
+  Con 3 de 78, un reparto completo enseñaría el estado «aún sin escribir» el
+  96 % de las veces y la pantalla no podría cumplir su función. El filtro
+  desaparece con A3.3. El estado vacío está construido y probado igualmente,
+  porque va a ser lo normal durante meses.
+- **La identidad de la carta viaja en la carga inicial.** `Carta` garantiza que
+  no entra en el DOM hasta el volteo, y hay prueba de ello; lo que sí se ve en
+  las herramientas del navegador es la propiedad que recibe el componente
+  cliente. Es el precio de que el significado sea un fichero estático, que es la
+  decisión de la que vive el modelo de negocio. Lo que sí hay que proteger es la
+  recolección masiva, y eso es A5.
+
+**Verificado** con siete pruebas de pantalla en los cuatro anchos: la posición
+antes del volteo, la identidad fuera del DOM, el significado sólo después, la
+invertida sin color, el estado sin texto, el volteo por teclado y el movimiento
+reducido.
 
 ### A4 · Renderizador 3D — escritorio
 

@@ -64,6 +64,11 @@ export const rutas = defineRouting({
       pt: "/cartas/[carta]",
       en: "/cards/[carta]",
     },
+    "/lectura": {
+      es: "/lectura",
+      pt: "/leitura",
+      en: "/reading",
+    },
     "/glosario": {
       es: "/glosario",
       pt: "/glossario",

@@ -51,6 +51,8 @@ const PANTALLAS: readonly Pantalla[] = [
     reflujoPendienteEn: ["estrecho-320"],
   },
   { nombre: "sistema · ornamentos", ruta: "/es/sistema/ornamentos", idioma: "es" },
+  /* Carta fijada: el recorrido mide maquetación, no suerte. */
+  { nombre: "lectura · revelado", ruta: "/es/lectura?carta=la-torre", idioma: "es" },
 ];
 
 test.describe("cada pantalla cabe en su ancho", () => {

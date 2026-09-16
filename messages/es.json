@@ -91,7 +91,10 @@
     "revelado": {
       "voltear": "Voltea la carta",
       "invertida": "Invertida",
-      "siguiente": "Siguiente carta"
+      "siguiente": "Siguiente carta",
+      "sinSignificado": "Este significado todavía no está escrito. Vuelve cuando el corpus lo alcance.",
+      "encabezadoDerecha": "{carta}",
+      "encabezadoInvertida": "{carta}, invertida"
     },
     "sintesis": {
       "titulo": "Lo que dicen juntas",
