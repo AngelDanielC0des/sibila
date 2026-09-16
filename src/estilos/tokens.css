@@ -1,0 +1,273 @@
+/*
+ * Sibila · Tokens de diseño
+ *
+ * Concepto: una sibila antigua proyectada como holograma en una cámara oscura.
+ * La regla que sostiene la coherencia de todo el producto:
+ *   lo holográfico es azul y EMITE luz; lo antiguo es oro y la REFLEJA.
+ * Se cruzan en un solo punto deliberado: el borde de las cartas al revelarse.
+ *
+ * Ningún componente escribe un color literal. Todo sale de aquí.
+ */
+
+:root {
+  /* ── La cámara · fondos ────────────────────────────────────────────────
+   * El fondo nunca es negro puro. El sesgo azul de --vacio es lo que hace
+   * que el azul holográfico emita en lugar de flotar sobre el papel.
+   */
+  --vacio: #050912;
+  --camara: #0a1020;
+  --nicho: #121a2e;
+  --borde: #1e2a45;
+
+  /* ── El holograma · luz emitida ───────────────────────────────────────── */
+  --holo-nucleo: #7fe9ff;
+  --holo: #3bc4f2;
+  --holo-hondo: #1b6fa8;
+
+  /* Aberración cromática. Un holograma real separa el espectro en los bordes,
+   * y esa separación va del violeta al rosa. Es física del concepto, no
+   * decoración: por eso el violeta solo aparece en bordes y desplazamientos. */
+  --fisura: #a66bff;
+  --fisura-rosa: #e85fbf;
+
+  /* ── Lo antiguo · luz reflejada ───────────────────────────────────────── */
+  --oro: #d4a552;
+  --oro-vivo: #f2d394;
+  --oro-hondo: #8a6a2e;
+
+  /* ── Texto ─────────────────────────────────────────────────────────────
+   * Cálido a propósito: contrasta con el frío del fondo y evita el gris
+   * azulado que hace que una interfaz oscura parezca apagada. */
+  --pergamino: #ede7da;
+  --bruma: #93a3bc;
+  --tenue: #5a6b85;
+
+  /* ── Semánticos · separados del acento ────────────────────────────────── */
+  --exito: #4fd8a0;
+  --aviso: #e8b55c;
+  --error: #ff6b7a;
+
+  /* ── Superficies derivadas ────────────────────────────────────────────── */
+  --fondo: var(--vacio);
+  --superficie: var(--camara);
+  --superficie-alta: var(--nicho);
+  --texto: var(--pergamino);
+  --texto-suave: var(--bruma);
+  --texto-tenue: var(--tenue);
+  --linea: var(--borde);
+  --acento: var(--holo);
+
+  /*
+   * Borde de controles, separado del decorativo.
+   *
+   * `--linea` es ornamental —separadores, cantos de panel— y no necesita
+   * contraste: WCAG no se lo exige a una línea que no aporta información.
+   * El borde de un campo o de un botón sí, porque es lo que indica dónde
+   * está el control, y el mínimo es 3. Apunta a `--texto-tenue`, que da 3,68
+   * en oscuro y 3,52 en claro sin tener que definirlo dos veces.
+   */
+  --linea-control: var(--texto-tenue);
+
+  /* ── Resplandor · siempre aditivo ─────────────────────────────────────── */
+  --brillo-holo: 0 0 24px rgb(59 196 242 / 0.35);
+  --brillo-holo-intenso: 0 0 40px rgb(127 233 255 / 0.55);
+  --brillo-oro: 0 0 20px rgb(212 165 82 / 0.4);
+  --sombra-panel: 0 24px 60px -20px rgb(0 0 0 / 0.7);
+
+  /* ── Ornamentos ────────────────────────────────────────────────────────
+   * Los velos de la proyección. Son translúcidos a propósito: se apilan sobre
+   * el sujeto sin taparlo, y su opacidad es lo que gradúa la intensidad del
+   * holograma. Ningún ornamento escribe un color literal; todos salen de aquí.
+   */
+  --velo-barrido: rgb(127 233 255 / 0.07);
+  --velo-fresnel: rgb(127 233 255 / 0.35);
+  --velo-cono: rgb(59 196 242 / 0.3);
+  --velo-cono-nucleo: rgb(127 233 255 / 0.22);
+  --velo-interferencia: rgb(127 233 255 / 0.14);
+  --velo-rejilla: rgb(59 196 242 / 0.28);
+  --fringe-frio: rgb(59 196 242 / 0.55);
+  --fringe-calido: rgb(166 107 255 / 0.55);
+
+  /* Grosor de la línea de barrido y su separación. Por debajo de 3px el patrón
+   * produce muaré al escalar, que es lo que hace que un barrido mal hecho
+   * parezca sucio en vez de holográfico. */
+  --barrido-linea: 1px;
+  --barrido-paso: 3px;
+
+  /* Desplazamiento de la aberración cromática. Más de 2px deja de leerse como
+   * separación espectral y empieza a leerse como error de impresión. */
+  --aberracion-desfase: 1.5px;
+
+  /* ── Tipografía ────────────────────────────────────────────────────────
+   * Serif renacentista para la voz de la sibila, sans neutro para la voz de
+   * la máquina, monoespaciada para datos y para el efecto de decodificación.
+   * Las familias reales se inyectan desde next/font en el layout. */
+  --fuente-display: var(--fuente-cormorant), "Cormorant Garamond", "Georgia", serif;
+  --fuente-texto: var(--fuente-inter), "Inter Tight", system-ui, sans-serif;
+  --fuente-datos: var(--fuente-mono), "JetBrains Mono", ui-monospace, monospace;
+
+  /* Escala tipográfica · razón 1.25 sobre 16 px */
+  --texto-xs: 0.75rem;
+  --texto-sm: 0.875rem;
+  --texto-base: 1rem;
+  --texto-md: 1.125rem;
+  --texto-lg: 1.375rem;
+  --texto-xl: 1.75rem;
+  --texto-2xl: 2.25rem;
+  --texto-3xl: 3rem;
+  --texto-4xl: 4rem;
+
+  --peso-normal: 400;
+  --peso-medio: 500;
+  --peso-fuerte: 600;
+  --peso-negrita: 700;
+
+  --interlineado-apretado: 1.1;
+  --interlineado-titular: 1.2;
+  --interlineado-texto: 1.65;
+
+  --espaciado-versalita: 0.14em;
+
+  /* ── Espaciado · escala de 4 px ───────────────────────────────────────── */
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 0.75rem;
+  --esp-4: 1rem;
+  --esp-5: 1.5rem;
+  --esp-6: 2rem;
+  --esp-7: 3rem;
+  --esp-8: 4rem;
+  --esp-9: 6rem;
+  --esp-10: 8rem;
+
+  /* ── Radios ───────────────────────────────────────────────────────────── */
+  --radio-sm: 3px;
+  --radio-md: 6px;
+  --radio-lg: 12px;
+  --radio-carta: 10px;
+  --radio-completo: 999px;
+
+  /* ── Movimiento ────────────────────────────────────────────────────────
+   * Tres velocidades con tres significados:
+   *   ritual     · imparable, ceremonial. El usuario no puede acelerarlo.
+   *   agencia    · responde al dedo. Por debajo del umbral de percepción.
+   *   revelacion · más lento que la lectura. Obliga a esperar la respuesta.
+   * Toda animación del producto pertenece a una de las tres.
+   */
+  --dur-agencia-rapida: 160ms;
+  --dur-agencia: 240ms;
+  --dur-agencia-lenta: 320ms;
+
+  /* El volteo de una carta. Medido de la producción de Tarotoo. */
+  --dur-volteo: 600ms;
+
+  --dur-revelacion: 1800ms;
+  --dur-revelacion-larga: 2100ms;
+  --dur-ritual: 4800ms;
+
+  --curva-entrada: cubic-bezier(0.16, 1, 0.3, 1);
+  --curva-salida: cubic-bezier(0.7, 0, 0.84, 0);
+
+  /* Medida directamente de la producción de Tarotoo: arranque lento, tramo
+   * largo, aterrizaje muy amortiguado. Es la curva del reparto del mazo. */
+  --curva-ritual: cubic-bezier(0.3, 0, 0.14, 1);
+  --curva-volteo: cubic-bezier(0.23, 1, 0.32, 1);
+
+  /* ── Geometría del abanico ─────────────────────────────────────────────
+   * El paso angular se calcula en tiempo de ejecución como
+   *   min(--abanico-paso-maximo, arcoDisponible / (numeroDeCartas - 1))
+   * porque 78 cartas a 5° darían 390°, que es imposible. Ver docs/plan-v1.md.
+   */
+  --abanico-paso-maximo: 5deg;
+  --abanico-arco: 110deg;
+  --abanico-inclinacion: 1.5deg;
+  --abanico-perspectiva: 600px;
+
+  /* ── Carta ─────────────────────────────────────────────────────────────
+   * Proporción de una baraja real, unos 70 × 120 mm.
+   */
+  --carta-proporcion: 7 / 12;
+  --carta-perspectiva: 900px;
+
+  /* ── Disposición ──────────────────────────────────────────────────────── */
+  --ancho-lectura: 68ch;
+  --ancho-contenedor: 1180px;
+  --gutter: var(--esp-4);
+
+  /* ── Capas ────────────────────────────────────────────────────────────── */
+  --capa-ambiente: 0;
+  --capa-contenido: 10;
+  --capa-abanico: 20;
+  --capa-carta-elevada: 30;
+  --capa-panel: 40;
+  --capa-muro: 50;
+  --capa-aviso: 60;
+}
+
+/*
+ * Tema claro.
+ *
+ * Solo se expone en superficies cuyo trabajo es que se lea texto largo:
+ * enciclopedia, glosario, artículos, legal, ajustes. Las pantallas de lectura
+ * no ofrecen el conmutador, porque un holograma necesita oscuridad para
+ * leerse como tal. Ver docs/plan-v1.md, apartado 3.2.
+ */
+[data-tema="claro"] {
+  --fondo: #f4f6fa;
+  --superficie: #ffffff;
+  --superficie-alta: #eef1f7;
+  --texto: #101828;
+  --texto-suave: #4a5670;
+  --texto-tenue: #77839c;
+  --linea: #d5dce8;
+  --acento: #1b6fa8;
+
+  --brillo-holo: 0 0 0 1px rgb(27 111 168 / 0.18);
+  --brillo-holo-intenso: 0 0 0 2px rgb(27 111 168 / 0.28);
+  --brillo-oro: 0 0 0 1px rgb(138 106 46 / 0.25);
+  --sombra-panel: 0 12px 32px -16px rgb(16 24 40 / 0.25);
+
+  /*
+   * El oro se recalcula, no se hereda.
+   *
+   * `--oro-vivo` significa «oro con más énfasis», no «oro más luminoso». Sobre
+   * fondo oscuro esas dos cosas coinciden; sobre fondo claro son opuestas, y
+   * heredar el valor luminoso dejaba el token de énfasis con MENOS contraste
+   * que el base (3,33 frente a 4,64). Aquí el énfasis se consigue oscureciendo.
+   *
+   * Contrastes sobre la peor superficie clara, #eef1f7:
+   *   --oro       4,86 · AA texto
+   *   --oro-vivo  6,57 · AAA texto
+   */
+  --oro: #836428;
+  --oro-vivo: #6b5120;
+
+  /*
+   * Los semánticos también se recalculan.
+   *
+   * Los valores del tema oscuro son colores luminosos, pensados para emitir
+   * sobre negro. Sobre fondo claro se hunden: daban 1,59, 1,66 y 2,43, muy por
+   * debajo del 4,5 exigido, lo que dejaba un mensaje de error casi invisible.
+   *
+   * Contrastes sobre la peor superficie clara, #eef1f7:
+   *   --exito  5,50 · --aviso  6,03 · --error  5,78
+   */
+  --exito: #1b6e49;
+  --aviso: #7d5200;
+  --error: #b3261e;
+}
+
+/*
+ * Modo de lectura.
+ *
+ * Transversal a ambos temas. Sube contraste, agranda el cuerpo y apaga los
+ * ornamentos. Cubre la necesidad de accesibilidad sin romper el concepto en
+ * ninguna pantalla.
+ */
+[data-modo-lectura="activo"] {
+  --texto-base: 1.125rem;
+  --interlineado-texto: 1.8;
+  --brillo-holo: none;
+  --brillo-holo-intenso: none;
+  --brillo-oro: none;
+}

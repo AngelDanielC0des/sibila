@@ -1,0 +1,166 @@
+.boton {
+  position: relative;
+  display: inline-flex;
+  gap: var(--esp-2);
+  align-items: center;
+  justify-content: center;
+
+  /* El objetivo táctil mínimo de la guía de diseño, §2.6. */
+  min-height: 44px;
+  padding-inline: var(--esp-5);
+  padding-block: var(--esp-3);
+
+  border: 1px solid transparent;
+  border-radius: var(--radio-completo);
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-medio);
+  letter-spacing: 0.03em;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    color var(--dur-agencia) var(--curva-entrada),
+    border-color var(--dur-agencia) var(--curva-entrada),
+    background-color var(--dur-agencia) var(--curva-entrada),
+    box-shadow var(--dur-agencia) var(--curva-entrada);
+}
+
+/* ── Reposo, por variante ──────────────────────────────────────────────── */
+
+.primario {
+  color: var(--holo-nucleo);
+  border-color: var(--holo);
+  box-shadow: var(--brillo-holo);
+}
+
+.secundario {
+  color: var(--oro);
+  border-color: var(--oro-hondo);
+}
+
+.sutil {
+  color: var(--texto-suave);
+  border-color: transparent;
+  padding-inline: var(--esp-3);
+}
+
+/* ── Hover · solo donde existe ─────────────────────────────────────────── */
+
+@media (hover: hover) {
+  .primario:hover:not([aria-disabled="true"]) {
+    color: var(--vacio);
+    background-color: var(--holo-nucleo);
+    box-shadow: var(--brillo-holo-intenso);
+  }
+
+  .secundario:hover:not([aria-disabled="true"]) {
+    color: var(--oro-vivo);
+    border-color: var(--oro);
+  }
+
+  .sutil:hover:not([aria-disabled="true"]) {
+    color: var(--texto);
+    border-color: var(--linea-control);
+  }
+}
+
+/* ── Foco · nunca se elimina, se sustituye ─────────────────────────────── */
+
+.boton:focus-visible {
+  outline: 2px solid var(--holo);
+  outline-offset: 3px;
+}
+
+/* ── Activo · el instante de la pulsación ──────────────────────────────── */
+
+.boton:active:not([aria-disabled="true"]) {
+  transform: translateY(1px);
+}
+
+/* ── Bloqueado ─────────────────────────────────────────────────────────── */
+
+/*
+ * Se usa `aria-disabled` y no el atributo `disabled`.
+ *
+ * Un botón con `disabled` no recibe foco, así que quien navega con teclado o
+ * lector de pantalla no llega a él y nunca se entera de por qué no puede seguir.
+ * Con `aria-disabled` el botón sigue siendo alcanzable, anuncia su estado y su
+ * motivo, y el manejador es quien ignora la pulsación.
+ */
+.boton[aria-disabled="true"] {
+  color: var(--texto-tenue);
+  border-color: var(--linea-control);
+  background-color: transparent;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* ── Cargando ──────────────────────────────────────────────────────────── */
+
+.boton[aria-busy="true"] {
+  cursor: progress;
+}
+
+.indicador {
+  flex: none;
+  width: 1em;
+  height: 1em;
+  animation: giro-de-carga 1.1s linear infinite;
+}
+
+@keyframes giro-de-carga {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+ * Con movimiento reducido el indicador no puede limitarse a congelarse: dejaría
+ * de comunicar que algo está ocurriendo. Late en vez de girar.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .indicador {
+    animation: latido-de-carga 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes latido-de-carga {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ── Error ─────────────────────────────────────────────────────────────── */
+
+.boton[data-estado="error"] {
+  color: var(--error);
+  border-color: var(--error);
+  box-shadow: none;
+}
+
+.motivo {
+  display: block;
+  max-width: 34ch;
+  margin-top: var(--esp-2);
+  font-size: var(--texto-xs);
+  color: var(--texto-suave);
+}
+
+.motivoDeError {
+  color: var(--error);
+}
+
+.envoltorio {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

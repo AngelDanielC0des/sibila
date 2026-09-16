@@ -1,0 +1,192 @@
+.pagina {
+  padding-inline: var(--gutter);
+  padding-block: var(--esp-6) var(--esp-10);
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-contenedor);
+  margin-inline: auto;
+}
+
+.cabecera {
+  padding-bottom: var(--esp-5);
+  border-bottom: 1px solid var(--linea);
+}
+
+.titulo {
+  font-size: var(--texto-2xl);
+  color: var(--texto);
+}
+
+.entradilla {
+  max-width: var(--ancho-lectura);
+  margin-top: var(--esp-2);
+  color: var(--texto-suave);
+}
+
+.seccion {
+  padding-top: var(--esp-7);
+}
+
+.tituloDeSeccion {
+  font-size: var(--texto-xl);
+  color: var(--texto);
+  margin-bottom: var(--esp-2);
+}
+
+.notaDeSeccion {
+  max-width: var(--ancho-lectura);
+  margin-bottom: var(--esp-5);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+}
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--esp-5);
+}
+
+.ficha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-4);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-md);
+  background-color: var(--superficie);
+}
+
+.escenario {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: var(--radio-sm);
+  background-color: var(--vacio);
+}
+
+.nombreDeFicha {
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-fuerte);
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--oro);
+}
+
+.tecnica {
+  font-size: var(--texto-sm);
+  color: var(--texto-suave);
+}
+
+.coste {
+  font-family: var(--fuente-datos);
+  font-size: 10px;
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+  padding-top: var(--esp-2);
+  border-top: 1px solid var(--linea);
+}
+
+/* El sujeto de muestra: una silueta con alfa real, para que se vea que la
+   aberración y el fresnel siguen el contorno y no el rectángulo. */
+.sujetoDeMuestra {
+  display: block;
+  width: 42%;
+  height: auto;
+  margin-inline: auto;
+  padding-top: 8%;
+  color: var(--holo-nucleo);
+}
+
+.aviso {
+  margin-top: var(--esp-5);
+  padding: var(--esp-4);
+  border-left: 3px solid var(--aviso);
+  border-radius: 0 var(--radio-sm) var(--radio-sm) 0;
+  background-color: var(--superficie);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+  max-width: var(--ancho-lectura);
+}
+
+.escenarioAncho {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radio-sm);
+  background-color: var(--vacio);
+}
+
+.textoDeMuestra {
+  font-family: var(--fuente-display);
+  font-size: var(--texto-xl);
+  color: var(--pergamino);
+  text-align: center;
+  padding-block: var(--esp-7);
+}
+
+.envoltorioTabla {
+  overflow-x: auto;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-md);
+  background-color: var(--superficie);
+  margin-bottom: var(--esp-4);
+}
+
+.tabla {
+  width: 100%;
+  min-width: 460px;
+  border-collapse: collapse;
+  font-size: var(--texto-sm);
+}
+
+.tabla th {
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-medio);
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+  text-align: left;
+  padding: var(--esp-3) var(--esp-4);
+  border-bottom: 1px solid var(--linea);
+  background-color: var(--superficie-alta);
+}
+
+.tabla td {
+  padding: var(--esp-3) var(--esp-4);
+  border-bottom: 1px solid var(--linea);
+  color: var(--texto);
+}
+
+.tabla tr:last-child td {
+  border-bottom: none;
+}
+
+.dato {
+  font-family: var(--fuente-datos);
+  font-variant-numeric: tabular-nums;
+  color: var(--texto-suave);
+}
+
+.muestraDeGlifos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-4);
+  padding: var(--esp-5);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-md);
+  background-color: var(--superficie);
+  color: var(--oro);
+  font-size: var(--texto-xl);
+}
+
+.textoDeMuestraMenor {
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-md);
+  color: var(--texto-suave);
+  text-align: center;
+  padding-bottom: var(--esp-7);
+}

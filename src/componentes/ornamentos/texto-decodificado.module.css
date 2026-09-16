@@ -1,0 +1,55 @@
+/*
+ * Cada carácter es un `span` en posición relativa, pero sigue siendo `inline`.
+ *
+ * No es `inline-block` a propósito: eso rompe el flujo de texto y hace que
+ * algunos lectores de pantalla inserten una pausa entre letra y letra, que es
+ * exactamente lo que se quiere evitar al partir un texto en caracteres.
+ */
+.caracter {
+  position: relative;
+}
+
+/*
+ * Mientras no está resuelto, la letra real se vuelve transparente pero conserva
+ * su sitio: así el texto no se recoloca ni una sola vez durante la animación.
+ */
+.caracter[data-resuelto="false"] {
+  color: transparent;
+}
+
+/*
+ * El glifo se confina a la caja de su letra.
+ *
+ * Los glifos tienen ancho fijo y las letras no, así que un glifo centrado sobre
+ * una «i» invade a sus vecinas. A plena densidad eso no se lee como símbolos
+ * resolviéndose sino como un borrón. Recortado a la caja de la letra nunca se
+ * solapa: los anchos muestran el símbolo entero y los estrechos, un fragmento,
+ * que además espesa la textura y le sienta bien al efecto.
+ */
+.glifo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  /*
+   * Ancho del hueco de la letra y alto explícito. `inset: 0` no sirve: el padre
+   * es `inline`, así que su caja contenedora no le da altura al hijo absoluto y
+   * el glifo se quedaba recortado a nada.
+   */
+  width: 100%;
+  height: 1em;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: var(--fuente-datos);
+  font-size: 0.8em;
+  line-height: 1;
+  color: var(--holo);
+  pointer-events: none;
+}
+
+.caracter[data-resuelto="true"] .glifo {
+  opacity: 0;
+}

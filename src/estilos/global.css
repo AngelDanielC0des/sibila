@@ -1,0 +1,106 @@
+@import url("./tokens.css");
+
+/*
+ * Restablecimiento y base.
+ *
+ * Deliberadamente corto. Todo lo que no sea comportamiento base del documento
+ * vive en el módulo CSS del componente que lo necesita.
+ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark;
+
+  /* Safari en iOS solo entiende la versión prefijada, y sin ella el navegador
+   * reajusta el tamaño del texto al girar el dispositivo. */
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; /* stylelint-disable-line property-no-vendor-prefix */
+}
+
+[data-tema="claro"] {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-base);
+  line-height: var(--interlineado-texto);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-family: var(--fuente-display);
+  font-weight: var(--peso-fuerte);
+  line-height: var(--interlineado-titular);
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/*
+ * Foco visible con anillo holográfico. Nunca se elimina el contorno: se
+ * sustituye por uno que encaja con el sistema.
+ */
+:focus-visible {
+  outline: 2px solid var(--holo);
+  outline-offset: 3px;
+  border-radius: var(--radio-sm);
+}
+
+/*
+ * Movimiento reducido.
+ *
+ * No se desactiva la experiencia: se sustituye desplazamiento por fundido.
+ * La ceremonia se conserva, el movimiento desaparece.
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important; /* stylelint-disable-line declaration-no-important */
+    animation-iteration-count: 1 !important; /* stylelint-disable-line declaration-no-important */
+    transition-duration: 0.01ms !important; /* stylelint-disable-line declaration-no-important */
+    scroll-behavior: auto !important; /* stylelint-disable-line declaration-no-important */
+  }
+}

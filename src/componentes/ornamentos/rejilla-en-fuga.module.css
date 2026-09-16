@@ -1,0 +1,70 @@
+.rejilla {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 62%;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: var(--factor-ornamento, 1);
+  perspective: 180px;
+  perspective-origin: 50% 100%;
+}
+
+/*
+ * El suelo es un plano abatido que se aleja del espectador.
+ *
+ * El origen va en el borde inferior: es la arista que queda cerca, y desde ella
+ * el plano se tumba hacia el fondo. Con el origen arriba ocurre lo contrario —el
+ * plano se inclina hacia delante y se sale de cuadro—, que es justo el error que
+ * hacía que esto no se viera.
+ *
+ * Es más ancho que el contenedor porque la perspectiva ensancha lo lejano: sin
+ * ese margen quedarían dos cuñas vacías en las esquinas del fondo.
+ */
+.suelo {
+  position: absolute;
+  right: -60%;
+  bottom: 0;
+  left: -60%;
+  height: 340%;
+  transform: rotateX(76deg);
+  transform-origin: 50% 100%;
+  background-image:
+    repeating-linear-gradient(to right, var(--velo-rejilla) 0 1px, transparent 1px 72px),
+    repeating-linear-gradient(to bottom, var(--velo-rejilla) 0 1px, transparent 1px 72px);
+  mask-image: linear-gradient(to bottom, transparent 4%, #000000 58%);
+  animation: avance-de-rejilla 60s linear infinite;
+}
+
+/*
+ * El avance recorre exactamente el paso de la cuadrícula, así que al reiniciarse
+ * el bucle la rejilla coincide consigo misma y no se ve el salto.
+ */
+@keyframes avance-de-rejilla {
+  from {
+    transform: rotateX(76deg) translateY(0);
+  }
+
+  to {
+    transform: rotateX(76deg) translateY(72px);
+  }
+}
+
+/*
+ * Nivel 2: solo donde hay holgura.
+ *
+ * Medido en producción con la CPU 4× estrangulada, que aproxima un Android de
+ * gama media: el tratamiento completo baja a 42 fps, mientras que el conjunto
+ * barato —barrido, fresnel y aberración— sostiene los 60. El puntero fino es la
+ * señal más barata de «esto es un escritorio», y no cuesta una línea de
+ * JavaScript.
+ *
+ * La regla vive aquí, en el ornamento, y no en quien lo usa: así no depende de
+ * que nadie se acuerde.
+ */
+@media (hover: none), (pointer: coarse) {
+  .rejilla {
+    display: none;
+  }
+}

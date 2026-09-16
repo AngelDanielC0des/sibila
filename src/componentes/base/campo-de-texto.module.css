@@ -1,0 +1,116 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  width: 100%;
+}
+
+.etiqueta {
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-medio);
+  color: var(--texto);
+}
+
+.control {
+  width: 100%;
+  min-height: 44px;
+  padding-inline: var(--esp-4);
+  padding-block: var(--esp-3);
+
+  /* Borde de control, no ornamental: alcanza el 3:1 que exige la guía §4.5. */
+  border: 1px solid var(--linea-control);
+  border-radius: var(--radio-md);
+  background-color: var(--superficie);
+  color: var(--texto);
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-base);
+  transition:
+    border-color var(--dur-agencia) var(--curva-entrada),
+    box-shadow var(--dur-agencia) var(--curva-entrada);
+}
+
+.control::placeholder {
+  color: var(--texto-tenue);
+}
+
+.area {
+  min-height: 7rem;
+  resize: vertical;
+  line-height: var(--interlineado-texto);
+}
+
+@media (hover: hover) {
+  .control:hover:not(:disabled) {
+    border-color: var(--holo-hondo);
+  }
+}
+
+.control:focus-visible {
+  outline: none;
+  border-color: var(--holo);
+  box-shadow: var(--brillo-holo);
+}
+
+.control:disabled {
+  color: var(--texto-tenue);
+  cursor: not-allowed;
+  background-color: transparent;
+}
+
+.control[aria-invalid="true"] {
+  border-color: var(--error);
+}
+
+.control[aria-invalid="true"]:focus-visible {
+  box-shadow: none;
+  outline: 2px solid var(--error);
+  outline-offset: 2px;
+}
+
+.pie {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2) var(--esp-4);
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.ayuda {
+  flex: 1 1 18ch;
+  font-size: var(--texto-xs);
+  color: var(--texto-suave);
+}
+
+.contador {
+  flex: none;
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--texto-tenue);
+}
+
+.contadorAlLimite {
+  color: var(--aviso);
+}
+
+.error {
+  display: flex;
+  gap: var(--esp-2);
+  align-items: baseline;
+  font-size: var(--texto-xs);
+  color: var(--error);
+}
+
+/*
+ * Región que solo existe para los lectores de pantalla. Fuera de flujo pero sin
+ * `display: none`, que la retiraría del árbol de accesibilidad.
+ */
+.soloParaLectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

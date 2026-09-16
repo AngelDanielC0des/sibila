@@ -1,0 +1,65 @@
+/*
+ * Tres piezas: dos trazos que ceden y un motivo que no.
+ *
+ * La primera versión era un solo SVG estirado con `preserveAspectRatio: none`, y
+ * eso deformaba el rombo según el ancho del contenedor. Un componente de sistema
+ * que cambia de forma según dónde se ponga está roto, aunque en una captura
+ * concreta parezca correcto.
+ */
+.separador {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-3);
+  width: 100%;
+  color: var(--oro-hondo);
+  opacity: var(--factor-ornamento, 1);
+}
+
+.trazo {
+  flex: 1;
+  height: 1px;
+  background-color: currentcolor;
+}
+
+.motivo {
+  flex: none;
+  width: 3.5rem;
+  height: auto;
+}
+
+.esquina {
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--oro-hondo);
+  opacity: var(--factor-ornamento, 1);
+}
+
+.superiorIzquierda {
+  top: 0;
+  left: 0;
+}
+
+.superiorDerecha {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.inferiorIzquierda {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.inferiorDerecha {
+  right: 0;
+  bottom: 0;
+  transform: scale(-1);
+}
+
+.marco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}

@@ -1,0 +1,62 @@
+{
+  "metadatos": {
+    "titulo": "Sibila · Tarot con una oráculo que te escucha",
+    "descripcion": "Formula tu pregunta, elige tus cartas y deja que Sibila las lea. Las 78 cartas, con inversiones, y una interpretación que atiende a la tirada entera."
+  },
+  "navegacion": {
+    "tiradas": "Tiradas",
+    "cartas": "Cartas",
+    "historial": "Mi historial",
+    "idioma": "Idioma",
+    "entrar": "Entrar"
+  },
+  "portada": {
+    "titular": "Pregunta a Sibila",
+    "entradilla": "Las cartas llevan seis siglos respondiendo. Sibila las traduce.",
+    "llamada": "Empezar una lectura",
+    "secundaria": "Ver las 78 cartas"
+  },
+  "lectura": {
+    "pregunta": {
+      "etiqueta": "¿Qué quieres preguntar?",
+      "marcador": "Escribe tu pregunta…",
+      "ayuda": "Cuanto más concreta sea, más útil será la respuesta.",
+      "contador": "{restantes} caracteres restantes",
+      "continuar": "Barajar las cartas"
+    },
+    "barajado": {
+      "aviso": "Piensa en tu pregunta mientras se baraja el mazo."
+    },
+    "seleccion": {
+      "instruccion": "Elige {total, plural, one {# carta} other {# cartas}}",
+      "restantes": "{restantes, plural, =0 {Ya están todas} one {Queda # carta} other {Quedan # cartas}}",
+      "continuar": "Revelar"
+    },
+    "revelado": {
+      "voltear": "Voltea la carta",
+      "invertida": "Invertida",
+      "siguiente": "Siguiente carta"
+    },
+    "sintesis": {
+      "titulo": "Lo que dicen juntas",
+      "cargando": "Sibila está leyendo la tirada…"
+    }
+  },
+  "muro": {
+    "titulo": "Las cartas ya han hablado por separado",
+    "cuerpo": "Su conversación entre ellas es otra cosa. La síntesis relaciona las {total} cartas de tu tirada y responde a tu pregunta concreta.",
+    "llamada": "Desbloquear la síntesis",
+    "alternativa": "Seguir sin la síntesis"
+  },
+  "comun": {
+    "cargando": "Cargando…",
+    "reintentar": "Reintentar",
+    "volver": "Volver",
+    "cerrar": "Cerrar"
+  },
+  "legal": {
+    "edad": "Solo para mayores de 18 años.",
+    "encuadre": "Sibila es una herramienta de entretenimiento y autoconocimiento. No predice el futuro ni sustituye consejo médico, legal, financiero ni psicológico.",
+    "crisis": "Si estás pasando por una crisis, busca ayuda profesional."
+  }
+}

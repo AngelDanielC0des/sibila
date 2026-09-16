@@ -1,0 +1,207 @@
+.pagina {
+  padding-inline: var(--gutter);
+  padding-block: var(--esp-6) var(--esp-10);
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-contenedor);
+  margin-inline: auto;
+}
+
+.cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-4);
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: var(--esp-5);
+  border-bottom: 1px solid var(--linea);
+}
+
+.titulo {
+  font-size: var(--texto-2xl);
+  color: var(--texto);
+}
+
+.entradilla {
+  max-width: 56ch;
+  margin-top: var(--esp-2);
+  color: var(--texto-suave);
+}
+
+.seccion {
+  padding-top: var(--esp-7);
+}
+
+.tituloDeSeccion {
+  font-size: var(--texto-xl);
+  color: var(--texto);
+}
+
+.notaDeSeccion {
+  max-width: var(--ancho-lectura);
+  margin-top: var(--esp-2);
+  margin-bottom: var(--esp-5);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+}
+
+.grupo {
+  margin-top: var(--esp-6);
+}
+
+.tituloDeGrupo {
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-fuerte);
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--oro);
+  margin-bottom: var(--esp-3);
+}
+
+.envoltorioTabla {
+  overflow-x: auto;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-md);
+  background-color: var(--superficie);
+}
+
+.tabla {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: var(--texto-sm);
+}
+
+.tabla th {
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-medio);
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+  text-align: left;
+  padding: var(--esp-3) var(--esp-4);
+  border-bottom: 1px solid var(--linea);
+  background-color: var(--superficie-alta);
+}
+
+.tabla td {
+  padding: var(--esp-3) var(--esp-4);
+  border-bottom: 1px solid var(--linea);
+  vertical-align: middle;
+  color: var(--texto);
+}
+
+.tabla tr:last-child td {
+  border-bottom: none;
+}
+
+.muestra {
+  width: 44px;
+  height: 28px;
+  border-radius: var(--radio-sm);
+  border: 1px solid var(--linea);
+}
+
+.nombreDeToken,
+.valor,
+.relacion {
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.nombreDeToken {
+  color: var(--texto);
+}
+
+.valor,
+.relacion {
+  color: var(--texto-suave);
+}
+
+.veredicto {
+  display: inline-block;
+  font-family: var(--fuente-datos);
+  font-size: 10px;
+  font-weight: var(--peso-fuerte);
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: var(--radio-sm);
+  white-space: nowrap;
+}
+
+.veredictoAaa,
+.veredictoAa {
+  color: var(--exito);
+  border: 1px solid var(--exito);
+}
+
+.veredictoGrande {
+  color: var(--aviso);
+  border: 1px solid var(--aviso);
+}
+
+.veredictoInsuficiente {
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+
+.aviso {
+  margin-top: var(--esp-4);
+  padding: var(--esp-4);
+  border-left: 3px solid var(--aviso);
+  border-radius: 0 var(--radio-sm) var(--radio-sm) 0;
+  background-color: var(--superficie);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+  max-width: var(--ancho-lectura);
+}
+
+.filaTipografica {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2) var(--esp-5);
+  align-items: baseline;
+  padding-block: var(--esp-3);
+  border-bottom: 1px solid var(--linea);
+}
+
+.etiquetaTipografica {
+  flex: 0 0 8rem;
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  color: var(--texto-tenue);
+}
+
+.escalaDeEspaciado {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
+.filaDeEspaciado {
+  display: flex;
+  gap: var(--esp-4);
+  align-items: center;
+}
+
+.barraDeEspaciado {
+  height: 14px;
+  border-radius: var(--radio-sm);
+  background-color: var(--acento);
+}
+
+.rol {
+  font-family: var(--fuente-datos);
+  font-size: 10px;
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+  white-space: nowrap;
+}

@@ -1,0 +1,62 @@
+.posicion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  align-items: center;
+}
+
+.hueco {
+  width: 100%;
+  aspect-ratio: var(--carta-proporcion);
+}
+
+/*
+ * El hueco vacío late muy despacio. No es adorno: es lo que dice cuál es la
+ * siguiente posición que toca cubrir sin tener que escribirlo en ningún sitio.
+ */
+.vacio {
+  display: grid;
+  place-items: center;
+  border: 1px dashed var(--holo-hondo);
+  border-radius: var(--radio-carta);
+  background-color: color-mix(in srgb, var(--camara) 55%, transparent);
+  animation: latido-de-hueco 2.4s ease-in-out infinite;
+}
+
+.ordinal {
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-lg);
+  color: var(--holo-hondo);
+}
+
+@keyframes latido-de-hueco {
+  0%,
+  100% {
+    border-color: var(--holo-hondo);
+  }
+
+  50% {
+    border-color: var(--holo);
+  }
+}
+
+/*
+ * Sin movimiento, el latido desaparece y el hueco pendiente se distingue por
+ * contraste sostenido. La información se conserva; el parpadeo no.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .vacio {
+    animation: none;
+    border-color: var(--holo);
+  }
+}
+
+.nombre {
+  max-width: 18ch;
+  font-family: var(--fuente-texto);
+  font-size: var(--texto-xs);
+  line-height: var(--interlineado-titular);
+  color: var(--texto-suave);
+  text-align: center;
+  text-wrap: balance;
+}

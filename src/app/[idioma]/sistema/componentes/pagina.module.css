@@ -1,0 +1,143 @@
+.pagina {
+  padding-inline: var(--gutter);
+  padding-block: var(--esp-6) var(--esp-10);
+}
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-contenedor);
+  margin-inline: auto;
+}
+
+.cabecera {
+  padding-bottom: var(--esp-5);
+  border-bottom: 1px solid var(--linea);
+}
+
+.titulo {
+  font-size: var(--texto-2xl);
+  color: var(--texto);
+}
+
+.entradilla {
+  max-width: var(--ancho-lectura);
+  margin-top: var(--esp-2);
+  color: var(--texto-suave);
+}
+
+.seccion {
+  padding-top: var(--esp-7);
+}
+
+.tituloDeSeccion {
+  font-size: var(--texto-xl);
+  color: var(--texto);
+  margin-bottom: var(--esp-2);
+}
+
+.notaDeSeccion {
+  max-width: var(--ancho-lectura);
+  margin-bottom: var(--esp-5);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+}
+
+.grupo {
+  margin-top: var(--esp-6);
+}
+
+.tituloDeGrupo {
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-fuerte);
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--oro);
+  margin-bottom: var(--esp-3);
+}
+
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-5);
+  align-items: flex-start;
+  padding: var(--esp-5);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-md);
+  background-color: var(--superficie);
+}
+
+.rejillaDeCampos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--esp-6);
+  padding: var(--esp-5);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-md);
+  background-color: var(--superficie);
+}
+
+.aviso {
+  margin-top: var(--esp-5);
+  padding: var(--esp-4);
+  border-left: 3px solid var(--holo-hondo);
+  border-radius: 0 var(--radio-sm) var(--radio-sm) 0;
+  background-color: var(--superficie);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+  max-width: var(--ancho-lectura);
+}
+
+.listaDeEstados {
+  max-width: var(--ancho-lectura);
+  margin: 0;
+  padding-left: var(--esp-5);
+  color: var(--texto-suave);
+  font-size: var(--texto-sm);
+}
+
+.listaDeEstados li {
+  margin-bottom: var(--esp-2);
+}
+
+.rejillaDeCartas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--esp-6);
+  padding: var(--esp-5);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-md);
+  background-color: var(--superficie);
+}
+
+.muestraDeCarta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  margin: 0;
+}
+
+.pieDeCarta {
+  font-family: var(--fuente-datos);
+  font-size: 10px;
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--texto-tenue);
+  text-align: center;
+}
+
+.rejillaDePosiciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--esp-5);
+  padding: var(--esp-5);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-md);
+  background-color: var(--superficie);
+}
+
+.rejillaDePaneles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--esp-5);
+}

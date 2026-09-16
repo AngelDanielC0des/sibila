@@ -1,0 +1,29 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "declaration-no-important": true,
+    "selector-max-specificity": "0,3,0",
+    "max-nesting-depth": 2,
+    "selector-max-id": 0,
+    "selector-class-pattern": [
+      "^[a-z][a-zA-Z0-9]+$",
+      {
+        "message": "Las clases de CSS Modules van en camelCase y en español (p. ej. .cartaRevelada)"
+      }
+    ],
+    "custom-property-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+      {
+        "message": "Los tokens van en kebab-case y en español (p. ej. --holo-nucleo)"
+      }
+    ],
+    "color-hex-length": "long",
+    "alpha-value-notation": "number",
+    "color-function-notation": "modern",
+    "declaration-block-no-redundant-longhand-properties": null,
+    "no-descending-specificity": true,
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null
+  },
+  "ignoreFiles": ["**/node_modules/**", ".next/**", "coverage/**"]
+}

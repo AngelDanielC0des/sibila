@@ -1,0 +1,61 @@
+.interferencia {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: var(--factor-ornamento, 1);
+}
+
+.interferencia::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 14%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    var(--velo-interferencia),
+    transparent
+  );
+  animation: barra-de-interferencia 11s linear infinite;
+}
+
+/*
+ * El 96 % del ciclo es invisible. La banda solo cruza durante unos 440 ms, y esa
+ * rareza es justo lo que la hace creíble: una interferencia continua deja de
+ * leerse como fallo de señal y pasa a leerse como fondo animado.
+ */
+@keyframes barra-de-interferencia {
+  0%,
+  92% {
+    opacity: 0;
+    transform: translateY(-140%);
+  }
+
+  92.5% {
+    opacity: 1;
+    transform: translateY(-40%);
+  }
+
+  95.5% {
+    opacity: 1;
+    transform: translateY(240%);
+  }
+
+  96%,
+  100% {
+    opacity: 0;
+    transform: translateY(340%);
+  }
+}
+
+/*
+ * Con movimiento reducido no se atenúa: se retira. Una banda que cruza la
+ * pantalla de golpe es de los destellos que esta preferencia existe para evitar.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .interferencia {
+    display: none;
+  }
+}

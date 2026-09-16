@@ -1,0 +1,62 @@
+.cono {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--factor-ornamento, 1);
+}
+
+/*
+ * La falda del haz: se abre hacia arriba desde el proyector.
+ *
+ * Un haz real no es un degradado plano. Tiene una falda que se abre y un eje
+ * más caliente en el centro, y es esa diferencia entre los dos lo que hace que
+ * el ojo lo lea como volumen y no como un triángulo pintado.
+ */
+.cono::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to top, var(--velo-cono), transparent 78%);
+  clip-path: polygon(44% 100%, 56% 100%, 96% 0%, 4% 0%);
+  filter: blur(14px);
+}
+
+/* El eje caliente, más estrecho y más brillante. */
+.cono::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to top, var(--velo-cono-nucleo), transparent 62%);
+  clip-path: polygon(47% 100%, 53% 100%, 72% 0%, 28% 0%);
+  filter: blur(10px);
+}
+
+/* El propio proyector, encendido en la base. */
+.base {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 30%;
+  height: 10%;
+  transform: translateX(-50%);
+  background-image: radial-gradient(
+    ellipse at center,
+    var(--velo-cono-nucleo),
+    transparent 70%
+  );
+  filter: blur(8px);
+}
+
+/*
+ * En móvil el cono se queda, porque sin él la proyección no se lee. Lo que se
+ * retira es el desenfoque, que es de donde sale su coste: tres pasadas de blur
+ * sobre superficies grandes. El degradado ya trae su propia suavidad, así que la
+ * pérdida es mucho menor que el ahorro.
+ */
+@media (hover: none), (pointer: coarse) {
+  .cono::before,
+  .cono::after,
+  .base {
+    filter: none;
+  }
+}

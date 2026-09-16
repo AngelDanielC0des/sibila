@@ -10,9 +10,6 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
 # next.js
 /.next/
 /out/
@@ -39,3 +36,24 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ─── Sibila ───────────────────────────────────────────────────────────────
+
+# Informes de cobertura de las pruebas.
+/coverage
+
+# Trazas y capturas que deja el navegador de pruebas.
+/.playwright-mcp
+
+# Capturas de verificación del desarrollo: se regeneran abriendo la página.
+# Las capturas de la investigación de campo sí se versionan, en docs/investigacion.
+/docs/capturas/
+
+# Lienzo de diseño: las fuentes son los .dc.html y canvas.json, que sí se
+# versionan. El .html publicable pesa 2,5 MB y se reconstruye con seed-canvas.
+/docs/lienzo/*.html
+!/docs/lienzo/*.dc.html
+
+# Secuencias pre-renderizadas de las cartas: binarios pesados, fuera de git.
+/public/cartas/*.mp4
+/public/cartas/*.webm

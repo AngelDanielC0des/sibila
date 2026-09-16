@@ -1,0 +1,34 @@
+.panel {
+  position: relative;
+  padding: var(--esp-5);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-lg);
+  background-color: var(--superficie);
+}
+
+.elevado {
+  background-color: var(--superficie-alta);
+  box-shadow: var(--sombra-panel);
+}
+
+/*
+ * El panel enmarcado deja sitio a las esquinas de filigrana. Sin ese margen
+ * extra el ornamento se comería la primera línea de texto.
+ */
+.enmarcado {
+  padding: var(--esp-6);
+  border-color: var(--oro-hondo);
+}
+
+.titulo {
+  margin-bottom: var(--esp-4);
+  font-family: var(--fuente-display);
+  font-size: var(--texto-lg);
+  font-weight: var(--peso-fuerte);
+  color: var(--texto);
+}
+
+.contenido {
+  max-width: var(--ancho-lectura);
+  color: var(--texto-suave);
+}

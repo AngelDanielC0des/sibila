@@ -1,0 +1,19 @@
+/*
+ * A diferencia de los demás ornamentos, la aberración no es una capa que se
+ * superpone sino un tratamiento del propio sujeto: por eso es una clase que se
+ * aplica y no un elemento que se apila.
+ *
+ * `drop-shadow` sigue el canal alfa, así que sobre un retrato recortado las
+ * franjas aparecen en la silueta real y no en el rectángulo de la imagen. Es lo
+ * que distingue este efecto de dos copias desplazadas.
+ */
+.aberracion {
+  filter: drop-shadow(calc(var(--aberracion-desfase) * -1) 0 0 var(--fringe-frio))
+    drop-shadow(var(--aberracion-desfase) 0 0 var(--fringe-calido));
+}
+
+.aberracionTexto {
+  text-shadow:
+    calc(var(--aberracion-desfase) * -1) 0 0 var(--fringe-frio),
+    var(--aberracion-desfase) 0 0 var(--fringe-calido);
+}

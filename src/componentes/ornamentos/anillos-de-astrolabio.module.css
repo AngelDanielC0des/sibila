@@ -1,0 +1,77 @@
+.anillos {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  opacity: var(--factor-ornamento, 1);
+}
+
+/*
+ * Cada anillo es su propio SVG, y la rotación se aplica al elemento entero.
+ *
+ * No es un capricho de estructura: animar `transform` sobre un `<g>` dentro del
+ * SVG obliga al navegador a re-rasterizar el vector en cada fotograma. Medido a
+ * CPU 4× estrangulada, esa versión costaba unos 19 fps. Sobre el elemento
+ * exterior la transformación se compone en la GPU y el vector se rasteriza una
+ * sola vez.
+ */
+.anillo {
+  position: absolute;
+  width: min(88%, 88cqh);
+  height: auto;
+  aspect-ratio: 1;
+  overflow: visible;
+  color: var(--oro-hondo);
+  will-change: transform;
+}
+
+/*
+ * Los tres periodos son primos entre sí, así que el conjunto tarda horas en
+ * volver a la misma disposición.
+ */
+.zodiacal {
+  animation: giro 240s linear infinite;
+}
+
+.mansiones {
+  animation: giro 154s linear infinite reverse;
+}
+
+.cardinal {
+  animation: giro 389s linear infinite;
+}
+
+@keyframes giro {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anillo {
+    will-change: auto;
+  }
+}
+
+/*
+ * Nivel 2: solo donde hay holgura.
+ *
+ * Medido en producción con la CPU 4× estrangulada, que aproxima un Android de
+ * gama media: el tratamiento completo baja a 42 fps, mientras que el conjunto
+ * barato —barrido, fresnel y aberración— sostiene los 60. El puntero fino es la
+ * señal más barata de «esto es un escritorio», y no cuesta una línea de
+ * JavaScript.
+ *
+ * La regla vive aquí, en el ornamento, y no en quien lo usa: así no depende de
+ * que nadie se acuerde.
+ */
+@media (hover: none), (pointer: coarse) {
+  .anillos {
+    display: none;
+  }
+}

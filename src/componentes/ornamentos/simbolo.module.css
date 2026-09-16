@@ -1,0 +1,16 @@
+/*
+ * Los glifos se piden en un tamaño relativo al texto que los rodea, y heredan el
+ * color: por eso no se fija ninguno de los dos aquí. Quien los usa decide si son
+ * de oro, en la enciclopedia, o del azul del holograma, en la decodificación.
+ *
+ * El ancho fijo es lo que impide que el texto dé saltos mientras se decodifica:
+ * los glifos tienen anchos muy distintos entre sí y, sin caja de medida
+ * constante, cada carácter empujaría a los siguientes en cada fotograma.
+ */
+.simbolo {
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  font-variant-emoji: text;
+  line-height: 1;
+}

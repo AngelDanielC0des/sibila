@@ -1,0 +1,62 @@
+{
+  "metadatos": {
+    "titulo": "Sibila · Tarot with an oracle who listens",
+    "descripcion": "Ask your question, choose your cards, and let Sibila read them. All 78 cards, reversals included, and an interpretation that considers the whole spread."
+  },
+  "navegacion": {
+    "tiradas": "Spreads",
+    "cartas": "Cards",
+    "historial": "My history",
+    "idioma": "Language",
+    "entrar": "Sign in"
+  },
+  "portada": {
+    "titular": "Ask Sibila",
+    "entradilla": "The cards have been answering for six centuries. Sibila translates.",
+    "llamada": "Begin a reading",
+    "secundaria": "Browse all 78 cards"
+  },
+  "lectura": {
+    "pregunta": {
+      "etiqueta": "What do you want to ask?",
+      "marcador": "Type your question…",
+      "ayuda": "The more specific it is, the more useful the answer.",
+      "contador": "{restantes} characters left",
+      "continuar": "Shuffle the deck"
+    },
+    "barajado": {
+      "aviso": "Hold your question in mind while the deck is shuffled."
+    },
+    "seleccion": {
+      "instruccion": "Choose {total, plural, one {# card} other {# cards}}",
+      "restantes": "{restantes, plural, =0 {That's all of them} one {# card left} other {# cards left}}",
+      "continuar": "Reveal"
+    },
+    "revelado": {
+      "voltear": "Turn the card",
+      "invertida": "Reversed",
+      "siguiente": "Next card"
+    },
+    "sintesis": {
+      "titulo": "What they say together",
+      "cargando": "Sibila is reading the spread…"
+    }
+  },
+  "muro": {
+    "titulo": "The cards have spoken one by one",
+    "cuerpo": "What they say to each other is a different matter. The synthesis connects all {total} cards in your spread and answers your actual question.",
+    "llamada": "Unlock the synthesis",
+    "alternativa": "Continue without it"
+  },
+  "comun": {
+    "cargando": "Loading…",
+    "reintentar": "Try again",
+    "volver": "Back",
+    "cerrar": "Close"
+  },
+  "legal": {
+    "edad": "For ages 18 and over.",
+    "encuadre": "Sibila is a tool for entertainment and self-reflection. It does not predict the future and is not a substitute for medical, legal, financial or psychological advice.",
+    "crisis": "If you are in crisis, please seek professional help."
+  }
+}

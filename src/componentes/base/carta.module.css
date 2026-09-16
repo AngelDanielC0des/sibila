@@ -1,0 +1,162 @@
+.carta {
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--carta-proporcion);
+  padding: 0;
+  border: none;
+  background: none;
+  perspective: var(--carta-perspectiva);
+  container-type: inline-size;
+
+  /*
+   * El giro y la elevación se declaran por separado y el interior los compone.
+   *
+   * La alternativa —un selector por cada combinación de revelada, hover y
+   * activo— multiplica los selectores y dispara la especificidad por encima del
+   * tope del proyecto. Con dos variables, cada estado toca solo lo suyo y no hay
+   * que enumerar sus cruces.
+   */
+  --giro-de-carta: 0deg;
+  --elevacion-de-carta: 0;
+}
+
+.pulsable {
+  cursor: pointer;
+}
+
+/*
+ * El interior es lo que gira. Las dos caras viven aquí dentro, cada una en su
+ * lado del plano, y `preserve-3d` es lo que impide que el navegador las aplane
+ * y pinte las dos a la vez.
+ */
+.interior {
+  /*
+   * Es un `span`, y sin esto sería inline: la altura no se le aplicaría y la
+   * carta se quedaría en una franja del alto de su contenido.
+   */
+  display: block;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(var(--giro-de-carta)) translateY(var(--elevacion-de-carta));
+  transform-style: preserve-3d;
+  transition: transform var(--dur-volteo) var(--curva-volteo);
+}
+
+.carta[data-revelada="true"] {
+  --giro-de-carta: 180deg;
+}
+
+.cara {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  overflow: hidden;
+  border-radius: var(--radio-carta);
+  backface-visibility: hidden;
+}
+
+.dorso {
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--holo-hondo);
+  background-color: var(--camara);
+  box-shadow: var(--brillo-holo);
+}
+
+.frente {
+  flex-direction: column;
+  gap: 4cqi;
+  align-items: center;
+  justify-content: center;
+  padding: 6cqi;
+  border: 1px solid var(--oro-hondo);
+  background-color: var(--nicho);
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+/*
+ * La carta invertida se gira media vuelta, que es como se lee sobre la mesa. El
+ * giro no puede ser la única señal: la guía prohíbe que un estado dependa de un
+ * solo indicio, y quien no conoce la lámina no distingue su orientación. De ahí
+ * el rótulo de abajo.
+ */
+.carta[data-orientacion="invertida"] .frente {
+  transform: rotateY(180deg) rotate(180deg);
+}
+
+.dibujoDeDorso {
+  width: 68%;
+  height: auto;
+  color: var(--holo-hondo);
+}
+
+.nombre {
+  font-family: var(--fuente-display);
+  font-size: 11cqi;
+  font-weight: var(--peso-fuerte);
+  line-height: var(--interlineado-apretado);
+  color: var(--pergamino);
+  text-wrap: balance;
+}
+
+.numero {
+  font-family: var(--fuente-datos);
+  font-size: 7cqi;
+  letter-spacing: var(--espaciado-versalita);
+  color: var(--oro);
+}
+
+.marcaDeInvertida {
+  position: absolute;
+  bottom: 4cqi;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  font-family: var(--fuente-datos);
+  font-size: 5.5cqi;
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--aviso);
+}
+
+/* ── Estados interactivos ──────────────────────────────────────────────── */
+
+.carta:focus-visible {
+  outline: 2px solid var(--holo);
+  outline-offset: 4px;
+  border-radius: var(--radio-carta);
+}
+
+@media (hover: hover) {
+  .pulsable:hover {
+    --elevacion-de-carta: -6px;
+  }
+}
+
+.pulsable:active {
+  --elevacion-de-carta: -2px;
+}
+
+.carta[aria-disabled="true"] {
+  --elevacion-de-carta: 0;
+
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.carta[data-elegida="true"] .dorso {
+  border-color: var(--holo);
+  box-shadow: var(--brillo-holo-intenso);
+}
+
+/*
+ * Sin movimiento, el volteo no puede limitarse a desaparecer: dejaría de
+ * comunicar que la carta ha cambiado de cara. Se resuelve en un instante.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .interior {
+    transition-duration: 1ms;
+  }
+}

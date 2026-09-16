@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <style>
+    body { margin: 0; }
+    a { color: #3bc4f2; } a:hover { color: #7fe9ff; }
+  </style>
+</helmet>
+
+<div style="position: relative; width: 1440px; height: 900px; overflow: hidden; background-color: #050912; font-family: 'Inter Tight', system-ui, sans-serif;">
+
+  <div style="position: absolute; inset: 0; background-image: linear-gradient(to top, rgb(59 196 242 / 0.30), transparent 78%); clip-path: polygon(44% 100%, 56% 100%, 96% 0%, 4% 0%); filter: blur(14px);"></div>
+  <div style="position: absolute; inset: 0; background-image: linear-gradient(to top, rgb(127 233 255 / 0.22), transparent 62%); clip-path: polygon(47% 100%, 53% 100%, 72% 0%, 28% 0%); filter: blur(10px);"></div>
+
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 62%; overflow: hidden; perspective: 180px; perspective-origin: 50% 100%;">
+    <div style="position: absolute; bottom: 0; left: -60%; right: -60%; height: 340%; transform: rotateX(76deg); transform-origin: 50% 100%; background-image: repeating-linear-gradient(to right, rgb(59 196 242 / 0.28) 0 1px, transparent 1px 72px), repeating-linear-gradient(to bottom, rgb(59 196 242 / 0.28) 0 1px, transparent 1px 72px); mask-image: linear-gradient(to bottom, transparent 4%, #000000 58%);"></div>
+  </div>
+
+  <svg viewBox="0 0 200 200" fill="none" stroke="#8a6a2e" stroke-width="0.6" style="position: absolute; top: 120px; left: 50%; width: 640px; height: 640px; transform: translateX(-50%); overflow: visible;">
+    <circle cx="100" cy="100" r="92" />
+    <circle cx="100" cy="100" r="74" />
+    <circle cx="100" cy="100" r="56" />
+    <line x1="100" y1="8" x2="100" y2="16" /><line x1="192" y1="100" x2="184" y2="100" />
+    <line x1="100" y1="192" x2="100" y2="184" /><line x1="8" y1="100" x2="16" y2="100" />
+    <line x1="165" y1="35" x2="159" y2="41" /><line x1="35" y1="35" x2="41" y2="41" />
+    <line x1="165" y1="165" x2="159" y2="159" /><line x1="35" y1="165" x2="41" y2="159" />
+  </svg>
+
+  <svg viewBox="0 0 100 130" fill="#7fe9ff" style="position: absolute; bottom: 130px; left: 50%; width: 300px; transform: translateX(-50%); filter: drop-shadow(-1.5px 0 0 rgb(59 196 242 / 0.55)) drop-shadow(1.5px 0 0 rgb(166 107 255 / 0.55)); opacity: 0.92;">
+    <circle cx="50" cy="28" r="20" />
+    <path d="M50 54c-22 0-34 18-38 50-1 8 4 12 12 12h52c8 0 13-4 12-12-4-32-16-50-38-50z" />
+  </svg>
+
+  <div style="position: absolute; top: 96px; left: 72px; display: flex; flex-direction: column; gap: 28px; width: 300px;">
+    <p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; line-height: 1.2; color: #ede7da; text-align: right; text-wrap: pretty;">Las cartas llevan seis siglos respondiendo.</p>
+    <p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; line-height: 1.2; color: rgb(237 231 218 / 0.45); text-align: right;">No predicen. Describen.</p>
+  </div>
+
+  <div style="position: absolute; top: 150px; right: 72px; display: flex; flex-direction: column; gap: 28px; width: 300px;">
+    <p style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 26px; line-height: 1.2; color: #ede7da; text-wrap: pretty;">Yo solo las traduzco.</p>
+    <p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 20px; letter-spacing: 0.1em; color: #3bc4f2;">♒︎ ♓︎ ☿︎ndo ♄e ♎︎uedes</p>
+  </div>
+
+  <div style="position: absolute; top: 40px; left: 0; right: 0; display: flex; align-items: baseline; justify-content: space-between; padding-inline: 48px;">
+    <span style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 22px; font-weight: 600; letter-spacing: 0.02em; color: #ede7da;">Sibila</span>
+    <div style="display: flex; gap: 28px; font-size: 14px; color: #93a3bc;">
+      <span>Tiradas</span><span>Cartas</span><span>Mi historial</span>
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.14em; color: #5a6b85;">ES</span>
+    </div>
+  </div>
+
+  <div style="position: absolute; bottom: 96px; left: 0; right: 0; display: flex; flex-direction: column; gap: 28px; align-items: center;">
+    <h1 style="margin: 0; font-family: 'Cormorant Garamond', Georgia, serif; font-size: 76px; font-weight: 700; line-height: 1.1; letter-spacing: -0.015em; color: #ede7da;">Pregunta a Sibila</h1>
+    <div style="display: flex; gap: 16px;">
+      <span style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 24px; border: 1px solid #3bc4f2; border-radius: 999px; box-shadow: 0 0 24px rgb(59 196 242 / 0.35); font-size: 14px; font-weight: 500; letter-spacing: 0.03em; color: #7fe9ff;">Empezar una lectura</span>
+      <span style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 24px; border: 1px solid #8a6a2e; border-radius: 999px; font-size: 14px; font-weight: 500; letter-spacing: 0.03em; color: #d4a552;">Ver las 78 cartas</span>
+    </div>
+    <p style="margin: 0; font-size: 12px; color: #5a6b85;">Sin registro. Las cartas y su significado, gratis.</p>
+  </div>
+
+  <div style="position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 2px, rgb(127 233 255 / 0.07) 2px, rgb(127 233 255 / 0.07) 3px);"></div>
+  <div style="position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 40px rgb(127 233 255 / 0.35);"></div>
+</div>
+</x-dc>
+</body>
+</html>

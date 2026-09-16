@@ -1,0 +1,115 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "1 - Portada"
+    },
+    {
+      "file": "Catalogo.dc.html",
+      "x": 1560,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "2 - Catalogo de tiradas"
+    },
+    {
+      "file": "Pregunta.dc.html",
+      "x": 3120,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "3 - La pregunta"
+    },
+    {
+      "file": "Barajado.dc.html",
+      "x": 4680,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "4 - Barajado"
+    },
+    {
+      "file": "Seleccion.dc.html",
+      "x": 0,
+      "y": 1060,
+      "w": 1440,
+      "h": 900,
+      "title": "5 - Seleccion (abanico)"
+    },
+    {
+      "file": "Revelado.dc.html",
+      "x": 1560,
+      "y": 1060,
+      "w": 1440,
+      "h": 900,
+      "title": "6 - Revelado y significado"
+    },
+    {
+      "file": "Muro.dc.html",
+      "x": 3120,
+      "y": 1060,
+      "w": 1440,
+      "h": 900,
+      "title": "7 - El muro"
+    },
+    {
+      "file": "Sintesis.dc.html",
+      "x": 4680,
+      "y": 1060,
+      "w": 1440,
+      "h": 900,
+      "title": "8 - Sintesis"
+    },
+    {
+      "file": "PortadaMovil.dc.html",
+      "x": 0,
+      "y": 2120,
+      "w": 390,
+      "h": 844,
+      "title": "1m - Portada movil"
+    },
+    {
+      "file": "SeleccionMovil.dc.html",
+      "x": 510,
+      "y": 2120,
+      "w": 390,
+      "h": 844,
+      "title": "5m - Seleccion movil"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "recorrido",
+      "x": 0,
+      "y": -150,
+      "w": 460,
+      "text": "EL RECORRIDO COMPLETO. Fila 1: entrada y preparacion. Fila 2: la lectura y el corte de pago. Fila 3: las dos pantallas que en movil NO se encogen, se cambian."
+    },
+    {
+      "id": "corte-de-pago",
+      "x": 3120,
+      "y": 910,
+      "w": 420,
+      "text": "AQUI SE CORTA. Todo lo de la izquierda es gratis y sale de fichero. El muro es el unico sitio donde se pide dinero, y ofrece dos caminos: compra suelta sin cuenta, o suscripcion."
+    },
+    {
+      "id": "sin-cargador",
+      "x": 0,
+      "y": 910,
+      "w": 420,
+      "text": "La portada es ruta de contenido: su metrica son los Core Web Vitals. El retrato es el LCP y se pinta sin JavaScript. Nunca puede haber un 'INITIALIZING SCENE'."
+    },
+    {
+      "id": "rolodex",
+      "x": 510,
+      "y": 3000,
+      "w": 420,
+      "text": "78 cartas sobre 110 grados dan franjas de 6 a 19 px, muy por debajo de los 44 px tactiles minimos. Por eso en movil el abanico se sustituye por un rolodex con zona de foco."
+    }
+  ],
+  "launch": { "view": "canvas" }
+}

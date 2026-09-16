@@ -1,0 +1,62 @@
+{
+  "metadatos": {
+    "titulo": "Sibila · Tarot com um oráculo que te escuta",
+    "descripcion": "Faz a tua pergunta, escolhe as cartas e deixa a Sibila lê-las. As 78 cartas, com inversões, e uma interpretação que atende à tiragem inteira."
+  },
+  "navegacion": {
+    "tiradas": "Tiragens",
+    "cartas": "Cartas",
+    "historial": "O meu histórico",
+    "idioma": "Idioma",
+    "entrar": "Entrar"
+  },
+  "portada": {
+    "titular": "Pergunta à Sibila",
+    "entradilla": "As cartas respondem há seis séculos. A Sibila traduz.",
+    "llamada": "Começar uma leitura",
+    "secundaria": "Ver as 78 cartas"
+  },
+  "lectura": {
+    "pregunta": {
+      "etiqueta": "O que queres perguntar?",
+      "marcador": "Escreve a tua pergunta…",
+      "ayuda": "Quanto mais concreta for, mais útil será a resposta.",
+      "contador": "{restantes} caracteres restantes",
+      "continuar": "Baralhar as cartas"
+    },
+    "barajado": {
+      "aviso": "Pensa na tua pergunta enquanto o baralho é misturado."
+    },
+    "seleccion": {
+      "instruccion": "Escolhe {total, plural, one {# carta} other {# cartas}}",
+      "restantes": "{restantes, plural, =0 {Já estão todas} one {Falta # carta} other {Faltam # cartas}}",
+      "continuar": "Revelar"
+    },
+    "revelado": {
+      "voltear": "Vira a carta",
+      "invertida": "Invertida",
+      "siguiente": "Carta seguinte"
+    },
+    "sintesis": {
+      "titulo": "O que dizem em conjunto",
+      "cargando": "A Sibila está a ler a tiragem…"
+    }
+  },
+  "muro": {
+    "titulo": "As cartas já falaram em separado",
+    "cuerpo": "A conversa entre elas é outra coisa. A síntese relaciona as {total} cartas da tua tiragem e responde à tua pergunta concreta.",
+    "llamada": "Desbloquear a síntese",
+    "alternativa": "Continuar sem a síntese"
+  },
+  "comun": {
+    "cargando": "A carregar…",
+    "reintentar": "Tentar de novo",
+    "volver": "Voltar",
+    "cerrar": "Fechar"
+  },
+  "legal": {
+    "edad": "Apenas para maiores de 18 anos.",
+    "encuadre": "A Sibila é uma ferramenta de entretenimento e autoconhecimento. Não prevê o futuro nem substitui aconselhamento médico, legal, financeiro ou psicológico.",
+    "crisis": "Se estás a passar por uma crise, procura ajuda profissional."
+  }
+}

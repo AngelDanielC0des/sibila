@@ -1,0 +1,14 @@
+{
+  "la-torre": {
+    "derecha": "La Torre no avisa. Lo que se derrumba aquí es lo que ya estaba agrietado por dentro, y el golpe solo hace visible una grieta que llevaba tiempo ahí. No es castigo ni azar: es una estructura que dejó de sostenerse y tardó en admitirlo. Lo que queda después es suelo firme, aunque de momento no lo parezca.",
+    "invertida": "La Torre invertida es el derrumbe aplazado. La estructura ya cedió, pero se sigue apuntalando por dentro, y cada puntal nuevo encarece el día que caiga. También puede ser el temblor que se sintió y no llegó a tirar nada: el aviso que se decidió no escuchar. Lo que se evita aquí no se cancela, solo espera."
+  },
+  "el-ermitano": {
+    "derecha": "El Ermitaño se aparta a propósito. No es soledad impuesta ni huida: es la decisión de bajar el ruido para oír algo que con ruido no se oye. Sube con una lámpara, y la lámpara no le sirve solo a él — alumbra el camino a quien viene detrás. Aquí hay una respuesta, pero no está fuera.",
+    "invertida": "El Ermitaño invertido es el retiro que se pasó de largo. Lo que empezó siendo una pausa deliberada se ha vuelto costumbre, y la lámpara ya no alumbra a nadie porque no hay nadie cerca. También aparece cuando la respuesta se busca fuera, en cualquier voz que hable alto, justo cuando tocaba callar. La salida no es más ruido."
+  },
+  "cuatro-de-copas": {
+    "derecha": "Tres copas delante y una cuarta que se ofrece, y la mirada puesta en otra parte. El Cuatro de Copas no habla de carencia sino de hartazgo: hay algo disponible y no lo estás viendo, precisamente porque ya tienes suficiente de algo parecido. El desinterés aquí no es descanso, es una puerta que se cierra sola.",
+    "invertida": "El Cuatro de Copas invertido es el momento en que la mirada vuelve. Lo que se ofrecía seguía ahí todo el tiempo, y de pronto se ve: no porque haya cambiado, sino porque se ha agotado el hartazgo. También puede ser la sacudida que rompe la apatía desde fuera, sin permiso. El descanso terminó."
+  }
+}

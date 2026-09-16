@@ -1,0 +1,24 @@
+.holograma {
+  position: relative;
+  isolation: isolate;
+
+  /*
+   * Un único mando gradúa el tratamiento entero. Cada capa lee este factor como
+   * su opacidad, así que subir o bajar la intensidad no obliga a tocar cinco
+   * ornamentos por separado ni a que queden desacompasados.
+   */
+  --factor-ornamento: 1;
+}
+
+.holograma[data-intensidad="sutil"] {
+  --factor-ornamento: 0.55;
+}
+
+.holograma[data-intensidad="reposo"] {
+  --factor-ornamento: 0.25;
+}
+
+.sujeto {
+  position: relative;
+  z-index: var(--capa-contenido);
+}

@@ -1,0 +1,24 @@
+# Finales de línea
+#
+# `.editorconfig` declara `end_of_line = lf`, pero Git en Windows tiene
+# `core.autocrlf = true` y sacaría los ficheros con CRLF, contradiciéndolo. Eso
+# provoca que Prettier reescriba ficheros que nadie ha tocado y que los diffs
+# salgan enteros en rojo. Aquí se fija LF en el repositorio **y** en el árbol de
+# trabajo, que es lo que espera el resto de la configuración.
+* text=auto eol=lf
+
+# Binarios: Git no debe tocarlos nunca.
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.webp  binary
+*.avif  binary
+*.ico   binary
+*.mp4   binary
+*.webm  binary
+*.woff  binary
+*.woff2 binary
+
+# Generados: no cuentan como código en las estadísticas del repositorio y no
+# tiene sentido revisarlos a mano.
+package-lock.json  -diff linguist-generated

@@ -1,0 +1,36 @@
+.barrido {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: var(--factor-ornamento, 1);
+}
+
+/*
+ * El patrón vive en un hijo más alto que el contenedor para poder desplazarlo
+ * sin que asome el borde. Se traslada una distancia múltiplo exacto del paso,
+ * que es lo que hace que el bucle no tenga costura.
+ */
+.barrido::before {
+  content: "";
+  position: absolute;
+  inset: -100% 0;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--barrido-paso) - var(--barrido-linea)),
+    var(--velo-barrido) calc(var(--barrido-paso) - var(--barrido-linea)),
+    var(--velo-barrido) var(--barrido-paso)
+  );
+  animation: deriva-de-barrido 6s linear infinite;
+}
+
+@keyframes deriva-de-barrido {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(var(--barrido-paso) * 20));
+  }
+}

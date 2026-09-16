@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sibila
 
-## Getting Started
+Plataforma de tarot interactivo con una oráculo holográfica. Las 78 cartas, con
+inversiones, y una interpretación que atiende a la tirada entera.
 
-First, run the development server:
+Web primero, multiidioma desde la arquitectura. La astrología llega en la v2.
+
+## Puesta en marcha
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La aplicación queda en `http://localhost:3000/es`. Los idiomas activos son
+`es`, `pt` y `en`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comandos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Comando             | Qué hace                                            |
+| ------------------- | --------------------------------------------------- |
+| `npm run dev`       | Servidor de desarrollo                              |
+| `npm run build`     | Compilación de producción                           |
+| `npm run verificar` | **La puerta**: tipos + eslint + stylelint + pruebas |
+| `npm run typecheck` | Solo comprobación de tipos                          |
+| `npm run lint`      | Solo ESLint, con información de tipos               |
+| `npm run lint:css`  | Solo Stylelint                                      |
+| `npm test`          | Pruebas del motor de lectura                        |
+| `npm run format`    | Formatea con Prettier                               |
 
-## Learn More
+Si `npm run verificar` no pasa, el trabajo no está terminado. El gancho de
+pre-commit ejecuta las mismas comprobaciones sobre los ficheros en preparación.
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+  app/[idioma]/       rutas localizadas · toda página vive dentro de un idioma
+  i18n/               enrutado, catálogos y resolución de idioma
+  estilos/            tokens de diseño y hoja global
+  motor-de-lectura/   lógica de la lectura · agnóstica de presentación
+  renderizadores/     escritorio en 3D y móvil plano · solo pintan
+messages/             catálogos de interfaz por idioma
+docs/
+  plan-v1.md          plan de construcción
+  investigacion/      auditoría de campo de la competencia
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Convenciones
 
-## Deploy on Vercel
+El código se escribe **en español**: nombres de clases, métodos, variables y
+comentarios. El detalle completo, con el glosario de dominio y las reglas de
+estilo, está en [CLAUDE.md](./CLAUDE.md).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Aviso
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Sibila es una herramienta de entretenimiento y autoconocimiento para mayores de
+18 años. No predice el futuro ni sustituye consejo médico, legal, financiero ni
+psicológico.
