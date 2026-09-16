@@ -248,7 +248,12 @@ describe("los huecos de la capa de valencias", () => {
       { carta: ERMITANO, orientacion: "invertida", modo: "base" },
       { carta: ERMITANO, orientacion: "derecha", modo: "matiz", familia: "pasado" },
       { carta: ERMITANO, orientacion: "derecha", modo: "valencia" },
-      { carta: TORRE, orientacion: "invertida", modo: "matiz", familia: "aporte" },
+      {
+        carta: TORRE,
+        orientacion: "invertida",
+        modo: "matiz",
+        familia: "aporte-vinculo",
+      },
     ];
 
     for (const peticion of peticiones) {

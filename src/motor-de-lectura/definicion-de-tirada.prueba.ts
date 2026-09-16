@@ -1,8 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { existeFamilia } from "./familias";
+import { buscarFamiliaPorId, existeFamilia, FAMILIAS } from "./familias";
 import {
   buscarTiradaPorId,
   existeTirada,
+  familiasEnUso,
   TIRADAS,
   type DefinicionDeTirada,
 } from "./definicion-de-tirada";
@@ -106,11 +107,67 @@ describe("el catálogo de tiradas", () => {
   /*
    * La Cruz Celta no está por una razón concreta, no por olvido: tres de sus
    * diez posiciones —lo que corona, la actitud propia y el pasado reciente— no
-   * tienen familia, y crearlas cuesta 468 piezas de corpus por idioma. Es la
+   * tienen familia. Con el mapa temático el precio sube: además de crear esas
+   * tres, tendría que escribir `interior` y `entorno`, que hoy están
+   * declaradas y en espera. Son cinco familias, 780 piezas por idioma. Es la
    * decisión D2. Cuando se decida, esta prueba se cambia a la vez que la
    * declaración, y así nadie la añade a medias.
    */
   it("la Cruz Celta sigue fuera mientras D2 esté abierta", () => {
     expect(existeTirada("cruz-celta")).toBe(false);
+  });
+});
+
+/*
+ * El eje temático es una decisión de producto con precio: cada familia son 156
+ * piezas de corpus. Estas pruebas la fijan para que no se desdibuje sola.
+ */
+describe("el eje temático", () => {
+  it("el sufijo del identificador y el tema dicen lo mismo", () => {
+    const incoherentes = FAMILIAS.filter(
+      (familia) => familia.id.endsWith("-vinculo") !== (familia.tema === "vinculo"),
+    ).map((familia) => familia.id);
+
+    expect(incoherentes).toEqual([]);
+  });
+
+  /*
+   * Si una posición de la tirada de amor se quedara con una familia genérica,
+   * la tirada pasaría a leerse como la general con otro nombre, que es
+   * exactamente lo que el eje temático existe para evitar.
+   */
+  it("la tirada de amor es temática en sus cinco posiciones", () => {
+    const amor = buscarTiradaPorId("amor-de-cinco");
+    const genericas = (amor?.posiciones ?? [])
+      .map((posicion) => posicion.familia)
+      .filter((id) => id !== undefined)
+      .filter((id) => buscarFamiliaPorId(id)?.tema !== "vinculo");
+
+    expect(genericas).toEqual([]);
+  });
+});
+
+describe("qué familias cuestan corpus", () => {
+  it("sólo están en uso las que alguna tirada nombra", () => {
+    const enUso = familiasEnUso();
+    const declaradasYSinUsar = FAMILIAS.filter((familia) => !enUso.has(familia.id)).map(
+      (familia) => familia.id,
+    );
+
+    /*
+     * Las dos esperan a la Cruz Celta, que está fuera por D2. Que la lista sea
+     * exactamente ésta es lo que impide dos errores opuestos: escribir 156
+     * piezas que nadie lee, y dejar sin escribir una familia que sí se usa.
+     */
+    expect([...declaradasYSinUsar].sort()).toEqual(["entorno", "interior"]);
+  });
+
+  it("el recuento del corpus de la v1 es el aprobado", () => {
+    const PIEZAS_POR_CAPA = 156;
+    const matices = familiasEnUso().size * PIEZAS_POR_CAPA;
+    const total = matices + PIEZAS_POR_CAPA * 2;
+
+    expect(familiasEnUso().size).toBe(13);
+    expect(total).toBe(2340);
   });
 });

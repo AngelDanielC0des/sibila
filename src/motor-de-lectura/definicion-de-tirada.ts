@@ -139,7 +139,7 @@ export const TIRADAS: readonly DefinicionDeTirada[] = [
       "situacion",
       "obstaculo",
       "recurso",
-      "a-trabajar",
+      "a-atender",
       "resultado",
     ]),
   },
@@ -147,9 +147,46 @@ export const TIRADAS: readonly DefinicionDeTirada[] = [
     id: "amor-de-cinco",
     numeroDeCartas: 5,
     modo: "matiz",
-    posiciones: enUnaFila(["aporte", "pasado", "situacion", "a-trabajar", "futuro"]),
+    /*
+     * Las cinco posiciones son del vínculo, no genéricas con otro nombre. Es lo
+     * que hace que la tirada se lea como lo que dice ser.
+     */
+    posiciones: enUnaFila([
+      "aporte-vinculo",
+      "pasado-vinculo",
+      "situacion-vinculo",
+      "a-atender-vinculo",
+      "futuro-vinculo",
+    ]),
   },
 ];
+
+/**
+ * Las familias que alguna tirada activa usa de verdad.
+ *
+ * Declarar una familia es barato; escribirla son 156 piezas de corpus. Esta
+ * función es la que distingue una cosa de la otra, y se deriva en lugar de
+ * marcarse a mano: una familia queda «en uso» porque una tirada la nombra, no
+ * porque alguien se acuerde de anotarlo.
+ *
+ * Vive aquí y no en `familias.ts` porque la dirección de la dependencia es
+ * ésta: las tiradas conocen a las familias, nunca al revés.
+ *
+ * @returns Los identificadores de familia en uso, sin repetir.
+ */
+export function familiasEnUso(): ReadonlySet<IdFamilia> {
+  const enUso = new Set<IdFamilia>();
+
+  for (const tirada of TIRADAS) {
+    for (const posicion of tirada.posiciones) {
+      if (posicion.familia !== undefined) {
+        enUso.add(posicion.familia);
+      }
+    }
+  }
+
+  return enUso;
+}
 
 /** Índice de tiradas por identificador, para acceso en tiempo constante. */
 const TIRADAS_POR_ID: ReadonlyMap<string, DefinicionDeTirada> = new Map(

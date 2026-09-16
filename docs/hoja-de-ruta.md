@@ -91,6 +91,37 @@ nada porque el panel donde se leen no existía.
 | 390   | 42 base · 41 matiz   | 540 px de 844       | carta y matiz sin desplazar |
 | 320   | 31 base · 30 matiz   | 594 px de 844       | carta y matiz sin desplazar |
 
+### B1c · Mapa de familias temáticas — aprobado
+
+El significado se matiza por dos ejes: la posición y el tema. El tema **suma**
+familias en lugar de multiplicarlas, y una familia se escribe sólo cuando una
+tirada la usa.
+
+| Grupo                  | Familias                                                                                       | Piezas |
+| ---------------------- | ---------------------------------------------------------------------------------------------- | ------ |
+| Genéricas en uso       | `situacion`, `obstaculo`, `pasado`, `futuro`, `resultado`, `consejo`, `recurso`, `a-atender`   | 1.248  |
+| Del vínculo            | `aporte-vinculo`, `situacion-vinculo`, `pasado-vinculo`, `a-atender-vinculo`, `futuro-vinculo` | 780    |
+| Declaradas y en espera | `interior`, `entorno` · ninguna tirada activa las usa                                          | 0      |
+
+**Total de la v1: 2.340 piezas**, unas 72.000 palabras en español. Base 156,
+matices 2.028, valencias 156, más 78 núcleos.
+
+Lo que salió de hacer el mapa:
+
+- **Dos familias no las usaba ninguna tirada.** `interior` y `entorno` se
+  escribieron para la Cruz Celta, que está fuera por D2. Escribirlas ahora
+  habrían sido 312 piezas que nadie lee. Se quedan declaradas y sin escribir, y
+  quién está en uso lo **deriva** `familiasEnUso()` en lugar de marcarse a mano.
+- `a-trabajar` pasa a `a-atender`. El nombre ya chirriaba con su propia pregunta
+  —«atender o soltar»— y además el día que entre un tema de trabajo la variante
+  habría sido `a-trabajar-trabajo`.
+- `aporte` pasa a `aporte-vinculo`: nunca fue genérica.
+- **La tirada de amor lleva las cinco posiciones temáticas.** Si una se quedara
+  genérica, la tirada se leería como la general con otro nombre.
+- El informe de `npm run corpus` cuenta contra las familias en uso: contar las
+  dos en espera mostraba un cero eterno y hundía el porcentaje midiendo trabajo
+  que nadie ha decidido hacer.
+
 ### A1 · Sistema de diseño
 
 Nada de pantallas reales hasta que esto esté. Construir componentes sobre tokens
@@ -211,14 +242,14 @@ descubrirlo con tres clips hechos que con el catálogo entero.
 
 Ninguna bloquea hoy. Se anotan para resolverlas cuando toque y no antes.
 
-|     | Decisión                                                                                                                                                                                                                                                                                                                       | Bloquea a   | Cuándo hay que resolverla        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- | -------------------------------- |
-| D1  | **Interacción táctil del abanico.** La aritmética descarta «el mismo abanico más pequeño»: 78 cartas sobre 110° dan franjas de 6–19px frente a los 44px mínimos. Recomendación: rotación tipo rolodex con zona de foco                                                                                                         | A3.3        | Antes de empezar A3              |
-| D2  | **La Cruz Celta, ¿entra?** Auditada: tres de sus diez posiciones no tienen familia —lo que corona, la actitud propia y el pasado reciente, que hoy chocaría con la raíz y repetiría texto—. Crearlas cuesta **468 piezas por idioma**, un 27 % más de capa de matiz. Las otras seis tiradas ya están y no cuestan corpus nuevo | B3          | Cuando B2 esté cerca de terminar |
-| D3  | **Proveedor de modelo**                                                                                                                                                                                                                                                                                                        | A5.3        | Antes de A5                      |
-| D4  | **Pasarela de pago** y si acepta pago sin cuenta con el flujo que queremos                                                                                                                                                                                                                                                     | A5.4        | Antes de A5                      |
-| D5  | **Voseo** para Argentina                                                                                                                                                                                                                                                                                                       | A7, o nunca | Solo si entra ese mercado        |
-| D6  | **Postura ante Raka**, que ya ocupa la tesis de tarot informado por carta natal. ¿La astrología sigue en la v2 o se adelanta algo?                                                                                                                                                                                             | Nada hoy    | Tras lanzar el tarot             |
+|     | Decisión                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Bloquea a   | Cuándo hay que resolverla        |
+| --- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- | -------------------------------- |
+| D1  | **Interacción táctil del abanico.** La aritmética descarta «el mismo abanico más pequeño»: 78 cartas sobre 110° dan franjas de 6–19px frente a los 44px mínimos. Recomendación: rotación tipo rolodex con zona de foco                                                                                                                                                                                                                                                     | A3.3        | Antes de empezar A3              |
+| D2  | **La Cruz Celta, ¿entra?** Auditada: tres de sus diez posiciones no tienen familia —lo que corona, la actitud propia y el pasado reciente, que hoy chocaría con la raíz y repetiría texto—. Con el mapa temático el precio sube: además de crear esas tres, habría que escribir `interior` y `entorno`, hoy declaradas y en espera. Son **cinco familias, 780 piezas por idioma**, un 38 % más de capa de matiz. Las otras seis tiradas ya están y no cuestan corpus nuevo | B3          | Cuando B2 esté cerca de terminar |
+| D3  | **Proveedor de modelo**                                                                                                                                                                                                                                                                                                                                                                                                                                                    | A5.3        | Antes de A5                      |
+| D4  | **Pasarela de pago** y si acepta pago sin cuenta con el flujo que queremos                                                                                                                                                                                                                                                                                                                                                                                                 | A5.4        | Antes de A5                      |
+| D5  | **Voseo** para Argentina                                                                                                                                                                                                                                                                                                                                                                                                                                                   | A7, o nunca | Solo si entra ese mercado        |
+| D6  | **Postura ante Raka**, que ya ocupa la tesis de tarot informado por carta natal. ¿La astrología sigue en la v2 o se adelanta algo?                                                                                                                                                                                                                                                                                                                                         | Nada hoy    | Tras lanzar el tarot             |
 
 ---
 

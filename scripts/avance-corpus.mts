@@ -13,6 +13,7 @@ import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { BARAJA, ORIENTACIONES } from "../src/motor-de-lectura/baraja.ts";
 import { FAMILIAS } from "../src/motor-de-lectura/familias.ts";
+import { familiasEnUso } from "../src/motor-de-lectura/definicion-de-tirada.ts";
 
 const RAIZ = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const IDIOMA = process.argv[2] ?? "es";
@@ -105,7 +106,18 @@ const ficherosDeMatices = existsSync(carpetaMatices)
 
 let maticesEscritos = 0;
 
-for (const familia of FAMILIAS) {
+/*
+ * Se cuenta contra las familias EN USO, no contra todas las declaradas.
+ *
+ * `interior` y `entorno` están declaradas porque la Cruz Celta las necesitará,
+ * pero ninguna tirada activa las usa. Contarlas mostraría un cero eterno y
+ * hundiría el porcentaje midiendo trabajo que nadie ha decidido hacer.
+ */
+const enUso = familiasEnUso();
+const familiasQueCuentan = FAMILIAS.filter((familia) => enUso.has(familia.id));
+const familiasEnEspera = FAMILIAS.filter((familia) => !enUso.has(familia.id));
+
+for (const familia of familiasQueCuentan) {
   const fichero = `${familia.id}.json`;
   const avance = ficherosDeMatices.has(fichero)
     ? medirCapa(resolve(carpetaMatices, fichero), familia.id)
@@ -115,7 +127,15 @@ for (const familia of FAMILIAS) {
   imprimirLinea(avance);
 }
 
-const totalEsperado = PIEZAS_POR_CAPA * (2 + FAMILIAS.length);
+if (familiasEnEspera.length > 0) {
+  const nombres = familiasEnEspera.map((familia) => familia.id).join(", ");
+  console.log(
+    `
+  Declaradas y sin escribir, porque ninguna tirada las usa: ${nombres}`,
+  );
+}
+
+const totalEsperado = PIEZAS_POR_CAPA * (2 + familiasQueCuentan.length);
 const totalEscrito = avanceBase.escritas + avanceValencias.escritas + maticesEscritos;
 const porcentajeTotal = Math.round((totalEscrito / totalEsperado) * 100);
 
