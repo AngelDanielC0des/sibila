@@ -237,6 +237,20 @@ El validador las comprueba en cada lote.
 Verificadas en el componente real a 320, 390 y 1440 px: el caso peor son las 130
 palabras de matiz más base, y caben. Ver la hoja de ruta, B1b.
 
+> ### El rango es lo permitido, no el objetivo
+>
+> Un significado base **apunta a unas 60 palabras**. Los ejemplos de §8 rondan
+> las 57, y son el estándar; las 90 son el techo del que no se pasa, no la
+> medida a la que aspirar.
+>
+> Importa por dos motivos. Uno, una base de 85 palabras con su matiz encima deja
+> la composición pegada al caso peor que se midió, sin margen. Dos, y es el que
+> cuenta: una pieza larga casi siempre es una pieza con relleno, y el relleno es
+> por donde se cuela el horóscopo.
+>
+> La primera tanda se escribió en 68–82 palabras y se reescribió a 61–69. No
+> perdió nada. Eso es exactamente la prueba.
+
 ---
 
 ## 6. Cómo se escribe una carta invertida
@@ -254,6 +268,21 @@ corresponde a cada carta **se decide una sola vez**, en el núcleo de esa carta
 | **Exceso**          | La energía se desborda y se vuelve contra sí | La Fuerza invertida: dominio que se convierte en dureza |
 | **Interiorización** | Ocurre por dentro, no por fuera              | El Sol invertido: una alegría que no se comparte        |
 | **Retraso**         | Va a expresarse, pero todavía no             | El As de Oros invertido: una oportunidad aún sin abrir  |
+
+### 6.1 El `voz` del núcleo no se copia en la pieza
+
+El núcleo tiene tres campos y los dos primeros se usan distinto. El `invariante`
+es el contrato: la pieza tiene que decir eso. El `voz` es el **espécimen de
+tono**: enseña cómo suena esa carta en boca de Sibila, y su trabajo termina ahí.
+
+Copiarlo dentro de la pieza sale barato y sale mal. Las frases del núcleo son
+las mejores que tiene esa carta —por eso se eligieron—, y gastarlas como cierre
+deja la pieza sin nada propio que recordar. Peor: si el día de mañana se escriben
+el matiz y la valencia de esa carta con el mismo reflejo, la misma frase aparece
+tres veces en la misma pantalla.
+
+Cada pieza se gana su propia frase memorable. El núcleo enseña el registro; no
+presta el texto.
 
 ---
 

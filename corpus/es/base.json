@@ -1,11 +1,31 @@
 {
-  "la-torre": {
-    "derecha": "La Torre no avisa. Lo que se derrumba aquí es lo que ya estaba agrietado por dentro, y el golpe solo hace visible una grieta que llevaba tiempo ahí. No es castigo ni azar: es una estructura que dejó de sostenerse y tardó en admitirlo. Lo que queda después es suelo firme, aunque de momento no lo parezca.",
-    "invertida": "La Torre invertida es el derrumbe aplazado. La estructura ya cedió, pero se sigue apuntalando por dentro, y cada puntal nuevo encarece el día que caiga. También puede ser el temblor que se sintió y no llegó a tirar nada: el aviso que se decidió no escuchar. Lo que se evita aquí no se cancela, solo espera."
+  "el-loco": {
+    "derecha": "El Loco tiene un pie en el aire y el borde debajo, y aun así el gesto no es de caída: es de salida. Lleva lo poco que cabe en un hatillo porque todavía no sabe qué necesita, y esa ignorancia es su ventaja. Nadie con experiencia daría este paso. Aquí se empieza sin garantías, y el camino aparece al andarlo.",
+    "invertida": "El Loco invertido es el salto que no se da. El pie sigue en el aire y el borde sigue ahí, pero el gesto se queda en el umbral: no por prudencia, sino por calcular algo que no se deja calcular. También aparece por el otro lado, saltando sin mirar dónde — el impulso sin dirección tampoco llega. Aquí falta el paso, no las ganas."
+  },
+  "el-mago": {
+    "derecha": "El Mago señala arriba con una mano y abajo con la otra, y entre las dos hay una mesa con cuatro herramientas puestas. No pide nada porque no le falta nada: bastos, copas, espadas y oros ya están ahí. Aquí el poder no es de deseo, es de ejecución. La distancia entre tenerlo todo y hacer algo con ello cabe en un gesto.",
+    "invertida": "El Mago invertido tiene la mesa igual de llena y las manos quietas. Las cuatro herramientas siguen ahí, y ahí se quedan: el poder existe y no sale, o se gasta en convencer en lugar de en hacer. También es la habilidad que se enseña más de lo que se emplea. Lo bloqueado aquí no es la capacidad, es su salida."
+  },
+  "la-sacerdotisa": {
+    "derecha": "La Sacerdotisa está sentada entre dos columnas, delante de un velo que no aparta. Sostiene un rollo a medio esconder: hay algo escrito y no toca leerlo en voz alta todavía. Lo que sabe no se transmite explicando, se transmite esperando, y el silencio que guarda no es vacío: es donde cabe una respuesta que aún no ha terminado de formarse. Aquí callar también es contestar.",
+    "invertida": "La Sacerdotisa invertida guarda de más. El velo deja de proteger un saber que madura y pasa a tapar uno que ya estaba listo: lo que se calla se endurece, y la reserva que servía para esperar acaba sirviendo para no decir. También aparece cuando la voz de dentro hace tanto ruido que tapa la de fuera. El límite sigue puesto, pero ahora retiene lo que tenía que salir."
+  },
+  "la-emperatriz": {
+    "derecha": "La Emperatriz está sentada en el trigo que ella misma dejó crecer, y no lo dejó crecer mirándolo: lo regó, lo esperó y lo defendió. La abundancia de esta carta no cae, se cultiva, y viene con su cuenta de tiempo. Lo que aquí prospera —una casa, un proyecto, un vínculo— prospera porque alguien lo alimenta con constancia. El crecimiento tiene su ritmo y no admite prisas.",
+    "invertida": "La Emperatriz invertida cuida de más. El mismo cuidado que hacía crecer empieza a tapar la luz: se riega lo que ya no necesita agua, se sostiene lo que podría sostenerse solo, y el trigo se dobla bajo la mano que lo protege. También es dar hasta quedarse sin reserva, y llamarlo generosidad. Lo que se ahoga aquí se ahoga por exceso de atención, no por falta."
+  },
+  "el-emperador": {
+    "derecha": "El Emperador ocupa un trono de piedra en una montaña donde no crece nada, y eso es su mérito y su advertencia a la vez: lo que sostiene se sostiene sin ayuda del terreno. Lleva armadura debajo de la túnica porque el orden se defiende. Aquí los límites están puestos y se notan, y por eso hay dónde apoyar lo siguiente. El límite aquí no encierra, sujeta.",
+    "invertida": "El Emperador invertido aprieta el marco hasta que no cabe nada dentro. La estructura que servía para construir pasa a servir para controlar: la norma se aplica por la norma, y el límite se defiende cuando ya no protege nada. También es el orden que se impone hacia fuera porque dentro no lo hay. Lo que sobra aquí es rigidez, y lo que falta es el porqué."
   },
   "el-ermitano": {
     "derecha": "El Ermitaño se aparta a propósito. No es soledad impuesta ni huida: es la decisión de bajar el ruido para oír algo que con ruido no se oye. Sube con una lámpara, y la lámpara no le sirve solo a él — alumbra el camino a quien viene detrás. Aquí hay una respuesta, pero no está fuera.",
     "invertida": "El Ermitaño invertido es el retiro que se pasó de largo. Lo que empezó siendo una pausa deliberada se ha vuelto costumbre, y la lámpara ya no alumbra a nadie porque no hay nadie cerca. También aparece cuando la respuesta se busca fuera, en cualquier voz que hable alto, justo cuando tocaba callar. La salida no es más ruido."
+  },
+  "la-torre": {
+    "derecha": "La Torre no avisa. Lo que se derrumba aquí es lo que ya estaba agrietado por dentro, y el golpe solo hace visible una grieta que llevaba tiempo ahí. No es castigo ni azar: es una estructura que dejó de sostenerse y tardó en admitirlo. Lo que queda después es suelo firme, aunque de momento no lo parezca.",
+    "invertida": "La Torre invertida es el derrumbe aplazado. La estructura ya cedió, pero se sigue apuntalando por dentro, y cada puntal nuevo encarece el día que caiga. También puede ser el temblor que se sintió y no llegó a tirar nada: el aviso que se decidió no escuchar. Lo que se evita aquí no se cancela, solo espera."
   },
   "cuatro-de-copas": {
     "derecha": "Tres copas delante y una cuarta que se ofrece, y la mirada puesta en otra parte. El Cuatro de Copas no habla de carencia sino de hartazgo: hay algo disponible y no lo estás viendo, precisamente porque ya tienes suficiente de algo parecido. El desinterés aquí no es descanso, es una puerta que se cierra sola.",
