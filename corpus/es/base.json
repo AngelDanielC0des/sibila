@@ -19,9 +19,29 @@
     "derecha": "El Emperador ocupa un trono de piedra en una montaña donde no crece nada, y eso es su mérito y su advertencia a la vez: lo que sostiene se sostiene sin ayuda del terreno. Lleva armadura debajo de la túnica porque el orden se defiende. Aquí los límites están puestos y se notan, y por eso hay dónde apoyar lo siguiente. El límite aquí no encierra, sujeta.",
     "invertida": "El Emperador invertido aprieta el marco hasta que no cabe nada dentro. La estructura que servía para construir pasa a servir para controlar: la norma se aplica por la norma, y el límite se defiende cuando ya no protege nada. También es el orden que se impone hacia fuera porque dentro no lo hay. Lo que sobra aquí es rigidez, y lo que falta es el porqué."
   },
+  "el-hierofante": {
+    "derecha": "El Hierofante está sentado entre dos columnas con dos figuras arrodilladas delante, y lo que les da no es suyo: lo recibió y lo pasa, porque el saber aquí viene de fuera, de una norma que otros probaron antes. A sus pies hay dos llaves cruzadas: lo que abre está guardado, pero no escondido. Aprender de quien ya recorrió el camino no es renunciar a nada.",
+    "invertida": "El Hierofante invertido es la enseñanza que no llega. La norma sigue ahí y sigue repitiéndose, pero ya no explica nada: se cumple por costumbre, y nadie recuerda para qué se puso. También aparece cuando hay que salirse de lo aprendido y el permiso no llega de ninguna parte, porque no lo da nadie. Lo heredado aquí pesa más de lo que enseña."
+  },
+  "los-enamorados": {
+    "derecha": "Los Enamorados parecen una carta de amor. Son una carta de decisión. Hay dos figuras, dos árboles y una sola dirección posible, y la carta se juega en que elegir uno cierra el otro. Por eso el ángel está arriba y no interviene: la decisión no se delega. Lo que se pone en juego aquí no es el afecto, es el compromiso que lo sigue.",
+    "invertida": "Los Enamorados invertidos son la elección que no se cierra. Los dos caminos siguen abiertos porque mantenerlos abiertos parece la opción sin coste, y no lo es: no decidir también descarta, solo que despacio y sin que se note. También aparece como el compromiso firmado con la mitad de uno fuera. Aquí lo que falta no es una opción mejor, es decidir."
+  },
+  "el-carro": {
+    "derecha": "El Carro avanza tirado por dos esfinges que no van en la misma dirección, y ahí está todo el mérito: el movimiento no sale de la fuerza, sale de sujetar dos fuerzas contrarias a la vez. La ciudad ya queda atrás. Esto no es suerte ni empuje, es dirección sostenida. Lo que aquí gana no es el más fuerte, es el que no suelta.",
+    "invertida": "El Carro invertido tiene dirección y no tiene tracción: las dos esfinges tiran cada una hacia su lado, y la fuerza se gasta entera en no avanzar. También es el avance que se consigue atropellando, que llega a algún sitio y deja el carro roto. Aquí el problema no es la meta, es que nadie sujeta."
+  },
+  "la-fuerza": {
+    "derecha": "La Fuerza cierra la boca de un león sin apretar. No hay arma, no hay grito y no hay forcejeo: hay una mano encima y el tiempo suficiente para que el animal se deje. Esta carta describe el dominio que no necesita imponerse, y funciona porque no humilla a lo que doma. Lo que aquí se vence, se vence sin romperlo.",
+    "invertida": "La Fuerza invertida aprieta. El mismo dominio que bastaba con una mano se convierte en pulso. Lo que se doblega a la fuerza guarda memoria de haber sido doblegado. También es la paciencia estirada hasta volverse aguante, sosteniendo por orgullo algo que ya pedía soltarse. El león sigue ahí; lo que ha cambiado es la mano."
+  },
   "el-ermitano": {
     "derecha": "El Ermitaño se aparta a propósito. No es soledad impuesta ni huida: es la decisión de bajar el ruido para oír algo que con ruido no se oye. Sube con una lámpara, y la lámpara no le sirve solo a él — alumbra el camino a quien viene detrás. Aquí hay una respuesta, pero no está fuera.",
     "invertida": "El Ermitaño invertido es el retiro que se pasó de largo. Lo que empezó siendo una pausa deliberada se ha vuelto costumbre, y la lámpara ya no alumbra a nadie porque no hay nadie cerca. También aparece cuando la respuesta se busca fuera, en cualquier voz que hable alto, justo cuando tocaba callar. La salida no es más ruido."
+  },
+  "la-rueda-de-la-fortuna": {
+    "derecha": "La Rueda de la Fortuna describe un cambio que ya está en marcha y que no arrancó nadie: lo que sube y lo que baja intercambian sitio por el propio movimiento, no por mérito. En las cuatro esquinas hay figuras leyendo, quietas mientras todo lo demás da vueltas: el giro se atraviesa, no se discute. El momento no se escoge; la postura sí.",
+    "invertida": "La Rueda de la Fortuna invertida es el giro que se está tomando su tiempo. El cambio ya arrancó y todavía no se nota: hay latencia entre lo que se movió por debajo y lo que se ve. También es forzar la vuelta antes de que toque, empujando una rueda que gira sola. Lo que aquí falta no es el cambio, es su plazo."
   },
   "la-torre": {
     "derecha": "La Torre no avisa. Lo que se derrumba aquí es lo que ya estaba agrietado por dentro, y el golpe solo hace visible una grieta que llevaba tiempo ahí. No es castigo ni azar: es una estructura que dejó de sostenerse y tardó en admitirlo. Lo que queda después es suelo firme, aunque de momento no lo parezca.",

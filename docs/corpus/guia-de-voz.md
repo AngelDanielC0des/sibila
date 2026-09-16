@@ -251,6 +251,16 @@ palabras de matiz más base, y caben. Ver la hoja de ruta, B1b.
 > La primera tanda se escribió en 68–82 palabras y se reescribió a 61–69. No
 > perdió nada. Eso es exactamente la prueba.
 
+> ### La cadencia también deriva
+>
+> El rango de frases es 3–5 y conviene **usarlo entero**. Al medir las
+> veintiséis primeras piezas, veinticuatro tenían exactamente cuatro frases: no
+> incumplían nada y sonaban a plantilla, que es una forma de deriva que el
+> validador no puede ver porque cada pieza está bien por separado.
+>
+> Se corrige al escribir, variando dónde se corta. Una pieza de tres frases
+> largas y una de cinco cortas dicen lo mismo con dos respiraciones distintas.
+
 ---
 
 ## 6. Cómo se escribe una carta invertida
