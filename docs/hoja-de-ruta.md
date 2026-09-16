@@ -122,6 +122,31 @@ Lo que salió de hacer el mapa:
   dos en espera mostraba un cero eterno y hundía el porcentaje midiendo trabajo
   que nadie ha decidido hacer.
 
+### B1d · Los 78 núcleos — aprobados
+
+Antes de escribir 2.340 piezas hay que fijar **qué dice cada carta**. El núcleo
+no es corpus: es la decisión, tomada una sola vez por carta, que las 34 piezas
+de esa carta tienen que respetar. Escribir la base sin él es cómo se tuerce un
+corpus sin que el validador lo note.
+
+Cada núcleo son tres campos en `corpus/es/nucleos.json`:
+
+| Campo             | Qué es                                                   | Límite      |
+| ----------------- | -------------------------------------------------------- | ----------- |
+| `invariante`      | Lo que la carta dice, sin voz. El contrato semántico     | 25 palabras |
+| `voz`             | El espécimen de tono: la misma carta ya en voz de Sibila | 20 palabras |
+| `estadoInvertido` | Cuál de los cuatro estados de §6 de la guía le toca      | cerrado     |
+
+|       | Tarea                   | Terminado cuando                                                                                                                                                                     |
+| ----- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| B1d.1 | Los 78 núcleos escritos | ✅ 78 de 78. Reparto de estado invertido: bloqueo 29 · exceso 24 · retraso 17 · interiorización 8. Revisados por ti; El Loco, La Torre y La Luna se tomaron como muestra de control  |
+| B1d.2 | Validador enganchado    | ✅ `npm run validar:nucleos`, dentro de `npm run verificar`. Comprueba cobertura contra la baraja, longitudes, estado conocido, duplicados, y pasa el campo `voz` por la guía de voz |
+
+El campo `voz` se valida como si fuera una pieza de matiz —léxico prohibido,
+léxico que envejece, dosis de instrumento— menos la extensión, que no aplica
+porque un núcleo no es una capa del corpus. Es lo que impide que el espécimen de
+tono sea el único texto del proyecto que nadie revisa.
+
 ### A1 · Sistema de diseño
 
 Nada de pantallas reales hasta que esto esté. Construir componentes sobre tokens

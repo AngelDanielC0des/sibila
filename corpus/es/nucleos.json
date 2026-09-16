@@ -1,0 +1,396 @@
+{
+  "el-loco": {
+    "invariante": "El salto que se da sin garantías ni experiencia previa, confiando en que el camino aparece al andarlo.",
+    "voz": "El Loco salta antes de ver el suelo. Esa es toda su ventaja.",
+    "estadoInvertido": "bloqueo"
+  },
+  "el-mago": {
+    "invariante": "Tiene delante todo lo que necesita y la voluntad de usarlo. El poder aquí es de ejecución, no de deseo.",
+    "voz": "El Mago no pide nada: ya tiene las cuatro herramientas sobre la mesa.",
+    "estadoInvertido": "bloqueo"
+  },
+  "la-sacerdotisa": {
+    "invariante": "El saber que todavía no se dice. Conocimiento interior, paciencia y el límite entre lo que se muestra y lo que se guarda.",
+    "voz": "La Sacerdotisa sabe y calla. El silencio también es una respuesta.",
+    "estadoInvertido": "exceso"
+  },
+  "la-emperatriz": {
+    "invariante": "Lo que crece porque se cuida: fertilidad, abundancia material y afectiva, y el trabajo lento de sostener algo vivo.",
+    "voz": "La Emperatriz no fuerza el crecimiento: lo alimenta y espera el tiempo justo.",
+    "estadoInvertido": "exceso"
+  },
+  "el-emperador": {
+    "invariante": "La estructura que ordena: límites claros, autoridad ejercida y la solidez que permite construir encima.",
+    "voz": "El Emperador pone el marco. Sin marco no hay obra, sólo intención.",
+    "estadoInvertido": "exceso"
+  },
+  "el-hierofante": {
+    "invariante": "La tradición que enseña: lo aprendido de otros, la norma compartida y el valor de un camino ya recorrido.",
+    "voz": "El Hierofante transmite lo que recibió. No todo hay que descubrirlo solo.",
+    "estadoInvertido": "bloqueo"
+  },
+  "los-enamorados": {
+    "invariante": "Una elección que compromete. No es sólo amor: es decidir entre dos caminos sabiendo que uno se cierra.",
+    "voz": "Los Enamorados no hablan de encontrar: hablan de elegir, y elegir descarta.",
+    "estadoInvertido": "bloqueo"
+  },
+  "el-carro": {
+    "invariante": "El avance que se consigue dirigiendo fuerzas opuestas. Victoria por control y dirección, no por suerte.",
+    "voz": "El Carro avanza porque alguien sujeta las riendas de dos fuerzas contrarias.",
+    "estadoInvertido": "bloqueo"
+  },
+  "la-fuerza": {
+    "invariante": "El dominio que no necesita violencia. Se vence por paciencia y por trato, no por imposición.",
+    "voz": "La Fuerza cierra la boca del león con las manos abiertas, no con hierro.",
+    "estadoInvertido": "exceso"
+  },
+  "el-ermitano": {
+    "invariante": "La retirada deliberada para ver con claridad. Soledad elegida, no impuesta, y la luz que después alumbra a otros.",
+    "voz": "El Ermitaño baja el ruido hasta oír lo que con ruido no se oye.",
+    "estadoInvertido": "exceso"
+  },
+  "la-rueda-de-la-fortuna": {
+    "invariante": "El giro que no depende de ti. Ciclos que suben y bajan, y un momento exacto que no se elige.",
+    "voz": "La Rueda gira con permiso o sin él. Lo elegible es dónde te agarras.",
+    "estadoInvertido": "retraso"
+  },
+  "la-justicia": {
+    "invariante": "La consecuencia exacta de lo hecho. Equilibrio, responsabilidad y una cuenta que se salda sin descuento.",
+    "voz": "La Justicia mide sin margen. Lo que está en la balanza ya está puesto.",
+    "estadoInvertido": "bloqueo"
+  },
+  "el-colgado": {
+    "invariante": "La pausa que cambia la perspectiva. Suspensión voluntaria, entrega y ver lo mismo desde otro ángulo.",
+    "voz": "El Colgado no está atrapado: eligió esa postura para mirar desde otro ángulo.",
+    "estadoInvertido": "bloqueo"
+  },
+  "la-muerte": {
+    "invariante": "El final que hace sitio. No es muerte física: es el cierre necesario para que empiece lo siguiente.",
+    "voz": "La Muerte no se lleva: hace hueco. Lo que sigue necesitaba ese sitio.",
+    "estadoInvertido": "retraso"
+  },
+  "la-templanza": {
+    "invariante": "La mezcla en proporción justa. Paciencia, medida y la combinación de opuestos sin que ninguno se imponga.",
+    "voz": "La Templanza calibra despacio. La proporción correcta no sale al primer intento.",
+    "estadoInvertido": "bloqueo"
+  },
+  "el-diablo": {
+    "invariante": "La atadura que se eligió y se sostiene. Dependencia, apego material y unas cadenas que están flojas.",
+    "voz": "El Diablo no ata a nadie: las cadenas están flojas y siguen puestas.",
+    "estadoInvertido": "interiorizacion"
+  },
+  "la-torre": {
+    "invariante": "El derrumbe de una estructura que ya había cedido por dentro. El golpe revela la grieta, no la causa.",
+    "voz": "La Torre no avisa. El rayo sólo vuelve visible una grieta ya trazada.",
+    "estadoInvertido": "retraso"
+  },
+  "la-estrella": {
+    "invariante": "La calma después del golpe y una orientación que vuelve. Esperanza sin garantía, y recursos que se renuevan.",
+    "voz": "La Estrella llega después de la Torre. Orienta, y no promete nada más.",
+    "estadoInvertido": "bloqueo"
+  },
+  "la-luna": {
+    "invariante": "Lo que se ve distorsionado. Miedo, imaginación y la dificultad de distinguir lo real de lo proyectado.",
+    "voz": "La Luna deforma lo que alumbra. Lo que ves ahí puede no estar.",
+    "estadoInvertido": "retraso"
+  },
+  "el-sol": {
+    "invariante": "Lo que se ve entero y sin sombra. Claridad, alegría sencilla y el reconocimiento de lo que hay.",
+    "voz": "El Sol no interpreta: alumbra. Lo que queda visible es lo que había.",
+    "estadoInvertido": "interiorizacion"
+  },
+  "el-juicio": {
+    "invariante": "La llamada que pide respuesta. Balance de lo hecho, despertar y una decisión que no admite quedarse quieto.",
+    "voz": "El Juicio llama una vez. Lo que se decide aquí venía decidiéndose ya.",
+    "estadoInvertido": "bloqueo"
+  },
+  "el-mundo": {
+    "invariante": "El ciclo que se cierra completo. Integración, logro y un final que es también el borde del siguiente.",
+    "voz": "El Mundo cierra el circuito. Lo que termina entero puede volver a empezar.",
+    "estadoInvertido": "retraso"
+  },
+
+  "as-de-bastos": {
+    "invariante": "La chispa inicial de un impulso. Ganas, iniciativa y la posibilidad de algo que todavía no ha empezado.",
+    "voz": "El As de Bastos es puro arranque. Lo que se haga con él viene después.",
+    "estadoInvertido": "retraso"
+  },
+  "dos-de-bastos": {
+    "invariante": "Mirar más lejos desde lo ya construido. Planificar la expansión sin haber salido todavía.",
+    "voz": "El Dos de Bastos sostiene el mundo en la mano y aún no se ha movido.",
+    "estadoInvertido": "bloqueo"
+  },
+  "tres-de-bastos": {
+    "invariante": "La espera activa después de haber lanzado algo. Los barcos ya salieron y toca ver qué vuelve.",
+    "voz": "El Tres de Bastos ya hizo su parte. Lo que queda es esperar de pie.",
+    "estadoInvertido": "retraso"
+  },
+  "cuatro-de-bastos": {
+    "invariante": "La estabilidad que se celebra. Un logro asentado, un hogar o un umbral cruzado con otros.",
+    "voz": "El Cuatro de Bastos levanta la casa antes de la fiesta. Primero el suelo.",
+    "estadoInvertido": "bloqueo"
+  },
+  "cinco-de-bastos": {
+    "invariante": "La fricción de varias voluntades a la vez. Competencia, desorden y roce que no es enemistad.",
+    "voz": "El Cinco de Bastos no es guerra: son cinco queriendo hablar a la vez.",
+    "estadoInvertido": "interiorizacion"
+  },
+  "seis-de-bastos": {
+    "invariante": "El reconocimiento que llega tras el esfuerzo. Victoria visible y aprobación de los demás.",
+    "voz": "El Seis de Bastos vuelve con la corona puesta y todo el mundo mirando.",
+    "estadoInvertido": "bloqueo"
+  },
+  "siete-de-bastos": {
+    "invariante": "Defender lo conseguido desde una posición ventajosa. Resistencia sostenida frente a varios.",
+    "voz": "El Siete de Bastos pelea cuesta arriba, y la cuesta está de su lado.",
+    "estadoInvertido": "exceso"
+  },
+  "ocho-de-bastos": {
+    "invariante": "Movimiento rápido y sin obstáculos. Noticias, mensajes y cosas que se aceleran de golpe.",
+    "voz": "El Ocho de Bastos ya está en el aire. Nada de esto va despacio.",
+    "estadoInvertido": "retraso"
+  },
+  "nueve-de-bastos": {
+    "invariante": "La guardia de quien ya fue herido. Cansancio, desconfianza y un último tramo que aún se sostiene.",
+    "voz": "El Nueve de Bastos está vendado y de pie. Todavía queda una batalla.",
+    "estadoInvertido": "exceso"
+  },
+  "diez-de-bastos": {
+    "invariante": "La carga asumida de más. Responsabilidad que pesa, avance costoso y un peso que se podría repartir.",
+    "voz": "El Diez de Bastos lleva tanto que ya no ve hacia dónde camina.",
+    "estadoInvertido": "bloqueo"
+  },
+  "sota-de-bastos": {
+    "invariante": "El entusiasmo del que empieza. Curiosidad, primera noticia de algo y ganas sin oficio todavía.",
+    "voz": "La Sota de Bastos trae la noticia y aún no sabe qué significa.",
+    "estadoInvertido": "bloqueo"
+  },
+  "caballo-de-bastos": {
+    "invariante": "El impulso que sale disparado. Acción rápida, coraje y poca paciencia para el detalle.",
+    "voz": "El Caballo de Bastos sale primero y pregunta el camino más adelante.",
+    "estadoInvertido": "exceso"
+  },
+  "reina-de-bastos": {
+    "invariante": "El calor que organiza a los demás. Seguridad propia, carisma y capacidad de sostener a otros.",
+    "voz": "La Reina de Bastos calienta la sala sin levantar la voz ni una vez.",
+    "estadoInvertido": "interiorizacion"
+  },
+  "rey-de-bastos": {
+    "invariante": "La visión que dirige. Liderazgo con rumbo, decisión clara y capacidad de poner a otros en marcha.",
+    "voz": "El Rey de Bastos no empuja: marca la dirección y los demás se mueven.",
+    "estadoInvertido": "exceso"
+  },
+
+  "as-de-copas": {
+    "invariante": "El comienzo de un sentir. Apertura emocional, afecto que se ofrece y una copa que rebosa sola.",
+    "voz": "El As de Copas se ofrece lleno. Aceptarlo o no es lo que queda.",
+    "estadoInvertido": "bloqueo"
+  },
+  "dos-de-copas": {
+    "invariante": "El encuentro entre dos como iguales. Reconocimiento mutuo, pacto y vínculo que se acuerda.",
+    "voz": "El Dos de Copas no es atracción: es acuerdo entre dos que se miran.",
+    "estadoInvertido": "bloqueo"
+  },
+  "tres-de-copas": {
+    "invariante": "La alegría compartida con otros. Celebración, amistad y lo que se disfruta en compañía.",
+    "voz": "El Tres de Copas brinda con quien estaba. La alegría aquí es de todos.",
+    "estadoInvertido": "exceso"
+  },
+  "cuatro-de-copas": {
+    "invariante": "El desinterés por hartazgo, no por carencia. Hay algo que se ofrece y no se está viendo.",
+    "voz": "El Cuatro de Copas mira a otro lado con una copa servida delante.",
+    "estadoInvertido": "retraso"
+  },
+  "cinco-de-copas": {
+    "invariante": "El duelo por lo derramado, con lo que queda todavía en pie a la espalda.",
+    "voz": "El Cinco de Copas cuenta tres caídas y no ve las dos que siguen enteras.",
+    "estadoInvertido": "retraso"
+  },
+  "seis-de-copas": {
+    "invariante": "La vuelta a lo anterior. Memoria, ternura y lo que del pasado sigue alimentando.",
+    "voz": "El Seis de Copas trae algo de antes. Lo de antes no está muerto.",
+    "estadoInvertido": "exceso"
+  },
+  "siete-de-copas": {
+    "invariante": "Muchas opciones a la vez, no todas reales. Fantasía, dispersión y elección pendiente.",
+    "voz": "El Siete de Copas ofrece siete caminos, y varios de ellos son humo.",
+    "estadoInvertido": "bloqueo"
+  },
+  "ocho-de-copas": {
+    "invariante": "Dejar atrás algo que funcionaba pero ya no basta. Marcharse por decisión propia.",
+    "voz": "El Ocho de Copas se va sin que nadie lo eche. Eso es lo difícil.",
+    "estadoInvertido": "bloqueo"
+  },
+  "nueve-de-copas": {
+    "invariante": "La satisfacción conseguida y disfrutada. Bienestar propio, deseo cumplido y cierta autocomplacencia.",
+    "voz": "El Nueve de Copas se sienta ante lo suyo y lo da por bueno.",
+    "estadoInvertido": "exceso"
+  },
+  "diez-de-copas": {
+    "invariante": "La plenitud compartida y sostenida en el tiempo. Vínculo asentado y satisfacción que incluye a otros.",
+    "voz": "El Diez de Copas no celebra un día: sostiene una manera de vivir.",
+    "estadoInvertido": "interiorizacion"
+  },
+  "sota-de-copas": {
+    "invariante": "La sensibilidad que empieza. Primer gesto afectivo, intuición nueva y una propuesta que llega.",
+    "voz": "La Sota de Copas trae un pez en la copa y no le extraña.",
+    "estadoInvertido": "bloqueo"
+  },
+  "caballo-de-copas": {
+    "invariante": "El gesto que se ofrece. Propuesta romántica o creativa, avance sin prisa y cierta idealización.",
+    "voz": "El Caballo de Copas viene al paso, con la copa por delante.",
+    "estadoInvertido": "exceso"
+  },
+  "reina-de-copas": {
+    "invariante": "La hondura emocional sostenida. Cuidado de otros, intuición fiable y límites que no se rompen.",
+    "voz": "La Reina de Copas sostiene la copa cerrada. Siente hondo y no se derrama.",
+    "estadoInvertido": "exceso"
+  },
+  "rey-de-copas": {
+    "invariante": "El dominio sereno de lo que se siente. Madurez afectiva y calma en aguas movidas.",
+    "voz": "El Rey de Copas gobierna sobre agua agitada sin mojarse el trono.",
+    "estadoInvertido": "interiorizacion"
+  },
+
+  "as-de-espadas": {
+    "invariante": "El corte de claridad. Verdad que se nombra, decisión limpia y el filo que separa lo confuso.",
+    "voz": "El As de Espadas corta en dos lo que estaba mezclado. Duele y aclara.",
+    "estadoInvertido": "bloqueo"
+  },
+  "dos-de-espadas": {
+    "invariante": "La decisión aplazada con los ojos tapados. Equilibrio incómodo entre dos opciones que no se miran.",
+    "voz": "El Dos de Espadas no elige: se venda los ojos y sostiene las dos.",
+    "estadoInvertido": "retraso"
+  },
+  "tres-de-espadas": {
+    "invariante": "El dolor que viene de algo dicho o sabido. Herida clara, sin ambigüedad y sin adorno.",
+    "voz": "El Tres de Espadas no disimula: tres filos y un corazón, sin metáfora.",
+    "estadoInvertido": "retraso"
+  },
+  "cuatro-de-espadas": {
+    "invariante": "El descanso obligado tras el esfuerzo. Retirada para reponerse, no derrota ni final.",
+    "voz": "El Cuatro de Espadas está tumbado, no vencido. Tres espadas siguen colgadas.",
+    "estadoInvertido": "bloqueo"
+  },
+  "cinco-de-espadas": {
+    "invariante": "La victoria que cuesta más de lo que vale. Ganar rompiendo algo que importaba.",
+    "voz": "El Cinco de Espadas recoge las armas del suelo y se queda solo.",
+    "estadoInvertido": "interiorizacion"
+  },
+  "seis-de-espadas": {
+    "invariante": "El traslado hacia aguas más tranquilas. Salir de algo malo sin haberlo resuelto del todo.",
+    "voz": "El Seis de Espadas cruza con las espadas a bordo. Se van con uno.",
+    "estadoInvertido": "retraso"
+  },
+  "siete-de-espadas": {
+    "invariante": "Lo que se hace a escondidas. Estrategia, evasión o quedarse con parte de lo que no toca.",
+    "voz": "El Siete de Espadas se lleva cinco y deja dos. Nadie lo ha visto.",
+    "estadoInvertido": "bloqueo"
+  },
+  "ocho-de-espadas": {
+    "invariante": "La sensación de estar atrapado con una salida que no se ve. Límite más mental que real.",
+    "voz": "El Ocho de Espadas está atada de pie, y las espadas no la rodean entera.",
+    "estadoInvertido": "bloqueo"
+  },
+  "nueve-de-espadas": {
+    "invariante": "La angustia que no deja dormir. Miedo nocturno que crece por dentro y supera a lo ocurrido.",
+    "voz": "El Nueve de Espadas ocurre a las cuatro de la mañana, y sólo ahí.",
+    "estadoInvertido": "exceso"
+  },
+  "diez-de-espadas": {
+    "invariante": "El final rotundo, sin margen de discusión. Tocar fondo, y que a partir de ahí no baje más.",
+    "voz": "El Diez de Espadas exagera a propósito: con una bastaba y hay diez.",
+    "estadoInvertido": "retraso"
+  },
+  "sota-de-espadas": {
+    "invariante": "La atención despierta y desconfiada. Curiosidad afilada, vigilancia y palabras aún sin medir.",
+    "voz": "La Sota de Espadas observa de lado, con el arma ya levantada.",
+    "estadoInvertido": "exceso"
+  },
+  "caballo-de-espadas": {
+    "invariante": "La embestida directa. Prisa, franqueza sin filtro y avance que no calcula el coste.",
+    "voz": "El Caballo de Espadas entra a galope y sin frenar. Avisa después.",
+    "estadoInvertido": "exceso"
+  },
+  "reina-de-espadas": {
+    "invariante": "La lucidez sin consuelo. Claridad ganada con experiencia, límites firmes y palabra exacta.",
+    "voz": "La Reina de Espadas dice la verdad entera, y no la endulza por nadie.",
+    "estadoInvertido": "exceso"
+  },
+  "rey-de-espadas": {
+    "invariante": "El juicio que decide con criterio. Autoridad intelectual, imparcialidad y norma aplicada.",
+    "voz": "El Rey de Espadas resuelve con la norma delante, no con la simpatía.",
+    "estadoInvertido": "exceso"
+  },
+
+  "as-de-oros": {
+    "invariante": "La oportunidad material que se ofrece. Semilla concreta: dinero, trabajo o cuerpo, aún sin desarrollar.",
+    "voz": "El As de Oros llega en la mano abierta. Cogerlo es trabajo de uno.",
+    "estadoInvertido": "retraso"
+  },
+  "dos-de-oros": {
+    "invariante": "El equilibrio en movimiento entre dos cargas. Malabar sostenible mientras no se pare.",
+    "voz": "El Dos de Oros se sostiene porque no deja de moverse. Parar lo tira.",
+    "estadoInvertido": "exceso"
+  },
+  "tres-de-oros": {
+    "invariante": "El trabajo hecho con otros y reconocido. Oficio, colaboración y obra que avanza bien.",
+    "voz": "El Tres de Oros trabaja mirado por dos que entienden lo que hace.",
+    "estadoInvertido": "bloqueo"
+  },
+  "cuatro-de-oros": {
+    "invariante": "Lo que se retiene por miedo a perderlo. Seguridad que se vuelve agarre.",
+    "voz": "El Cuatro de Oros abraza sus monedas y con eso ocupa las dos manos.",
+    "estadoInvertido": "exceso"
+  },
+  "cinco-de-oros": {
+    "invariante": "La carencia vivida a la intemperie. Falta material o de apoyo, con ayuda cerca y no vista.",
+    "voz": "El Cinco de Oros pasa bajo la vidriera encendida y no levanta la vista.",
+    "estadoInvertido": "retraso"
+  },
+  "seis-de-oros": {
+    "invariante": "El reparto desigual pero real. Dar y recibir con una balanza que alguien sostiene.",
+    "voz": "El Seis de Oros reparte con la balanza en la otra mano. Mide al dar.",
+    "estadoInvertido": "exceso"
+  },
+  "siete-de-oros": {
+    "invariante": "La pausa para evaluar lo sembrado. Paciencia con el tiempo largo y decisión de seguir o cambiar.",
+    "voz": "El Siete de Oros se apoya en la azada y calcula si vale la pena.",
+    "estadoInvertido": "bloqueo"
+  },
+  "ocho-de-oros": {
+    "invariante": "La repetición que perfecciona. Aprendizaje por oficio, constancia y mejora visible pieza a pieza.",
+    "voz": "El Ocho de Oros va por la sexta moneda. La primera era peor.",
+    "estadoInvertido": "bloqueo"
+  },
+  "nueve-de-oros": {
+    "invariante": "El disfrute de lo conseguido por uno mismo. Independencia material y jardín propio.",
+    "voz": "El Nueve de Oros pasea por lo suyo, y lo suyo se lo ganó sola.",
+    "estadoInvertido": "interiorizacion"
+  },
+  "diez-de-oros": {
+    "invariante": "La abundancia que dura más que una persona. Patrimonio, familia y lo que se hereda.",
+    "voz": "El Diez de Oros cuenta tres generaciones en el mismo patio.",
+    "estadoInvertido": "bloqueo"
+  },
+  "sota-de-oros": {
+    "invariante": "El aprendizaje que empieza con algo concreto en la mano. Estudio, primer trabajo, primera moneda.",
+    "voz": "La Sota de Oros sostiene la moneda y la mira como quien estudia.",
+    "estadoInvertido": "retraso"
+  },
+  "caballo-de-oros": {
+    "invariante": "El avance lento y fiable. Constancia sin brillo, método y trabajo que no se detiene.",
+    "voz": "El Caballo de Oros es el único que va al paso. Por eso llega.",
+    "estadoInvertido": "bloqueo"
+  },
+  "reina-de-oros": {
+    "invariante": "El cuidado práctico de lo concreto. Sostener a otros con recursos reales y sentido común.",
+    "voz": "La Reina de Oros cuida sin discurso: mira que haya comida y techo.",
+    "estadoInvertido": "exceso"
+  },
+  "rey-de-oros": {
+    "invariante": "El dominio consolidado de lo material. Prosperidad construida con tiempo y administrada con criterio.",
+    "voz": "El Rey de Oros no hizo su fortuna deprisa, y por eso sigue ahí.",
+    "estadoInvertido": "exceso"
+  }
+}

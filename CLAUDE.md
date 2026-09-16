@@ -24,11 +24,12 @@ guía, y hay que abrirla antes de trabajar en su área:
 
 ```bash
 npm run dev          # servidor de desarrollo
-npm run verificar    # tipos + eslint + stylelint + pruebas · pásalo antes de dar nada por terminado
+npm run verificar    # tipos + eslint + stylelint + pruebas + núcleos · pásalo antes de dar nada por terminado
 npm run typecheck    # solo tipos
 npm run lint         # solo eslint
 npm run lint:css     # solo stylelint
 npm test             # pruebas del motor
+npm run validar:nucleos  # los 78 núcleos de carta
 ```
 
 `npm run verificar` es la puerta. Si no pasa, el trabajo no está hecho.
