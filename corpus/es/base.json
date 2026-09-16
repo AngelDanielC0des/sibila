@@ -43,9 +43,49 @@
     "derecha": "La Rueda de la Fortuna describe un cambio que ya está en marcha y que no arrancó nadie: lo que sube y lo que baja intercambian sitio por el propio movimiento, no por mérito. En las cuatro esquinas hay figuras leyendo, quietas mientras todo lo demás da vueltas: el giro se atraviesa, no se discute. El momento no se escoge; la postura sí.",
     "invertida": "La Rueda de la Fortuna invertida es el giro que se está tomando su tiempo. El cambio ya arrancó y todavía no se nota: hay latencia entre lo que se movió por debajo y lo que se ve. También es forzar la vuelta antes de que toque, empujando una rueda que gira sola. Lo que aquí falta no es el cambio, es su plazo."
   },
+  "la-justicia": {
+    "derecha": "La Justicia sostiene una balanza en una mano y una espada levantada en la otra, y las dos hacen falta: pesar sin poder cortar no decide nada. Lo que hay en el platillo se puso antes, acción por acción, y el resultado sale de la suma y no de la intención. Aquí se paga el precio exacto, ni más ni menos.",
+    "invertida": "La Justicia invertida es la cuenta que no se salda. La balanza sigue cargada y el fiel no se mueve: lo hecho está ahí, pero el ajuste se aplaza, se negocia o se descarga en otro. También aparece como la medida que se aplica sólo hacia fuera. Lo que se evita aquí no desaparece; queda pendiente."
+  },
+  "el-colgado": {
+    "derecha": "El Colgado está cabeza abajo, atado de un solo pie, y tiene la cara tranquila. Nadie lo puso ahí. La postura es incómoda y voluntaria, y sirve exactamente para lo que parece inútil: quedarse quieto el tiempo suficiente para que lo conocido se vea de otra manera. Lo que aquí se gana no se gana haciendo, se gana en otra postura.",
+    "invertida": "El Colgado invertido es la pausa que se ha vuelto parada. Lo que empezó siendo suspensión deliberada ya no mira nada distinto: se sigue colgando por costumbre, y la espera dejó de trabajar hace tiempo. También es lo contrario, la prisa por bajarse antes de haber visto. Aquí sobra tiempo suspendido y falta el cambio de ángulo que lo justificaba."
+  },
+  "la-muerte": {
+    "derecha": "La Muerte avanza a caballo con un estandarte de rosa blanca, y delante de ella caen por igual el rey y el que no lo es. No es una carta de daño. Es una carta de cierre. Lo que termina aquí ocupaba el sitio de lo que viene, y al fondo el sol sale entre dos torres. Un final limpio es lo que hace posible empezar sin arrastrar.",
+    "invertida": "La Muerte invertida es el final que ya ocurrió y todavía no se ha admitido. La cosa terminó por dentro, y por fuera se mantiene el gesto: se conserva la forma de algo que ya no tiene contenido. También es el cierre que se resiste porque duele soltar, aunque soltar sea lo único que queda por hacer. Lo que aquí se retrasa no es el final; es aceptarlo."
+  },
+  "la-templanza": {
+    "derecha": "La Templanza pasa el agua de una copa a otra sin derramar una gota, y lo hace con un pie en tierra y el otro dentro del río. La proporción correcta no aparece de golpe: se busca probando, se corrige y se vuelve a probar. Esta carta describe la paciencia como técnica y no como virtud, y lo que se mezcla bien aquí se mezcla despacio.",
+    "invertida": "La Templanza invertida no encuentra la medida. Se echa de más o se echa de menos, y cada corrección pasa de largo por el punto justo: la calibración se convierte en oscilación. También es la mezcla forzada, juntar deprisa dos cosas que necesitaban tiempo para combinarse. Aquí el desequilibrio no viene de la falta de cuidado, viene de la impaciencia."
+  },
+  "el-diablo": {
+    "derecha": "El Diablo se sienta encima de un pedestal con dos figuras encadenadas debajo, y el detalle de la lámina lo dice todo: las argollas les quedan anchas. Nadie está sujeto aquí; están sosteniendo la cadena. La carta habla de lo que se eligió y se sigue eligiendo cada día: el apego, la costumbre cómoda, el pacto que compensaba y ya no. Salir cuesta poco. Reconocerlo cuesta.",
+    "invertida": "El Diablo invertido mueve la atadura hacia dentro. Por fuera no se ve cadena: el pacto se ha vuelto una idea sobre uno mismo, y eso no hace ruido ni pide explicaciones. También es el momento en que la argolla empieza a notarse, aún sin quitarse. Lo que se sostiene aquí se sostiene en privado, que es donde más dura."
+  },
   "la-torre": {
     "derecha": "La Torre no avisa. Lo que se derrumba aquí es lo que ya estaba agrietado por dentro, y el golpe solo hace visible una grieta que llevaba tiempo ahí. No es castigo ni azar: es una estructura que dejó de sostenerse y tardó en admitirlo. Lo que queda después es suelo firme, aunque de momento no lo parezca.",
     "invertida": "La Torre invertida es el derrumbe aplazado. La estructura ya cedió, pero se sigue apuntalando por dentro, y cada puntal nuevo encarece el día que caiga. También puede ser el temblor que se sintió y no llegó a tirar nada: el aviso que se decidió no escuchar. Lo que se evita aquí no se cancela, solo espera."
+  },
+  "la-estrella": {
+    "derecha": "La Estrella viene después de que algo se haya caído. Una figura desnuda vierte agua en el río y en la tierra, sin prisa y sin público, y arriba hay ocho estrellas quietas. Lo que vuelve aquí no es la suerte, es el norte: se sabe otra vez hacia dónde. No promete que salga bien. Sólo devuelve la orientación, que después del golpe es bastante.",
+    "invertida": "La Estrella invertida es la calma que no llega. Las jarras siguen vertiendo y el agua no empapa nada: el descanso está disponible y no se coge, porque después de lo que pasó cuesta fiarse de que esto sea tregua. También es la esperanza convertida en obligación, sonreír porque toca. Aquí lo que se ha perdido no es el norte, es la confianza en verlo."
+  },
+  "la-luna": {
+    "derecha": "La Luna alumbra un sendero entre dos torres, y con esa luz todo tiene el tamaño equivocado. Un perro y un lobo aúllan a lo mismo sin que se sepa cuál es cuál. Aquí lo que inquieta no está confirmado ni descartado: está a medio ver. Lo que se decide con esta luz se decide con la medida mal tomada.",
+    "invertida": "La Luna invertida es la niebla levantándose, y todavía no del todo: lo que parecía amenaza empieza a tener contorno, y no ha desaparecido, se ha vuelto medible. También aparece antes de eso, cuando el miedo se ha quedado dentro y ya no se proyecta fuera, que es más silencioso y no más pequeño. Lo que aquí falta es el tiempo que tarda la luz en cambiar."
+  },
+  "el-sol": {
+    "derecha": "El Sol no tiene nada escondido: hay un muro, unos girasoles y un niño a caballo sin silla ni miedo, y la luz cae plana sobre todo por igual. Esta carta no adorna, enseña lo que hay, y lo que hay resulta ser suficiente. La alegría de aquí es de las sencillas, las que no necesitan que se explique por qué.",
+    "invertida": "El Sol invertido guarda la luz dentro. Lo bueno está ocurriendo y no se comparte: se disfruta a solas, o se desconfía de ello hasta dejarlo pasar sin celebrarlo. El muro de la lámina sigue ahí, pero ahora separa en lugar de proteger. Aquí no falta claridad, falta dejarla salir y que la vea alguien más."
+  },
+  "el-juicio": {
+    "derecha": "El Juicio suena una vez y las figuras se incorporan con los brazos abiertos, no con miedo. Lo que llama no viene de fuera del todo: es el balance de lo hecho pidiendo que se reconozca en voz alta. Aquí hay una decisión que llevaba tiempo tomándose sola y que ahora pide firma. Quedarse quieto también es una respuesta, y cuenta como tal.",
+    "invertida": "El Juicio invertido oye la llamada y no contesta. El balance está hecho, la cuenta cuadra, y aun así la respuesta se posterga: se revisa una vez más, se busca una señal mejor, se espera a estar seguro. También es el juicio vuelto contra uno, que repasa lo hecho sin permitir levantarse. Lo que bloquea aquí no es la duda, es el veredicto propio."
+  },
+  "el-mundo": {
+    "derecha": "El Mundo es una figura bailando dentro de una guirnalda cerrada, con las cuatro criaturas mirando desde las esquinas. Lo que se completa aquí se completa entero: no queda cabo suelto ni parte que reclame volver. Es un logro y es un borde, porque una guirnalda cerrada sigue siendo un círculo. Lo que termina bien termina en condiciones de empezar otra cosa.",
+    "invertida": "El Mundo invertido es el cierre que se queda a un paso. Casi todo está hecho. Falta la parte que lo vuelve completo, y suele ser la menos vistosa: rematar, despedirse, decirlo en voz alta. La guirnalda tiene un hueco por el que se escapa lo conseguido. Aquí el final no está lejos; está sin terminar."
   },
   "cuatro-de-copas": {
     "derecha": "Tres copas delante y una cuarta que se ofrece, y la mirada puesta en otra parte. El Cuatro de Copas no habla de carencia sino de hartazgo: hay algo disponible y no lo estás viendo, precisamente porque ya tienes suficiente de algo parecido. El desinterés aquí no es descanso, es una puerta que se cierra sola.",
