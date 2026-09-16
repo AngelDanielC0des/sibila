@@ -9,9 +9,47 @@ import nextTs from "eslint-config-next/typescript";
  * Lo que puede comprobarse de forma mecánica se comprueba aquí; lo que no,
  * queda documentado en CLAUDE.md y se vigila en revisión.
  */
+
+/**
+ * Las librerías pesadas, y dónde NO pueden entrar.
+ *
+ * `CLAUDE.md`, apartado «Peso por ruta»: Three.js y GSAP no se cargan en rutas
+ * de contenido —portada, landings, enciclopedia, fichas, glosario, legal—
+ * porque esas rutas son toda la captación orgánica y su métrica son los Core
+ * Web Vitals, no los fotogramas por segundo.
+ *
+ * Sólo el renderizador tridimensional puede importarlas, y el propio
+ * renderizador se carga de forma diferida.
+ *
+ * Al ser un patrón compartido se declara una vez y se reparte a cada bloque:
+ * `no-restricted-imports` se **reemplaza** entre bloques en lugar de
+ * acumularse, así que un bloque que lo olvidara abriría un agujero sin que
+ * nadie se entere.
+ */
+const LIBRERIAS_PESADAS = {
+  group: ["three", "three/*", "gsap", "gsap/*"],
+  message:
+    "Three.js y GSAP sólo pueden entrar por el renderizador tridimensional, y de forma diferida. Una ruta de contenido que los importe pierde sus Core Web Vitals, que es de lo que vive la captación.",
+};
+
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+
+  /*
+   * Peso por ruta.
+   *
+   * Se aplica a todo `src` menos al renderizador tridimensional, que es el
+   * único sitio del proyecto donde estas librerías tienen sentido.
+   */
+  {
+    name: "sibila/peso-por-ruta",
+    files: ["src/**/*.{ts,tsx}"],
+    ignores: ["src/renderizadores/tridimensional/**/*.{ts,tsx}"],
+    rules: {
+      "no-restricted-imports": ["error", { patterns: [LIBRERIAS_PESADAS] }],
+    },
+  },
 
   {
     name: "sibila/convenciones",
@@ -146,10 +184,11 @@ const eslintConfig = defineConfig([
                 "El motor no puede depender de quien lo pinta. Invierte la dependencia: que el renderizador escuche el bus de eventos.",
             },
             {
-              group: ["react", "react-dom", "next", "next/*", "three", "gsap", "gsap/*"],
+              group: ["react", "react-dom", "next", "next/*"],
               message:
                 "El motor es TypeScript puro y se prueba sin DOM. Si necesitas esto aquí, la lógica va en un renderizador.",
             },
+            LIBRERIAS_PESADAS,
           ],
         },
       ],
@@ -177,6 +216,7 @@ const eslintConfig = defineConfig([
               message:
                 "El corpus sirve el camino gratuito y nunca llama a un modelo. Generar es responsabilidad de la síntesis, que es de pago.",
             },
+            LIBRERIAS_PESADAS,
           ],
         },
       ],

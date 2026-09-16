@@ -18,7 +18,7 @@
   padding-inline: var(--esp-4);
   padding-block: var(--esp-3);
 
-  /* Borde de control, no ornamental: alcanza el 3:1 que exige la guía §4.5. */
+  /* Borde de control, no ornamental: alcanza el 3:1 que exige la guía §4.6. */
   border: 1px solid var(--linea-control);
   border-radius: var(--radio-md);
   background-color: var(--superficie);

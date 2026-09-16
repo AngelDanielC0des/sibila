@@ -110,6 +110,25 @@
     "volver": "Volver",
     "cerrar": "Cerrar"
   },
+  "fallos": {
+    "noEncontrado": {
+      "titulo": "Esta carta no está en la baraja",
+      "cuerpo": "La página que buscabas no existe, o ha cambiado de sitio.",
+      "volver": "Volver a la portada",
+      "tiradas": "Ver las tiradas"
+    },
+    "error": {
+      "titulo": "Algo se ha cortado",
+      "cuerpo": "No hemos podido mostrar esta página. Tu lectura no se ha perdido.",
+      "reintentar": "Probar otra vez",
+      "volver": "Volver a la portada"
+    },
+    "critico": {
+      "titulo": "Sibila no responde",
+      "cuerpo": "Ha fallado algo por debajo de la aplicación. Vuelve a cargar la página.",
+      "recargar": "Recargar"
+    }
+  },
   "legal": {
     "edad": "Solo para mayores de 18 años.",
     "encuadre": "Sibila es una herramienta de entretenimiento y autoconocimiento. No predice el futuro ni sustituye consejo médico, legal, financiero ni psicológico.",

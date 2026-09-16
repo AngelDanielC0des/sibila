@@ -26,7 +26,7 @@ corpus. Por eso empieza ya y no espera a tener interfaz donde enseñarlo.
 
 ## Vía A · Producto
 
-### A0 · Cimientos — hecho, sin commitear
+### A0 · Cimientos
 
 Next 16, TypeScript estricto, ESLint tipado, Stylelint, Prettier, Husky,
 multiidioma con slug traducido, tokens de diseño, primera prueba.
@@ -37,6 +37,23 @@ multiidioma con slug traducido, tokens de diseño, primera prueba.
 - [x] **Commiteado.** `3befe8c`, 116 ficheros. `.gitattributes` fija LF en el
       repositorio y en el árbol de trabajo, que es lo que ya pedía
       `.editorconfig` y lo que `core.autocrlf` contradecía
+
+### A0b · Higiene — lo barato ahora y carísimo después
+
+Nada de esto se ve, y todo impide una avería concreta más adelante.
+
+|       | Tarea                   | Terminado cuando                                                                                                                                                                                                                                                        |
+| ----- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A0b.1 | Integración continua    | ✅ `.github/workflows/verificar.yml`. El hook de pre‑commit se salta con `--no-verify` y no corre al empujar; esto sí. Añade formato y **compilación de producción**, que ve errores que `tsc --noEmit` no ve. `engines` fija Node 22 para que local y CI no se separen |
+| A0b.2 | Pantallas de fallo      | ✅ Tres: 404 localizado dentro de un idioma, 404 estático en la raíz para URLs fuera de todo idioma, y `global-error` para cuando cae el propio layout. Verificadas en navegador: estado 404, `lang` correcto, enlaces traducidos                                       |
+| A0b.3 | Guarda de peso por ruta | ✅ `CLAUDE.md` prohíbe Three.js y GSAP en rutas de contenido, y hasta ahora era sólo prosa. Forzado en ESLint y verificado con un import prohibido real                                                                                                                 |
+| A0b.4 | Tema claro, decidido    | ✅ **No entra en la v1.** Los tokens quedan dormidos y documentados en `guia-de-diseno.md` §4.3, para que nadie los tome por trabajo a medias                                                                                                                           |
+| A0b.5 | Plantilla de entorno    | ✅ `.env.example` versionado —con la negación en `.gitignore` que hace falta para que `.env*` no se lo trague—, con la forma de lo que llega en A5 y sin ningún valor                                                                                                   |
+
+**Lo que sigue faltando aquí:** el arnés de pruebas de pantalla. Playwright no
+está instalado y tanto este documento como `guia-de-diseno.md` §8 prometen
+recorrido de extremo a extremo y capturas a 320, 390 y 1440. Es lo siguiente,
+antes de escribir pantallas y no después.
 
 ### A1 · Sistema de diseño
 
@@ -173,11 +190,12 @@ Ninguna bloquea hoy. Se anotan para resolverlas cuando toque y no antes.
 
 Se anotan para no volver a discutirlas.
 
-| Decisión                                                                     | Resultado                     | Motivo                                                                                                                                                                                                                               |
-| ---------------------------------------------------------------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **¿Publicamos el corpus como dataset abierto y servidor MCP, como Tarotoo?** | **No**                        | Su dataset es un diccionario de referencia; el nuestro **es el producto**. El modelo de negocio vive de que los significados sean el gancho gratuito. Además la posición ya está disputada por deckaura. Ver `docs/plan-tarot.md` §2 |
-| **¿Algún MCP entonces?**                                                     | Más adelante, y de otra forma | Uno que exponga **lecturas, no significados**: capa gratuita más enlace para desbloquear la síntesis. Es captación, no donación. Fuera de la v1                                                                                      |
-| **¿Usamos el dataset MIT de Tarotoo?**                                       | Solo para contrastar          | Elemento, planeta, zodiaco y valor sí/no son materia de tradición, no de autoría. Sirven de comprobación cruzada. Nuestra prosa es nuestra                                                                                           |
+| Decisión                                                                     | Resultado                             | Motivo                                                                                                                                                                                                                                                                                                                                                                     |
+| ---------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **¿Publicamos el corpus como dataset abierto y servidor MCP, como Tarotoo?** | **No**                                | Su dataset es un diccionario de referencia; el nuestro **es el producto**. El modelo de negocio vive de que los significados sean el gancho gratuito. Además la posición ya está disputada por deckaura. Ver `docs/plan-tarot.md` §2                                                                                                                                       |
+| **¿Algún MCP entonces?**                                                     | Más adelante, y de otra forma         | Uno que exponga **lecturas, no significados**: capa gratuita más enlace para desbloquear la síntesis. Es captación, no donación. Fuera de la v1                                                                                                                                                                                                                            |
+| **¿El tema claro entra en la v1?**                                           | **No. Los tokens se quedan dormidos** | El producto es un holograma en una cámara a oscuras y el tema claro es la idea contraria: obligaría a diseñar y verificar cada pantalla dos veces, con los ornamentos desactivados en la mitad clara. Los tokens ya están escritos y verificados, así que no se borran: la enciclopedia y una vista para imprimir son candidatos previsibles. Ver `guia-de-diseno.md` §4.3 |
+| **¿Usamos el dataset MIT de Tarotoo?**                                       | Solo para contrastar                  | Elemento, planeta, zodiaco y valor sí/no son materia de tradición, no de autoría. Sirven de comprobación cruzada. Nuestra prosa es nuestra                                                                                                                                                                                                                                 |
 
 ---
 

@@ -1,0 +1,48 @@
+# La puerta del proyecto, esta vez donde no se puede saltar.
+#
+# `npm run verificar` ya corre en el hook de pre-commit, pero un hook se salta
+# con `--no-verify` y no corre al empujar. Esto sí.
+name: Verificar
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+
+# Un empujón nuevo cancela la comprobación del anterior: sólo importa el último.
+concurrency:
+  group: verificar-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verificar:
+    name: Tipos, linters y pruebas
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # La misma versión que declara `engines` en package.json.
+          node-version: "22"
+          cache: npm
+
+      # `ci` y no `install`: instala exactamente lo que dice el lockfile y falla
+      # si package.json y el lockfile se han desincronizado.
+      - run: npm ci
+
+      - name: Formato
+        run: npm run format:check
+
+      - name: Tipos, ESLint, Stylelint y pruebas
+        run: npm run verificar
+
+      # Se compila de verdad: `tsc --noEmit` no ve los errores propios de Next
+      # —un componente de servidor que usa un hook, una ruta mal formada— y esos
+      # sólo aparecen al construir.
+      - name: Compilación de producción
+        run: npm run build
+
+      - name: Avance del corpus
+        run: npm run corpus

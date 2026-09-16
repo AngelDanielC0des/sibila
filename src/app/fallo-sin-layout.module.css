@@ -1,0 +1,147 @@
+/*
+ * Las dos pantallas que viven sin layout.
+ *
+ * `global-error` y el `not-found` de la raíz sustituyen al layout raíz entero,
+ * así que en las dos **no hay nada de lo que el resto del producto da por
+ * hecho**: ni proveedor de idioma, ni las fuentes que carga el layout con
+ * `next/font`.
+ *
+ * Por eso esta hoja no usa los tokens tipográficos. `--fuente-display` se
+ * resuelve a `var(--fuente-cormorant)`, que es una variable que inyecta el
+ * layout; sin él, la declaración entera queda inválida y el texto hereda lo que
+ * haya. En la única pantalla que aparece cuando todo lo demás ha fallado, eso
+ * no se puede arriesgar: se escriben pilas de fuentes del sistema a mano.
+ *
+ * Los colores sí salen de tokens, porque esta pantalla importa `global.css`
+ * por su cuenta.
+ */
+
+.pagina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  margin: 0;
+  padding: var(--esp-6, 2rem) var(--esp-5, 1.5rem);
+  background-color: var(--fondo, #050912);
+  text-align: center;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-5, 1.5rem);
+  max-width: 44ch;
+}
+
+.marca {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--texto-tenue, #5a6b85);
+}
+
+.titulo {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--texto, #ede7da);
+  text-wrap: balance;
+}
+
+.cuerpo {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: var(--texto-suave, #93a3bc);
+  text-wrap: pretty;
+}
+
+/*
+ * El botón se escribe entero aquí en vez de reutilizar el componente.
+ *
+ * Es la única duplicación deliberada del proyecto: importar el componente
+ * `Boton` obligaría a que su módulo se resuelva correctamente justo en la
+ * pantalla que existe porque algo se ha roto. Trece líneas de CSS son un precio
+ * razonable por no depender de nada.
+ */
+.recargar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--holo, #3bc4f2);
+  border-radius: 999px;
+  background: transparent;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--holo-nucleo, #7fe9ff);
+  cursor: pointer;
+}
+
+.recargar:focus-visible {
+  outline: 2px solid var(--holo, #3bc4f2);
+  outline-offset: 3px;
+}
+
+.referencia {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 0.75rem;
+  color: var(--texto-tenue, #5a6b85);
+  overflow-wrap: anywhere;
+}
+
+/*
+ * La fila de idiomas del 404 de raíz.
+ *
+ * Esta pantalla la ve quien llega a una URL fuera de todo idioma, así que no
+ * hay uno correcto que elegir: se ofrecen los tres y decide el visitante.
+ */
+.idiomas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-3, 0.75rem);
+  justify-content: center;
+}
+
+.idioma {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--oro-hondo, #8a6a2e);
+  border-radius: 999px;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--oro, #d4a552);
+  text-decoration: none;
+}
+
+.idioma:focus-visible {
+  outline: 2px solid var(--holo, #3bc4f2);
+  outline-offset: 3px;
+}

@@ -27,8 +27,12 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# Ficheros de entorno: ninguno se versiona...
 .env*
+
+# ...salvo la plantilla, que es justo lo que documenta qué variables hacen falta
+# y no contiene ningún valor.
+!.env.example
 
 # vercel
 .vercel

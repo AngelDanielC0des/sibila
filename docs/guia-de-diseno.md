@@ -22,7 +22,7 @@ clase a la otra.
 | Responsive        | **Reflujo**: el contenido se recoloca y se apila                         | **Adaptativo**: cambia el algoritmo de disposición, no solo el ancho |
 | Métrica           | Core Web Vitals                                                          | Fotogramas por segundo                                               |
 | Peso              | Mínimo. Sin Three.js ni GSAP                                             | Three.js y GSAP, cargados en diferido                                |
-| Tema              | Oscuro por defecto, claro disponible                                     | Solo oscuro                                                          |
+| Tema              | Sólo oscuro en la v1 · ver §4.3                                          | Solo oscuro                                                          |
 
 Antes de maquetar cualquier pantalla: **decidir a qué clase pertenece.** Si no
 está claro, es de contenido.
@@ -134,7 +134,7 @@ Tres anchos, y los tres antes de dar una pantalla por terminada:
 2. **390 × 844** y el mismo girado, **844 × 390**.
 3. **1440 × 900** — escritorio de referencia.
 
-Más: con `prefers-reduced-motion` activo, con el tema claro donde exista, y con
+Más: con `prefers-reduced-motion` activo y con
 zoom de texto al 200%, que es requisito de accesibilidad y rompe maquetaciones
 que usan alturas fijas.
 
@@ -197,13 +197,35 @@ redefinirlo para el tema claro la pregunta que te haces es «¿cuál da más
 Al añadir un token: **nombrarlo por lo que hace.** Y al redefinir la paleta para
 otro tema, **recalcular cada valor**, nunca heredar el del tema contrario.
 
-### 4.3 Suelos de contraste
+### 4.3 El tema claro existe, y en la v1 no se enciende
+
+Los tokens claros están escritos y su contraste lo verifica
+`contraste.prueba.ts` igual que el del oscuro. Pero **nadie pone nunca
+`data-tema`**, así que hoy es código inalcanzable, y eso es deliberado.
+
+El producto es un holograma proyectado en una cámara a oscuras. El tema claro
+no es una variante de esa idea: es su contraria. Mantener las dos obligaría a
+diseñar y verificar cada pantalla dos veces, en la mitad clara con los
+ornamentos —cono, barrido, fresnel, aberración— desactivados o reinventados,
+porque la luz sobre blanco no se lee como luz.
+
+**Por qué entonces no se borran los tokens:** porque el trabajo caro ya está
+hecho y verificado, y porque hay dos escenarios previsibles que lo pedirán
+—una vista de lectura para imprimir o guardar, y las fichas de la enciclopedia,
+que son documento y no ceremonia—. Borrarlos ahora y rehacerlos luego costaría
+más que dejarlos dormidos.
+
+**Qué significa esto al maquetar:** no se comprueba el tema claro, no se añade
+selector, y **no se escribe CSS nuevo bajo `[data-tema="claro"]`**. Si alguna
+pantalla lo necesitara, primero se reabre esta decisión.
+
+### 4.4 Suelos de contraste
 
 Medidos sobre los tokens reales. Mínimos exigidos: **4,5:1** para texto de
 cuerpo, **3:1** para texto grande —desde 24px, o 19px en negrita— y para
 elementos de interfaz no textuales como bordes de campo e iconos.
 
-### 4.4 Tokens prohibidos como texto de cuerpo
+### 4.5 Tokens prohibidos como texto de cuerpo
 
 Estos tres pasan de 3:1 pero no llegan a 4,5:1. Valen para bordes, filetes,
 iconos y texto grande. **Nunca para texto corrido:**
@@ -217,7 +239,7 @@ iconos y texto grande. **Nunca para texto corrido:**
 Todo lo demás de la paleta pasa AA como texto de cuerpo sobre las tres
 superficies oscuras.
 
-### 4.5 Bordes: hay dos, y no son intercambiables
+### 4.6 Bordes: hay dos, y no son intercambiables
 
 | Token             | Para qué                                          | Suelo   |
 | ----------------- | ------------------------------------------------- | ------- |
@@ -232,7 +254,7 @@ La distinción parece menor y no lo es. Es el tipo de fallo que no se ve al
 maquetar —quien lo hace ya sabe dónde están los campos— y que descubre un
 usuario con poca visión cuando ya está en producción.
 
-### 4.6 Los semánticos se recalculan en cada tema
+### 4.7 Los semánticos se recalculan en cada tema
 
 `--exito`, `--aviso` y `--error` son colores luminosos pensados para emitir
 sobre negro. Sobre fondo claro se hunden: heredarlos daba 1,59, 1,66 y 2,43,
@@ -321,5 +343,5 @@ No es una fase posterior. Una pantalla que incumpla esto no está terminada:
 - [ ] Con `prefers-reduced-motion` activo sigue siendo usable y con sentido
 - [ ] Zoom de texto al 200% sin romper
 - [ ] Solo `transform` y `opacity` animados
-- [ ] Tema claro revisado, si es ruta de contenido
+- [ ] ~~Tema claro revisado~~ · no aplica en la v1, ver §4.3
 - [ ] `npm run verificar` en verde

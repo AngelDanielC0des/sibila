@@ -1,7 +1,19 @@
+# Generado o ajeno
 .next
 out
 build
 coverage
 node_modules
 package-lock.json
+
+# Binarios de las cartas.
 public/cartas
+
+# Las maquetas del lienzo las escribe un generador, no una persona. Darles
+# formato aquí las haría divergir de su script en cuanto se regeneren, y cada
+# regeneración saldría como un diff entero.
+docs/lienzo/*.dc.html
+
+# Los informes de investigación son material de origen, no prosa del proyecto.
+# Reformatearlos sería reescribir un documento que no es nuestro.
+docs/investigacion/*.md

@@ -110,6 +110,25 @@
     "volver": "Back",
     "cerrar": "Close"
   },
+  "fallos": {
+    "noEncontrado": {
+      "titulo": "This card is not in the deck",
+      "cuerpo": "The page you were looking for does not exist, or it has moved.",
+      "volver": "Back to the home page",
+      "tiradas": "See the spreads"
+    },
+    "error": {
+      "titulo": "Something broke off",
+      "cuerpo": "We could not show this page. Your reading has not been lost.",
+      "reintentar": "Try again",
+      "volver": "Back to the home page"
+    },
+    "critico": {
+      "titulo": "Sibila is not answering",
+      "cuerpo": "Something failed underneath the application. Please reload the page.",
+      "recargar": "Reload"
+    }
+  },
   "legal": {
     "edad": "For ages 18 and over.",
     "encuadre": "Sibila is a tool for entertainment and self-reflection. It does not predict the future and is not a substitute for medical, legal, financial or psychological advice.",

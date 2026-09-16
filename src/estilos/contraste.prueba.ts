@@ -144,7 +144,7 @@ describe("tema oscuro · suelos de contraste", () => {
   /*
    * Estos tres pasan de 3 pero no llegan a 4,5. Sirven para bordes, iconos y
    * texto grande, y están prohibidos como texto de cuerpo en
-   * `docs/guia-de-diseno.md` §4.4. La prueba fija ambos extremos: si alguno
+   * `docs/guia-de-diseno.md` §4.5. La prueba fija ambos extremos: si alguno
    * subiera de 4,5 la prohibición sobraría, y si bajara de 3 no valdría ni para
    * bordes.
    */
