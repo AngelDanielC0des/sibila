@@ -50,8 +50,17 @@ next-env.d.ts
 /.playwright-mcp
 
 # Capturas de verificación del desarrollo: se regeneran abriendo la página.
-# Las capturas de la investigación de campo sí se versionan, en docs/investigacion.
-/docs/capturas/
+# Las de la investigación de campo sí se versionan, en docs/investigacion.
+#
+# Se excluye el CONTENIDO y no la carpeta: git no desciende a un directorio
+# excluido, así que con `/docs/capturas/` la excepción de abajo no rescataría
+# nada. Con `/*` sí.
+/docs/capturas/*
+
+# Excepción: las que son la evidencia de una decisión ya tomada y documentada.
+# Una captura de depuración caduca; ésta es la referencia de cómo tiene que
+# verse algo, y se versiona junto a la decisión que la cita.
+!/docs/capturas/referencia/
 
 # Lienzo de diseño: las fuentes son los .dc.html y canvas.json, que sí se
 # versionan. El .html publicable pesa 2,5 MB y se reconstruye con seed-canvas.

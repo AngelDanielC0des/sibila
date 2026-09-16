@@ -69,7 +69,15 @@
 
 .rejillaDeCampos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+  /*
+   * `min()` en el mínimo de la pista, no el valor a pelo.
+   *
+   * Con `minmax(280px, …)` la columna nunca baja de 280 aunque el contenedor
+   * mida menos, y a 320 px eso desbordaba el documento. Con `min(280px, 100%)`
+   * la pista cede cuando no cabe, que es lo que se esperaba desde el principio.
+   */
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: var(--esp-6);
   padding: var(--esp-5);
   border: 1px solid var(--linea);
@@ -138,6 +146,49 @@
 
 .rejillaDePaneles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
   gap: var(--esp-5);
+}
+
+/*
+ * La pareja carta + significado, que es como se lee de verdad una revelación.
+ *
+ * Se mide junta y no por separado: en móvil lo que decide si la pantalla
+ * funciona es cuánto ocupa la carta antes de que empiece el texto.
+ */
+.parejaDeLectura {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-5);
+  align-items: flex-start;
+}
+
+/*
+ * La carta necesita base explícita.
+ *
+ * `Carta` no tiene ancho propio a propósito —lo decide quien la coloca— y su
+ * proporción 7/12 convierte cualquier ancho en alto. Sin base, en un flex crece
+ * hasta el contenedor y se estira a más de dos mil píxeles de alto.
+ */
+.parejaDeLectura > :first-child {
+  flex: 0 0 15rem;
+}
+
+/*
+ * El panel se acota al ancho que tendrá en la pantalla de revelado.
+ *
+ * Sin tope crecía hasta 916 px mientras el texto se quedaba en 536, y la
+ * muestra dejaba de parecerse a lo que se va a construir.
+ */
+.parejaDeLectura > :last-child {
+  flex: 1 1 22rem;
+  max-width: 44rem;
+  min-width: 0;
+}
+
+/* En móvil la carta encoge, porque lo que tiene que caber es el texto. */
+@media (width <= 26rem) {
+  .parejaDeLectura > :first-child {
+    flex: 0 0 11rem;
+  }
 }

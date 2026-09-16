@@ -153,7 +153,11 @@ luego nadie sabe de dónde salen.
 
 ### 3.2 Medida de texto
 
-- Texto corrido: **60–70 caracteres** (`--ancho-lectura`, fijado en `68ch`).
+- Texto corrido: **60–75 caracteres** (`--ancho-lectura`, fijado en `58ch`).
+  Ojo: `ch` es el ancho del cero, no el de una letra media. Medido en navegador,
+  `68ch` daba 83 caracteres por línea —fuera de rango— y `58ch` da 71. **El
+  número del token no es el número de caracteres**, así que al cambiarlo hay que
+  volver a medir, no calcular.
 - Nunca se aplica la medida de lectura al mismo elemento que lleva la anchura de
   contenedor y el centrado automático: el resultado es un bloque estrecho
   centrado en vez de alineado. _Ya ocurrió una vez en el pie de la portada._

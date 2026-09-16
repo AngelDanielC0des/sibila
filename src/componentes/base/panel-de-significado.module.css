@@ -1,0 +1,97 @@
+/*
+ * El panel de significado.
+ *
+ * La jerarquía tipográfica hace todo el trabajo: versalita dorada para decir
+ * *dónde* estamos, serif grande para la respuesta a esa posición, y sans de
+ * lectura para el significado de la carta. Sin esa diferencia las dos capas del
+ * corpus se leerían como un único bloque y la lente dejaría de notarse.
+ */
+
+.encabezado {
+  margin: 0;
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-xs);
+  font-weight: var(--peso-medio);
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+  color: var(--oro);
+}
+
+/*
+ * La respuesta a esta posición.
+ *
+ * Medida más corta que la del cuerpo a propósito: es una frase o dos que hay que
+ * poder abarcar de una mirada, y a la medida de lectura larga se leería como un
+ * párrafo más.
+ */
+.destacado {
+  max-width: 44ch;
+  margin: var(--esp-4) 0 0;
+  font-family: var(--fuente-display);
+  font-size: var(--texto-lg);
+  font-weight: var(--peso-medio);
+  line-height: 1.5;
+  color: var(--texto);
+  text-wrap: pretty;
+}
+
+/* El veredicto de sí/no, delante de su motivo y en la misma línea. */
+.veredicto {
+  margin-right: var(--esp-2);
+  font-family: var(--fuente-datos);
+  font-size: var(--texto-sm);
+  font-weight: var(--peso-fuerte);
+  letter-spacing: var(--espaciado-versalita);
+  text-transform: uppercase;
+}
+
+.afirmativo {
+  color: var(--exito);
+}
+
+.negativo {
+  color: var(--error);
+}
+
+.incierto {
+  color: var(--aviso);
+}
+
+/*
+ * El significado de la carta, debajo de una regla.
+ *
+ * La regla no es adorno: marca dónde acaba lo que responde a *tu* posición y
+ * empieza lo que la carta significa siempre.
+ */
+.base {
+  margin: var(--esp-5) 0 0;
+  padding-top: var(--esp-5);
+  border-top: 1px solid var(--linea);
+  font-size: var(--texto-base);
+  line-height: 1.7;
+  color: var(--texto-suave);
+  text-wrap: pretty;
+}
+
+/*
+ * Cuando no hay lente —la tirada de una carta— el significado es todo lo que
+ * hay: no cuelga de nada, así que ni regla ni sangrado superior grande.
+ */
+.baseSola {
+  margin: var(--esp-4) 0 0;
+  font-size: var(--texto-base);
+  line-height: 1.7;
+  color: var(--texto-suave);
+  text-wrap: pretty;
+}
+
+/*
+ * En pantallas estrechas el panel respira menos y el destacado recupera el ancho
+ * completo: a 320 px una medida de 44ch ya no recorta nada, sólo estorbaría.
+ */
+@media (width <= 26rem) {
+  .destacado {
+    max-width: none;
+    font-size: var(--texto-md);
+  }
+}

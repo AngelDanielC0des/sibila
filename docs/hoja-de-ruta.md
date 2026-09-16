@@ -55,6 +55,42 @@ está instalado y tanto este documento como `guia-de-diseno.md` §8 prometen
 recorrido de extremo a extremo y capturas a 320, 390 y 1440. Es lo siguiente,
 antes de escribir pantallas y no después.
 
+### B1b · Tamaños de texto — antes de escribir corpus
+
+El usuario nunca lee una capa suelta: lee la composición. El caso que había que
+validar son las **130 palabras de matiz más base**, y no estaba validado contra
+nada porque el panel donde se leen no existía.
+
+|       | Tarea                       | Terminado cuando                                                                                                                                          |
+| ----- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| B1b.1 | Panel de significado        | ✅ `panel-de-significado.tsx`, compuesto sobre `Panel` enmarcado. Tres composiciones: sólo base, matiz más base, y veredicto más base                     |
+| B1b.2 | Textos de medida            | ✅ Seis textos en el mínimo y el máximo **exactos** de cada capa, atados a `reglas.ts` por prueba: si alguien cambia un límite y olvida la maqueta, falla |
+| B1b.3 | Medición a 320 / 390 / 1440 | ✅ En navegador y sobre valores calculados, no a ojo. **Los límites del corpus no cambian**: caben. Lo que cambió fue la maqueta                          |
+
+**Lo que la medición encontró**, todo corregido:
+
+- `--ancho-lectura: 68ch` daba **83 caracteres por línea**, no 68: `ch` es el
+  ancho del cero y la minúscula española corre más estrecha. Bajado a `58ch`,
+  que da 71. Afectaba a los doce sitios que usan el token, no sólo al panel.
+- `Carta` no tiene ancho propio —lo decide quien la coloca— y en un flex sin
+  base crecía hasta el contenedor: su proporción 7/12 la estiraba a 2.023 px de
+  alto. Toda disposición que la use tiene que darle base.
+- El panel enmarcado se comía el ancho a 320 px: con 32 px de relleno a cada
+  lado la línea caía a 24 caracteres. Reducido a 16 px en pantallas estrechas.
+- `minmax(280px, 1fr)` desbordaba el documento a 320 px. Corregido con
+  `min(280px, 100%)`, que es lo que se esperaba desde el principio.
+- **Con el texto al 200 % a 390 px el documento se desbordaba 37 px**, que
+  incumple el criterio de reflujo. La causa eran titulares con palabras largas.
+  `overflow-wrap: break-word` en `h1`–`h4` lo deja en cero.
+
+**Medidas finales**, caso peor de 130 palabras:
+
+| Ancho | Caracteres por línea | Carta más respuesta | Veredicto                   |
+| ----- | -------------------- | ------------------- | --------------------------- |
+| 1440  | 71 base · 49 matiz   | panel de 505 px     | entra entero en 900         |
+| 390   | 42 base · 41 matiz   | 540 px de 844       | carta y matiz sin desplazar |
+| 320   | 31 base · 30 matiz   | 594 px de 844       | carta y matiz sin desplazar |
+
 ### A1 · Sistema de diseño
 
 Nada de pantallas reales hasta que esto esté. Construir componentes sobre tokens

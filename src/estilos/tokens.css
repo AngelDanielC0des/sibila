@@ -190,7 +190,16 @@
   --carta-perspectiva: 900px;
 
   /* ── Disposición ──────────────────────────────────────────────────────── */
-  --ancho-lectura: 68ch;
+
+  /*
+   * Medida de lectura.
+   *
+   * `ch` es el ancho del cero, no el de una letra media, y la minúscula
+   * española corre bastante más estrecha: medido en navegador, 68ch daba 83
+   * caracteres por línea, por encima del rango cómodo de 45–75. 58ch deja la
+   * línea en unos 71. El número del token no es el número de caracteres.
+   */
+  --ancho-lectura: 58ch;
   --ancho-contenedor: 1180px;
   --gutter: var(--esp-4);
 

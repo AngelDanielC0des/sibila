@@ -37,6 +37,14 @@ body {
   text-rendering: optimizelegibility;
 }
 
+/*
+ * `overflow-wrap` en los titulares no es un detalle: es el criterio de reflujo.
+ *
+ * Medido a 390 px con el texto ampliado al 200 %, «Componentes» sola ocupa más
+ * que el ancho disponible y empuja el documento 84 px hacia la derecha, que es
+ * exactamente lo que WCAG 1.4.10 prohíbe. Sin esta línea, cualquier palabra
+ * larga en un titular reintroduce el fallo.
+ */
 h1,
 h2,
 h3,
@@ -46,6 +54,7 @@ h4 {
   font-weight: var(--peso-fuerte);
   line-height: var(--interlineado-titular);
   text-wrap: balance;
+  overflow-wrap: break-word;
 }
 
 p {

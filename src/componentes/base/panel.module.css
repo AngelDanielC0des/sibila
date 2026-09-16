@@ -20,6 +20,19 @@
   border-color: var(--oro-hondo);
 }
 
+/*
+ * En pantallas estrechas el relleno del marco se reduce.
+ *
+ * Medido a 320 px: con 32 px a cada lado, al texto le quedaban 209 px y la
+ * línea caía a 24 caracteres, que ya no se lee de corrido. Bajando a 16 px
+ * recupera unos 30, que es el suelo aceptable. La filigrana sigue cabiendo.
+ */
+@media (width <= 26rem) {
+  .enmarcado {
+    padding: var(--esp-4);
+  }
+}
+
 .titulo {
   margin-bottom: var(--esp-4);
   font-family: var(--fuente-display);

@@ -7,6 +7,14 @@ import { Carta } from "@/componentes/base/carta";
 import { buscarCartaPorId } from "@/motor-de-lectura/baraja";
 import { PosicionDeTirada } from "@/componentes/base/posicion-de-tirada";
 import { Panel } from "@/componentes/base/panel";
+import { PanelDeSignificado } from "@/componentes/base/panel-de-significado";
+import {
+  BASE_MAXIMO,
+  BASE_MINIMO,
+  MATIZ_MAXIMO,
+  MATIZ_MINIMO,
+  VALENCIA_MAXIMA,
+} from "./textos-de-medida";
 import estilos from "./pagina.module.css";
 
 /**
@@ -369,6 +377,74 @@ function SeccionDeEstados() {
 }
 
 /** Catálogo completo de componentes base. */
+/**
+ * El panel de significado, en el caso peor de cada composición.
+ *
+ * No es una muestra bonita: es la medición. El usuario nunca lee una capa
+ * suelta, lee la composición, y el caso que hay que validar son las 130
+ * palabras de matiz más base. Si algo desborda, lo que cambia es el límite de
+ * `reglas.ts` —ahora, que cuesta una línea— y no el corpus ya escrito.
+ */
+function SeccionDeSignificado() {
+  return (
+    <section className={estilos.seccion}>
+      <h2 className={estilos.tituloDeSeccion}>Panel de significado</h2>
+      <p className={estilos.notaDeSeccion}>
+        Las tres composiciones que existen, con los textos en el extremo exacto de{" "}
+        <code>src/corpus/reglas.ts</code>. Mídelas a 320, 390 y 1440: a ancho de
+        escritorio tiene que entrar el panel entero; en móvil basta con que entren la
+        carta y la respuesta a la posición.
+      </p>
+
+      <div className={estilos.grupo}>
+        <h3 className={estilos.tituloDeGrupo}>
+          Matiz más base · el caso peor, 130 palabras
+        </h3>
+        <div className={estilos.parejaDeLectura}>
+          <Carta carta={LA_TORRE} orientacion="invertida" estaRevelada />
+          <PanelDeSignificado
+            encabezado="Qué puede frenarte"
+            matiz={MATIZ_MAXIMO.texto}
+            base={BASE_MAXIMO.texto}
+          />
+        </div>
+      </div>
+
+      <div className={estilos.grupo}>
+        <h3 className={estilos.tituloDeGrupo}>Matiz más base · el caso corto, 63</h3>
+        <div className={estilos.parejaDeLectura}>
+          <Carta carta={LA_TORRE} estaRevelada />
+          <PanelDeSignificado
+            encabezado="Qué puede frenarte"
+            matiz={MATIZ_MINIMO.texto}
+            base={BASE_MINIMO.texto}
+          />
+        </div>
+      </div>
+
+      <div className={estilos.grupo}>
+        <h3 className={estilos.tituloDeGrupo}>Sólo base · la tirada de una carta</h3>
+        <div className={estilos.parejaDeLectura}>
+          <Carta carta={LA_TORRE} estaRevelada />
+          <PanelDeSignificado encabezado="La Torre" base={BASE_MAXIMO.texto} />
+        </div>
+      </div>
+
+      <div className={estilos.grupo}>
+        <h3 className={estilos.tituloDeGrupo}>Veredicto más base · la tirada de sí/no</h3>
+        <div className={estilos.parejaDeLectura}>
+          <Carta carta={LA_TORRE} estaRevelada />
+          <PanelDeSignificado
+            encabezado="Tu pregunta"
+            base={BASE_MAXIMO.texto}
+            valencia={{ veredicto: "no", etiqueta: "No", motivo: VALENCIA_MAXIMA.texto }}
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function CatalogoDeComponentes() {
   return (
     <main className={estilos.pagina}>
@@ -388,6 +464,7 @@ export function CatalogoDeComponentes() {
         <SeccionDeCarta />
         <SeccionDePosiciones />
         <SeccionDePanel />
+        <SeccionDeSignificado />
         <SeccionDeEstados />
       </div>
     </main>
