@@ -70,3 +70,10 @@ next-env.d.ts
 # Secuencias pre-renderizadas de las cartas: binarios pesados, fuera de git.
 /public/cartas/*.mp4
 /public/cartas/*.webm
+
+# Artefactos del arnés de pantalla: trazas, capturas de fallo e informe HTML.
+# La prueba es el fichero; su salida se regenera con `npm run pruebas:pantalla`.
+/pruebas-de-pantalla/salida
+/playwright-report
+/blob-report
+/.playwright

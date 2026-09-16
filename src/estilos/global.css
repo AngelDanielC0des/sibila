@@ -57,6 +57,20 @@ h4 {
   overflow-wrap: break-word;
 }
 
+/*
+ * Lo mismo, para los identificadores técnicos.
+ *
+ * Un nombre de fichero como `contraste.prueba.ts` no tiene ni un espacio donde
+ * romper, y en la fuente monoespaciada ocupa 293 px: a 320 px con el texto al
+ * 200 % desbordaba el documento 40 px. `anywhere` y no `break-word` porque
+ * `break-word` no rompe una palabra que ya está sola en su línea.
+ */
+code,
+kbd,
+samp {
+  overflow-wrap: anywhere;
+}
+
 p {
   margin: 0;
 }

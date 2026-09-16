@@ -42,18 +42,34 @@ multiidioma con slug traducido, tokens de diseño, primera prueba.
 
 Nada de esto se ve, y todo impide una avería concreta más adelante.
 
-|       | Tarea                   | Terminado cuando                                                                                                                                                                                                                                                        |
-| ----- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A0b.1 | Integración continua    | ✅ `.github/workflows/verificar.yml`. El hook de pre‑commit se salta con `--no-verify` y no corre al empujar; esto sí. Añade formato y **compilación de producción**, que ve errores que `tsc --noEmit` no ve. `engines` fija Node 22 para que local y CI no se separen |
-| A0b.2 | Pantallas de fallo      | ✅ Tres: 404 localizado dentro de un idioma, 404 estático en la raíz para URLs fuera de todo idioma, y `global-error` para cuando cae el propio layout. Verificadas en navegador: estado 404, `lang` correcto, enlaces traducidos                                       |
-| A0b.3 | Guarda de peso por ruta | ✅ `CLAUDE.md` prohíbe Three.js y GSAP en rutas de contenido, y hasta ahora era sólo prosa. Forzado en ESLint y verificado con un import prohibido real                                                                                                                 |
-| A0b.4 | Tema claro, decidido    | ✅ **No entra en la v1.** Los tokens quedan dormidos y documentados en `guia-de-diseno.md` §4.3, para que nadie los tome por trabajo a medias                                                                                                                           |
-| A0b.5 | Plantilla de entorno    | ✅ `.env.example` versionado —con la negación en `.gitignore` que hace falta para que `.env*` no se lo trague—, con la forma de lo que llega en A5 y sin ningún valor                                                                                                   |
+|       | Tarea                        | Terminado cuando                                                                                                                                                                                                                                                                      |
+| ----- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A0b.1 | Integración continua         | ✅ `.github/workflows/verificar.yml`. El hook de pre‑commit se salta con `--no-verify` y no corre al empujar; esto sí. Añade formato y **compilación de producción**, que ve errores que `tsc --noEmit` no ve. `engines` fija Node 22 para que local y CI no se separen               |
+| A0b.2 | Pantallas de fallo           | ✅ Tres: 404 localizado dentro de un idioma, 404 estático en la raíz para URLs fuera de todo idioma, y `global-error` para cuando cae el propio layout. Verificadas en navegador: estado 404, `lang` correcto, enlaces traducidos                                                     |
+| A0b.3 | Guarda de peso por ruta      | ✅ `CLAUDE.md` prohíbe Three.js y GSAP en rutas de contenido, y hasta ahora era sólo prosa. Forzado en ESLint y verificado con un import prohibido real                                                                                                                               |
+| A0b.4 | Tema claro, decidido         | ✅ **No entra en la v1.** Los tokens quedan dormidos y documentados en `guia-de-diseno.md` §4.3, para que nadie los tome por trabajo a medias                                                                                                                                         |
+| A0b.5 | Plantilla de entorno         | ✅ `.env.example` versionado —con la negación en `.gitignore` que hace falta para que `.env*` no se lo trague—, con la forma de lo que llega en A5 y sin ningún valor                                                                                                                 |
+| A0b.6 | Arnés de pruebas de pantalla | ✅ `playwright.config.mts` y `pruebas-de-pantalla/`. Los cuatro proyectos son **los cuatro anchos de `guia-de-diseno.md` §8**, no navegadores: el riesgo aquí no es la diferencia entre motores. Comando propio, `npm run pruebas:pantalla`, y trabajo propio en integración continua |
 
-**Lo que sigue faltando aquí:** el arnés de pruebas de pantalla. Playwright no
-está instalado y tanto este documento como `guia-de-diseno.md` §8 prometen
-recorrido de extremo a extremo y capturas a 320, 390 y 1440. Es lo siguiente,
-antes de escribir pantallas y no después.
+**Por qué no entra en `npm run verificar`:** aquello es la puerta rápida y tiene
+que seguir corriendo en segundos sin levantar servidor ni navegador. Un arnés
+que hace lento el comando que todo el mundo ejecuta es un arnés que la gente
+aprende a saltarse.
+
+**Lo que encontró en su primera ejecución**, que es para lo que existe:
+
+- **La portada desbordaba 255 px a 320 y 185 px a 390** con el texto al 200 %.
+  El selector de idioma era un `flex` sin `wrap` y los tres enlaces suman 543 px
+  ampliados. B1b midió el panel de significado, no la portada, y por eso este
+  fallo sobrevivió a aquella medición.
+- **`code` desbordaba 40 px en la página de tokens.** `contraste.prueba.ts` no
+  tiene ni un espacio donde romper y en monoespaciada ocupa 293 px. Resuelto con
+  `overflow-wrap: anywhere` en `code`, `kbd` y `samp`; `break-word` no valía
+  porque no rompe una palabra que ya está sola en su línea.
+- **El catálogo de componentes desborda 64 px a 320 px** con el texto al 200 %:
+  los botones de estado y la cara de la carta piden más ancho del que hay. Queda
+  **anotado como fallo esperado**, no excluido: la prueba sigue corriendo y
+  avisará el día que empiece a pasar. Es catálogo interno, sin indexar.
 
 ### B1b · Tamaños de texto — antes de escribir corpus
 

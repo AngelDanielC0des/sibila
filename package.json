@@ -19,6 +19,8 @@
     "test:watch": "vitest",
     "test:cobertura": "vitest run --coverage",
     "validar:nucleos": "node --experimental-strip-types --no-warnings scripts/validar-nucleos.mts",
+    "pruebas:pantalla": "playwright test",
+    "pruebas:pantalla:ui": "playwright test --ui",
     "verificar": "npm run typecheck && npm run lint && npm run lint:css && npm run test && npm run validar:nucleos",
     "prepare": "husky",
     "corpus": "node --experimental-strip-types --no-warnings scripts/avance-corpus.mts"
@@ -32,6 +34,7 @@
     "three": "^0.186.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "@types/node": "^22.20.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -46,3 +46,33 @@ jobs:
 
       - name: Avance del corpus
         run: npm run corpus
+
+  pantallas:
+    name: Pruebas de pantalla
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      # Solo Chromium: lo que se mide aquí es maquetación y accesibilidad, no
+      # diferencias entre motores. Traer los tres navegadores triplicaría
+      # minutos sin comprobar nada nuevo.
+      - name: Instalar Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Recorrido a 320, 390, 844x390 y 1440
+        run: npm run pruebas:pantalla
+
+      - if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: informe-de-pantalla
+          path: playwright-report/
+          retention-days: 7

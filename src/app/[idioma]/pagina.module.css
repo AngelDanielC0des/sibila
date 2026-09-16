@@ -31,6 +31,15 @@
 
 .idiomas {
   display: flex;
+
+  /*
+   * Envuelve, y no es cosmético: es el criterio de reflujo.
+   *
+   * Medido con el arnés de pantalla a 320 y 390 px con el texto al 200 %, los
+   * tres enlaces suman 543 px en una fila que no cedía, y empujaban el
+   * documento 255 px y 185 px respectivamente. WCAG 1.4.10 lo prohíbe.
+   */
+  flex-wrap: wrap;
   gap: var(--esp-2);
   align-items: center;
   font-family: var(--fuente-datos);
