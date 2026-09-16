@@ -16,20 +16,20 @@ import {
  */
 const EJEMPLOS_BUENOS = {
   torre:
-    "La Torre no avisa. Lo que se derrumba aquí es lo que ya estaba agrietado " +
-    "por dentro, y el golpe solo hace visible una grieta que llevaba tiempo ahí. " +
-    "No es castigo ni azar: es una estructura que dejó de sostenerse y tardó en " +
-    "admitirlo. Lo que queda después es suelo firme, aunque de momento no lo parezca.",
+    "La Torre no avisa. El rayo sólo vuelve visible una grieta que ya estaba " +
+    "trazada: lo que cede aquí llevaba tiempo cediendo por dentro, sin testigos. " +
+    "No es castigo ni azar, es una estructura que dejó de sostenerse y tardó en " +
+    "admitirlo. La señal estaba, sostenida y clara. Lo que faltó fue leerla a tiempo.",
   ermitano:
-    "El Ermitaño se aparta a propósito. No es soledad impuesta ni huida: es la " +
-    "decisión de bajar el ruido para oír algo que con ruido no se oye. Sube con " +
-    "una lámpara, y la lámpara no le sirve solo a él — alumbra el camino a quien " +
-    "viene detrás. Aquí hay una respuesta, pero no está fuera.",
+    "El Ermitaño se aparta a propósito. No es soledad impuesta ni huida: es bajar " +
+    "el ruido hasta que se oye lo que con ruido no se oye. Sube con una lámpara, " +
+    "y la lámpara no le sirve sólo a él — alumbra a quien viene detrás. Aquí hay " +
+    "una respuesta, y no está fuera.",
   cuatroDeCopas:
     "Tres copas delante y una cuarta que se ofrece, y la mirada puesta en otra " +
     "parte. El Cuatro de Copas no habla de carencia sino de hartazgo: hay algo " +
     "disponible y no lo estás viendo, precisamente porque ya tienes suficiente de " +
-    "algo parecido. El desinterés aquí no es descanso, es una puerta que se cierra sola.",
+    "algo parecido. El desinterés aquí no es descanso; es una puerta que se cierra sola.",
 };
 
 const MATIZ_BUENO =
@@ -217,5 +217,125 @@ describe("duplicados entre cartas", () => {
     ]);
 
     expect(problemas).toEqual([]);
+  });
+});
+
+/*
+ * El registro futurista, guía §3.1 y §4.5.
+ *
+ * Es la parte del validador con más riesgo de hacer daño: un falso positivo
+ * aquí no cuesta una corrección, cuesta que quien escribe aprenda a ignorar los
+ * avisos. Por eso se prueba con la misma insistencia lo que tiene que cazar y
+ * lo que NO puede cazar.
+ */
+describe("léxico que envejece", () => {
+  const conTermino = (termino: string) =>
+    `La Torre no avisa, y el ${termino} tampoco lo habría avisado. Lo que cede ` +
+    "aquí llevaba tiempo cediendo por dentro, sin testigos y sin ruido. No es " +
+    "castigo ni azar, es una estructura que dejó de sostenerse y tardó demasiado " +
+    "en admitirlo. Lo que queda en pie después es lo que podía sostenerse solo.";
+
+  for (const termino of ["algoritmo", "chip", "robot", "feedback", "cuantico"]) {
+    it(`«${termino}» tumba la pieza`, () => {
+      const errores = soloErrores(revisarTexto(conTermino(termino), "base", "base/x"));
+
+      expect(errores.map((problema) => problema.regla)).toContain("lexico prohibido");
+    });
+  }
+
+  /*
+   * Sibila es un holograma, y precisamente por eso el corpus no puede nombrarlo:
+   * que el texto cuente el truco lo desactiva.
+   */
+  it("«holograma» se rechaza aunque Sibila sea uno", () => {
+    const errores = soloErrores(revisarTexto(conTermino("holograma"), "base", "base/x"));
+
+    expect(errores).not.toEqual([]);
+  });
+
+  /*
+   * La lista se acortó a propósito después de escribirla: estas cuatro son
+   * español corriente y prohibirlas daría falsos positivos en textos legítimos.
+   */
+  it("no caza español corriente que sólo suena a informática", () => {
+    const legitimos = [
+      "Una nube tapa el sol de la carta y lo que se ve pierde nitidez, aunque " +
+        "el sol siga estando exactamente donde estaba.",
+      "Toca descargar el peso que llevas antes de que la espalda diga basta, " +
+        "porque nadie sostiene indefinidamente algo que no le corresponde.",
+      "La queja se ha instalado en la casa y ya nadie la reconoce como huésped, " +
+        "porque lleva tanto tiempo ahí que parece parte del mobiliario.",
+      "La aplicación de la regla importa más que la regla escrita, y esta carta " +
+        "señala justo esa distancia entre lo dicho y lo hecho.",
+    ];
+
+    for (const texto of legitimos) {
+      const errores = soloErrores(revisarTexto(texto, "matiz", "matiz/x"));
+
+      expect(errores, texto).toEqual([]);
+    }
+  });
+
+  it("lo dudoso avisa en lugar de tumbar", () => {
+    const texto =
+      "Descifrar el código de esta carta pide calma y no prisa, porque lo que se " +
+      "lee deprisa acaba diciendo lo que ya se quería oír.";
+    const problemas = revisarTexto(texto, "matiz", "matiz/x");
+
+    expect(soloErrores(problemas)).toEqual([]);
+    expect(problemas.map((problema) => problema.regla)).toContain("lexico a revisar");
+  });
+});
+
+describe("la dosis de sustantivos de instrumento", () => {
+  it("uno no avisa", () => {
+    const texto =
+      "La señal llega entera y aun así nadie la recoge a tiempo, que es " +
+      "exactamente lo que esta carta viene a poner delante.";
+
+    expect(revisarTexto(texto, "matiz", "matiz/x")).toEqual([]);
+  });
+
+  it("dos avisan, y el aviso los nombra", () => {
+    const texto =
+      "La señal llega con ruido de fondo y nadie termina de recogerla a tiempo, " +
+      "que es lo que esta carta viene a poner delante.";
+    const problemas = revisarTexto(texto, "matiz", "matiz/x");
+
+    expect(soloErrores(problemas)).toEqual([]);
+
+    const aviso = problemas.find((p) => p.regla === "dosis de instrumento");
+    expect(aviso?.detalle).toContain("«señal»");
+    expect(aviso?.detalle).toContain("«ruido»");
+  });
+
+  /*
+   * Singular y plural son la misma palabra, no dos instrumentos distintos.
+   * Contarlos por separado haría saltar el aviso en piezas correctas.
+   */
+  it("singular y plural cuentan como una sola palabra", () => {
+    const texto =
+      "Los ecos de lo anterior siguen ahí y el eco de ayer manda más que lo de " +
+      "hoy, aunque nadie quiera nombrarlo en voz alta.";
+    const problemas = revisarTexto(texto, "matiz", "matiz/x");
+
+    expect(problemas.map((problema) => problema.regla)).not.toContain(
+      "dosis de instrumento",
+    );
+  });
+
+  /*
+   * Español corriente que suena a instrumento y que la guía §4.4 deja fuera de
+   * la ración a propósito: racionarlo convertiría la dosis en camisa de fuerza.
+   */
+  it("no raciona «estructura», «tensión» ni «presión»", () => {
+    const texto =
+      "La estructura cede por la tensión de abajo y la presión de arriba no " +
+      "afloja, que es como se derrumba algo sin que parezca súbito.";
+    const problemas = revisarTexto(texto, "matiz", "matiz/x");
+
+    expect(problemas.map((problema) => problema.regla)).not.toContain(
+      "dosis de instrumento",
+    );
   });
 });
