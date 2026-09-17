@@ -307,7 +307,7 @@ contra la guía de voz.
 | --- | --------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | B0  | Guía de voz           | ✅ `docs/corpus/guia-de-voz.md`                                                                                     |
 | B1  | Esquema y validador   | ✅ Reglas puras probadas, validación del corpus real dentro de `verificar`, e informe de avance en `npm run corpus` |
-| B2  | 156 significados base | 78 cartas × 2 orientaciones, validador en verde, muestra revisada por ti                                            |
+| B2  | 156 significados base | ✅ Escritos y en verde. **Falta que leas una muestra**: lo mecánico lo garantiza el validador, la voz no            |
 | B3  | Matices por familia   | Todas las familias de las tiradas activas                                                                           |
 | B4  | Valencias sí/no       | Las 78, con su frase de motivo                                                                                      |
 | B5  | Revisión de voz       | Lectura completa buscando deriva. El validador no detecta que un texto no tenga voz                                 |
@@ -316,7 +316,7 @@ contra la guía de voz.
 tandas y revisar cada tanda antes de seguir es lo que impide descubrir en la
 pieza 140 que la voz se torció en la 40.
 
-**Los 22 arcanos mayores están escritos.** Quedan los 56 menores. Las tandas se
+**La capa base está completa: 156 de 156.** Las 78 cartas en las dos orientaciones. Las tandas se
 midieron sobre el conjunto y no pieza a pieza, que es la única forma de ver
 deriva, y eso hizo aparecer dos reglas que ahora están en la guía de voz:
 
