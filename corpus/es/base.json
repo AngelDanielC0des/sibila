@@ -198,5 +198,61 @@
   "rey-de-copas": {
     "derecha": "El Rey de Copas tiene el trono sobre el agua y el agua está movida, con un barco escorado a un lado y un pez saltando al otro. Él no se moja. No es frialdad: es haber pasado por ahí las veces suficientes para no reaccionar a la primera ola. Aquí la calma no viene de que el mar esté quieto.",
     "invertida": "El Rey de Copas invertido guarda el oleaje dentro. Por fuera sigue la misma calma, la misma voz medida, la misma mano firme. Por debajo, el trono lleva tiempo mojándose. También es la serenidad usada para no tener que decir nada, que se parece mucho a la madurez y no es lo mismo. Aquí lo que no se ve es lo que está pasando."
+  },
+  "as-de-espadas": {
+    "derecha": "El As de Espadas es una mano que sale de la nube con la hoja recta hacia arriba, coronada. No hay filigrana. Hay filo. Lo que esta carta trae es el corte que separa lo que estaba revuelto: se nombra una cosa con su nombre y deja de poder confundirse con otra. Aclarar y doler pueden ser el mismo gesto.",
+    "invertida": "El As de Espadas invertido tiene el filo y no el corte. La claridad está disponible y no se usa: se ve con precisión lo que pasa y se sigue hablando de otra cosa, porque nombrarlo obliga. También es el filo usado para hacer daño en vez de para separar, que es la misma herramienta con otro fin. Aquí lo bloqueado es decir la palabra exacta."
+  },
+  "dos-de-espadas": {
+    "derecha": "El Dos de Espadas está sentado de espaldas al mar, con una venda en los ojos y dos hojas cruzadas sobre el pecho. El equilibrio se sostiene porque no se mira nada. Aplazar aquí tiene su lógica: mientras las dos espadas pesen igual no hay que perder ninguna. La venda no la puso nadie más.",
+    "invertida": "El Dos de Espadas invertido empieza a soltar el peso. La venda se afloja y una de las dos opciones pesa ya más que la otra, aunque todavía no se diga en voz alta. También aparece antes. Es el equilibrio vuelto costumbre, sostenido tanto tiempo que los brazos ya no saben bajar. Lo que aquí se retrasa es admitir que hay preferencia."
+  },
+  "tres-de-espadas": {
+    "derecha": "El Tres de Espadas es un corazón con tres hojas clavadas y una nube lloviendo encima, y no hay nada más en la lámina: ni figura, ni paisaje, ni consuelo puesto al lado. El dolor que describe viene de algo dicho o sabido, no de una sospecha, y por eso tiene bordes limpios. Lo que se sabe duele distinto que lo que se teme.",
+    "invertida": "El Tres de Espadas invertido es la herida que va cerrando a su ritmo. Las hojas siguen puestas y ya no están entrando: lo que dolía duele algo menos cada vez que se cuenta. También aparece por el otro lado, cuando el corte se guarda sin airear y la nube se queda encima más tiempo del que haría falta. Lo que aquí se retrasa es la cicatriz."
+  },
+  "cuatro-de-espadas": {
+    "derecha": "El Cuatro de Espadas tiene a una figura tumbada sobre una tumba con las manos juntas, tres espadas colgadas en la pared y una cuarta debajo. No está vencida. Está descansando, y la diferencia es toda la carta: esto es una retirada para reponerse, no un final. Parar a tiempo es parte del trabajo, no una pausa en él.",
+    "invertida": "El Cuatro de Espadas invertido no consigue parar. El cuerpo está tumbado y la cabeza sigue de servicio: se descansa mal, se revisa lo pendiente desde la cama, y la pausa no repone nada. También es el reposo alargado hasta volverse escondite. Aquí lo bloqueado no es el sueño, es soltar la guardia."
+  },
+  "cinco-de-espadas": {
+    "derecha": "El Cinco de Espadas recoge del suelo las armas de los que se van. Ha ganado. Se le nota en la cara. Al fondo dos figuras se alejan de espaldas y el cielo está roto en jirones, y esa es la parte de la victoria que no se cuenta. Ganar así deja el campo despejado y vacío.",
+    "invertida": "El Cinco de Espadas invertido se lleva la cuenta hacia dentro. Por fuera el asunto está cerrado y nadie reclama nada, y por dentro se sigue pasando la factura de lo que costó tener razón. También es el momento en que se ve lo perdido y todavía no se hace nada con ello. Lo que se revisa aquí se revisa a solas."
+  },
+  "seis-de-espadas": {
+    "derecha": "En el Seis de Espadas alguien empuja una barca con una pértiga y lleva a dos pasajeros quietos, con seis hojas clavadas en la madera del casco. El agua de delante está lisa y la de detrás picada, y las espadas viajan a bordo: se sale de lo malo sin haberlo resuelto, y lo que no se resolvió se lleva puesto. Cambiar de aguas ya es bastante para una travesía.",
+    "invertida": "El Seis de Espadas invertido no acaba de cruzar. La barca está cargada y la otra orilla se ve, pero el empuje se queda corto: se sale y se vuelve, se prueba la travesía y se deshace el equipaje. También es el traslado hecho sin mover nada de lo que había que mover. Lo que aquí se retrasa es la salida, no la decisión."
+  },
+  "siete-de-espadas": {
+    "derecha": "El Siete de Espadas se lleva cinco hojas agarradas por el filo y deja dos clavadas detrás, mientras el campamento sigue en pie a su espalda. Va de puntillas y mira hacia atrás. Lo que describe esta carta se hace a escondidas y con cálculo: puede ser astucia, puede ser evasión, y muchas veces las dos a la vez. Llevarse parte no es lo mismo que llevárselo todo.",
+    "invertida": "El Siete de Espadas invertido devuelve lo cogido, o lo destapa. Lo que se hacía por lo bajo sale a la luz, a veces porque alguien lo ve y a veces porque cansa sostenerlo. También es lo contrario. Es el plan que se abandona por miedo a que se note, con las cinco espadas otra vez en su sitio. Aquí lo bloqueado es hacerlo de frente."
+  },
+  "ocho-de-espadas": {
+    "derecha": "El Ocho de Espadas tiene a una figura atada y con los ojos tapados entre ocho hojas clavadas en el barro. Las espadas no la rodean del todo: hay hueco por delante y el suelo está libre. El límite que describe esta carta es más de cabeza que de terreno, y eso no lo hace menos real mientras la venda siga puesta. Lo que encierra aquí se puede caminar.",
+    "invertida": "El Ocho de Espadas invertido afloja el nudo. Se mueve un pie, se ve un hueco, y lo que parecía cerrado resulta tener más salida de la que se contaba. También aparece antes de eso, cuando la atadura se ha vuelto cómoda porque quedarse dentro evita tener que decidir fuera. Aquí lo bloqueado es el primer paso a ciegas."
+  },
+  "nueve-de-espadas": {
+    "derecha": "El Nueve de Espadas es alguien sentado en la cama con la cara entre las manos y nueve hojas colgadas en la pared de detrás, sin tocarle. Ocurre de noche, y de noche todo tiene el tamaño que le da la oscuridad. Lo que pasó de día era más pequeño que esto, y a las cuatro de la mañana ese dato no sirve de nada.",
+    "invertida": "El Nueve de Espadas invertido empieza a amanecer. Lo que crecía en la oscuridad recupera su tamaño en cuanto entra luz, y lo que parecía definitivo pasa a ser un asunto con medidas. También es el agobio llevado aún más adentro y no contado a nadie, sostenido en silencio durante el día. Aquí lo que desborda no es lo ocurrido."
+  },
+  "diez-de-espadas": {
+    "derecha": "El Diez de Espadas clava diez hojas en una espalda cuando con una habría bastado, y esa exageración es intencionada. Al fondo el cielo negro se corta en una línea recta y ya está aclarando. La carta describe un final sin discusión posible: no queda nada que negociar ni margen para entenderlo de otra manera. Desde aquí no se baja más.",
+    "invertida": "El Diez de Espadas invertido levanta la cabeza despacio. El final ya ocurrió y todavía se están sacando las hojas una a una, que es un trabajo lento y poco vistoso. También aparece antes. Es el final que se alarga porque no se declara, sosteniendo algo terminado por no decir la palabra. Lo que aquí se retrasa es el punto final, no el desenlace."
+  },
+  "sota-de-espadas": {
+    "derecha": "La Sota de Espadas está en alto, con el arma ya levantada y la mirada de lado, y a su alrededor el viento mueve las nubes y los pájaros. Vigila. Todavía no sabe medir lo que dice, así que lo dice: la atención aquí está afilada y sin pulir. Mirar con desconfianza también es una forma de aprender rápido.",
+    "invertida": "La Sota de Espadas invertida vigila de más. La atención despierta se convierte en sospecha constante: se lee segunda intención en cualquier frase, y se responde antes de haber terminado de escuchar. También es la palabra soltada por encima, la que hace daño sin querer y no se puede recoger. Aquí sobra filo y falta puntería."
+  },
+  "caballo-de-espadas": {
+    "derecha": "El Caballo de Espadas entra a galope con la hoja en alto y el viento echándole la capa hacia atrás. No frena. No rodea. Lo que hay que decir se dice de una vez, y el coste de decirlo se calcula después, si es que se calcula. Hay asuntos que sólo se resuelven entrando de frente.",
+    "invertida": "El Caballo de Espadas invertido embiste sin blanco. La prisa sigue intacta y ha perdido el motivo: se discute por discutir, se corrige a quien no lo pidió, y la franqueza se usa como permiso para no cuidar la forma. También es la carga lanzada con la información a medias. Aquí sobra velocidad y falta el porqué."
+  },
+  "reina-de-espadas": {
+    "derecha": "La Reina de Espadas está de perfil, con la hoja recta y una mano extendida, y en el trono hay mariposas y una cara de niño tallada. Ha pasado por cosas, y de ahí viene su claridad, no de la teoría. Dice lo que ve, entero, sin rebajarlo para que siente mejor. Eso se agradece más tarde que en el momento.",
+    "invertida": "La Reina de Espadas invertida corta más de lo que hace falta. La lucidez sigue siendo exacta y ha perdido la medida: se dice todo, a todo el mundo, tenga o no que oírlo, y la verdad empieza a servir para mantener a la gente a distancia. También es el límite convertido en muro. Aquí sobra filo y falta para quién."
+  },
+  "rey-de-espadas": {
+    "derecha": "El Rey de Espadas está sentado de frente, con la hoja algo inclinada y la mirada quieta, y detrás las nubes están altas y no se mueven. Lo que decide lo decide por criterio y no por afecto: pesa lo que hay, aplica la regla y sostiene el resultado aunque no le guste a nadie, incluido él. La imparcialidad se parece a la frialdad y no es lo mismo.",
+    "invertida": "El Rey de Espadas invertido aplica el criterio por encima del caso. La norma sigue siendo buena y se ha vuelto un fin: se tiene razón contra la gente, se gana la discusión y se pierde el asunto. También es la autoridad que se apoya en la palabra difícil para que nadie compruebe el fondo. Aquí sobra argumento y falta escuchar el caso."
   }
 }
