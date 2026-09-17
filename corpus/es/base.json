@@ -87,6 +87,62 @@
     "derecha": "El Mundo es una figura bailando dentro de una guirnalda cerrada, con las cuatro criaturas mirando desde las esquinas. Lo que se completa aquí se completa entero: no queda cabo suelto ni parte que reclame volver. Es un logro y es un borde, porque una guirnalda cerrada sigue siendo un círculo. Lo que termina bien termina en condiciones de empezar otra cosa.",
     "invertida": "El Mundo invertido es el cierre que se queda a un paso. Casi todo está hecho. Falta la parte que lo vuelve completo, y suele ser la menos vistosa: rematar, despedirse, decirlo en voz alta. La guirnalda tiene un hueco por el que se escapa lo conseguido. Aquí el final no está lejos; está sin terminar."
   },
+  "as-de-bastos": {
+    "derecha": "Del As de Bastos sale una mano entre nubes sosteniendo una rama que todavía echa hojas. No hay obra aquí, hay materia prima: las ganas en estado bruto, antes de que nadie decida en qué se gastan. El castillo del fondo queda lejos y no importa todavía. Lo que se ofrece es el arranque, y el arranque no obliga a nada.",
+    "invertida": "El As de Bastos invertido tiene la chispa encendida y sin destino. Las ganas están, y por eso no es una carta de apatía: lo que falta es el sitio donde ponerlas, o el momento, que todavía no ha llegado. También es el impulso que se anuncia mucho y se aplaza cada vez. Aquí no se ha apagado nada; sigue esperando."
+  },
+  "dos-de-bastos": {
+    "derecha": "El Dos de Bastos mira el mar desde la muralla de su propio castillo, con un globo pequeño en la mano: un bastón está fijado al muro y el otro lo sostiene él, una parte ya es suya y la otra se puede llevar. Aquí se planifica desde lo conseguido, no desde el deseo. Lo que se decide es hasta dónde, no si.",
+    "invertida": "El Dos de Bastos invertido se queda en la muralla. El plan está hecho, el mapa mirado y el mundo cabe en la mano, pero el pie no pasa de la piedra: se confunde preparar con empezar. También es el proyecto que se rehace una vez más para no tener que defenderlo fuera. Aquí falta salir, y salir no admite ensayo."
+  },
+  "tres-de-bastos": {
+    "derecha": "El Tres de Bastos está de espaldas, en alto, viendo salir los barcos. La parte que dependía de él ya se hizo: se cargó, se firmó, se soltó amarras, y lo que viene ahora depende de otros y de la mar. Estar quieto aquí no es estar parado: es la parte del trabajo que no se ve.",
+    "invertida": "El Tres de Bastos invertido es la espera que se alarga más de lo previsto. Los barcos salieron y no se ve el horizonte devolver nada, y la duda empieza a trabajar por su cuenta: se piensa en salir a buscarlos. También aparece cuando la vista se acorta y lo lanzado se olvida. Lo que aquí se retrasa es la vuelta, no el envío."
+  },
+  "cuatro-de-bastos": {
+    "derecha": "El Cuatro de Bastos levanta cuatro palos con guirnaldas y debajo ya hay gente con los brazos en alto. Lo que se celebra no es una promesa. Es un suelo. La casa está en pie, el umbral existe, y por eso se puede invitar a alguien a cruzarlo. Aquí primero se asienta y después se brinda, en ese orden.",
+    "invertida": "El Cuatro de Bastos invertido celebra sobre algo que aún no aguanta. La guirnalda está puesta y los cimientos no: se da por cerrado lo que sigue abierto, y la fiesta tapa el trabajo que faltaba. También es el logro real que no se reconoce, la casa levantada sin que nadie se pare a mirarla. Aquí lo que falla es el orden, no el motivo."
+  },
+  "cinco-de-bastos": {
+    "derecha": "En el Cinco de Bastos hay cinco figuras moviendo palos y ninguna está herida. No es una batalla: es un solar donde cada uno empuja en su dirección y nadie cede el turno. El ruido que sale de ahí parece conflicto y muchas veces sólo es exceso de ganas mal repartidas. Lo que cuesta aquí no es vencer, es ordenar.",
+    "invertida": "El Cinco de Bastos invertido mete la pelea hacia dentro. Fuera todo parece en calma, nadie levanta la voz y nadie discute, y el empujón se ha quedado en quien lo aguanta: varias ganas propias tirando a la vez, sin decidir cuál gana. También es el roce que se evita a costa de no decir nada. Aquí el desorden es privado, y por eso no se reparte."
+  },
+  "seis-de-bastos": {
+    "derecha": "El Seis de Bastos vuelve a caballo con una corona de laurel atada al palo y gente andando al lado. El reconocimiento aquí es público y es merecido: hubo trabajo antes, y esto es lo que viene después. Que se vea forma parte del logro, no lo estropea. Aceptarlo sin rebajarlo cuesta más de lo que parece.",
+    "invertida": "El Seis de Bastos invertido hace el trabajo y no recibe la vuelta. El desfile no sale, o sale para otro, o llega y no se cree: la corona está puesta y no pesa nada. También es el reconocimiento que se necesita tanto que se empieza a trabajar para él y no para la obra. Aquí lo que se queda fuera es la mirada, no el mérito."
+  },
+  "siete-de-bastos": {
+    "derecha": "En el Siete de Bastos uno solo planta cara a seis palos que suben desde abajo. Está en alto. Eso cambia las cuentas: no hace falta ser más fuerte, hace falta no bajar. Esta carta describe la defensa de algo ya conseguido, que es una posición incómoda y ventajosa a la vez. Sostener también es una forma de ganar.",
+    "invertida": "El Siete de Bastos invertido defiende de más. La posición sigue siendo buena y aun así se pelea cada palmo, incluso el que nadie disputa: la guardia se ha vuelto costumbre y ya no distingue amenaza de compañía. También es el cansancio de sostener solo lo que podría compartirse. Aquí el desgaste no lo trae el ataque, lo trae la postura."
+  },
+  "ocho-de-bastos": {
+    "derecha": "En el Ocho de Bastos no hay nadie. Ocho palos cruzan el aire en paralelo, ya lanzados, sobre un campo tranquilo. Lo que describe esta carta es velocidad limpia: mensajes que llegan, cosas que se desatascan de golpe, un tramo que se recorre sin obstáculo. Aquí no toca empujar. Toca estar listo para cuando aterrice.",
+    "invertida": "El Ocho de Bastos invertido es el envío que aún está en el aire. Salió y no ha llegado, y el intervalo se hace largo porque nada de lo que se haga lo acorta. También es la prisa que atropella, mandar ocho cosas a la vez y que ninguna aterrice entera. Lo que aquí se retrasa suele ser la respuesta, no el movimiento."
+  },
+  "nueve-de-bastos": {
+    "derecha": "En el Nueve de Bastos hay una figura con la cabeza vendada, apoyada en un palo, y otros ocho clavados detrás como una empalizada. Ya le han dado antes y se le nota. La guardia que sostiene no es miedo: cada cicatriz es algo aprendido, y por eso mira con esa cara. Queda un tramo y tiene con qué.",
+    "invertida": "El Nueve de Bastos invertido mantiene la guardia cuando ya no hay nada que guardar. La empalizada sigue clavada por costumbre y cada figura que se acerca cuenta como asalto: lo que protegía empieza a encerrar, y el agotamiento se lleva un tramo de más por no admitir que el tramo terminó. Aquí sobra defensa y falta descanso."
+  },
+  "diez-de-bastos": {
+    "derecha": "El Diez de Bastos lleva los diez palos a la vez, abrazados contra el pecho, y por eso camina mirando el suelo mientras el pueblo está cerca y no lo ve. Esta carta no habla de fracaso sino de carga: lo que pesa aquí se aceptó una pieza cada vez, y ninguna parecía mucho. Casi todo esto se podía repartir.",
+    "invertida": "El Diez de Bastos invertido es la carga que ya no avanza. Se sigue llevando todo porque soltar algo parece admitir que sobraba, y el peso deja de ser medio para convertirse en prueba. También es el momento justo antes de dejar el fardo en el suelo. Aquí lo bloqueado no es la fuerza, es el permiso para dejar de usarla."
+  },
+  "sota-de-bastos": {
+    "derecha": "La Sota de Bastos sostiene un palo más alto que ella y lo mira desde abajo, en un desierto con pirámides al fondo. Trae algo nuevo, una noticia o unas ganas, y todavía no sabe qué hacer con ello. Le falta oficio y no le falta empuje, que es el orden bueno para empezar. Preguntar mucho aquí no es ignorancia.",
+    "invertida": "La Sota de Bastos invertida tiene la noticia y no la suelta. El entusiasmo está y se queda dentro: se empieza en la cabeza muchas veces y ninguna en el suelo. También es la impaciencia del que quiere el oficio sin los años, y abandona en cuanto la cosa deja de ser nueva. Aquí lo que falta no son ganas; es el primer intento."
+  },
+  "caballo-de-bastos": {
+    "derecha": "El Caballo de Bastos sale con el caballo encabritado y la armadura llena de salamandras. Va deprisa. Va convencido. No ha mirado el mapa. Esta carta describe el coraje que resuelve por movimiento: donde otro calcularía, aquí se arranca y se corrige por el camino, y lo que se gana en tiempo se paga en detalle.",
+    "invertida": "El Caballo de Bastos invertido corre más de lo que sujeta. El impulso sigue intacto y se ha comido la dirección: se empieza todo, se termina poco, y cada arranque nuevo justifica dejar el anterior a medias. También es la valentía usada para no quedarse quieto con algo incómodo. Aquí el problema no es la velocidad, es que nadie frena."
+  },
+  "reina-de-bastos": {
+    "derecha": "La Reina de Bastos está sentada de frente, con un girasol en una mano y un gato negro a sus pies. No necesita levantar la voz: el calor que trae ordena la sala por sí solo, y la gente se coloca alrededor sin que nadie lo pida. Esta carta describe la seguridad que sostiene a otros porque no se gasta en demostrarse. Se nota cuando entra y se nota cuando falta.",
+    "invertida": "La Reina de Bastos invertida guarda el calor para dentro. Sigue sosteniendo a los demás y ha dejado de sostenerse: se da presencia todo el día y luego no queda con quién soltarla. También aparece como la seguridad que se defiende hacia fuera porque por dentro se ha agrietado. Aquí lo que se apaga no se ve desde la sala."
+  },
+  "rey-de-bastos": {
+    "derecha": "El Rey de Bastos está sentado con salamandras y leones en el trono, y el palo apoyado como quien no lo necesita para apoyarse. Su trabajo no es empujar: es decir hacia dónde, con la claridad suficiente para que otros se pongan en marcha solos. Aquí la visión llega antes que el plan y el plan la sigue. Dirigir bien consiste sobre todo en no cambiar de rumbo cada semana.",
+    "invertida": "El Rey de Bastos invertido dirige de más. La visión sigue siendo buena y se ha vuelto exigencia. Se marca el rumbo cada día, se corrige a quien ya iba bien, y el empuje que ponía a la gente en marcha ahora la deja quieta esperando orden. También es el rumbo defendido cuando el terreno ya cambió. Aquí sobra mando y falta escucha."
+  },
   "cuatro-de-copas": {
     "derecha": "Tres copas delante y una cuarta que se ofrece, y la mirada puesta en otra parte. El Cuatro de Copas no habla de carencia sino de hartazgo: hay algo disponible y no lo estás viendo, precisamente porque ya tienes suficiente de algo parecido. El desinterés aquí no es descanso, es una puerta que se cierra sola.",
     "invertida": "El Cuatro de Copas invertido es el momento en que la mirada vuelve. Lo que se ofrecía seguía ahí todo el tiempo, y de pronto se ve: no porque haya cambiado, sino porque se ha agotado el hartazgo. También puede ser la sacudida que rompe la apatía desde fuera, sin permiso. El descanso terminó."
