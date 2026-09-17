@@ -254,5 +254,61 @@
   "rey-de-espadas": {
     "derecha": "El Rey de Espadas está sentado de frente, con la hoja algo inclinada y la mirada quieta, y detrás las nubes están altas y no se mueven. Lo que decide lo decide por criterio y no por afecto: pesa lo que hay, aplica la regla y sostiene el resultado aunque no le guste a nadie, incluido él. La imparcialidad se parece a la frialdad y no es lo mismo.",
     "invertida": "El Rey de Espadas invertido aplica el criterio por encima del caso. La norma sigue siendo buena y se ha vuelto un fin: se tiene razón contra la gente, se gana la discusión y se pierde el asunto. También es la autoridad que se apoya en la palabra difícil para que nadie compruebe el fondo. Aquí sobra argumento y falta escuchar el caso."
+  },
+  "as-de-oros": {
+    "derecha": "Del As de Oros sale una mano abierta con una moneda encima, y debajo hay un jardín con un arco de setos que da al camino. No es un regalo ni una promesa: es materia concreta, un trabajo o un dinero o una posibilidad con peso, puesta ahí para que alguien la coja. La mano no se cierra y tampoco la acerca. El arco del fondo hay que cruzarlo a pie.",
+    "invertida": "El As de Oros invertido tiene la oportunidad puesta y sin coger. La mano sigue abierta y la moneda sigue encima: no se ha retirado nada, sólo que el momento todavía no ha llegado, o no se ve que sea eso lo que estaba esperándose. También es la ocasión cogida con prisa y mal calculada. Aquí lo que falta es que se junten la cosa y el momento."
+  },
+  "dos-de-oros": {
+    "derecha": "El Dos de Oros hace malabares con dos monedas unidas por una cinta, mientras detrás dos barcos suben y bajan en un mar movido. Se sostiene porque no para: el equilibrio de esta carta es dinámico, no estable, y funciona mientras las manos sigan en movimiento. Llevar dos cosas a la vez se puede, y cansa de una manera distinta a llevar una.",
+    "invertida": "El Dos de Oros invertido lleva más pesos de los que caben en dos manos. El malabar sigue y ha dejado de ser elegante. Se atiende lo que grita más fuerte, se aplaza lo que calla, y cada vuelta cuesta más que la anterior. También es pararse de golpe y que se caiga todo a la vez. Aquí sobra carga y falta una mano libre."
+  },
+  "tres-de-oros": {
+    "derecha": "El Tres de Oros tiene a alguien encaramado trabajando la piedra de una iglesia, con dos figuras abajo mirando los planos. Los tres saben lo que están haciendo. Esta carta describe el oficio reconocido por quien entiende: no es aplauso de público, es criterio de iguales, que vale más y se nota menos. Obra que avanza bien suele ser obra con más de una cabeza.",
+    "invertida": "El Tres de Oros invertido trabaja y no encaja. Cada parte hace lo suyo y las piezas no llegan a juntarse: se decide sin quien ejecuta, se ejecuta sin quien decidió, la obra avanza torcida sin que nadie la pare, y el oficio acaba haciéndose a solas porque pedir criterio parece admitir que falta. Aquí lo bloqueado es la colaboración, no la capacidad."
+  },
+  "cuatro-de-oros": {
+    "derecha": "El Cuatro de Oros está sentado con una moneda en la corona, otra abrazada contra el pecho y dos bajo los pies. Tiene las cuatro. También tiene las dos manos ocupadas. Lo que empezó como precaución razonable se ha convertido en agarre: se guarda por miedo a que falte, y guardar acaba siendo lo único que se hace. Una mano que sujeta no coge nada más.",
+    "invertida": "El Cuatro de Oros invertido afloja los brazos. Algo se suelta, un gasto o un permiso o una cosa que no se prestaba a nadie, y el alivio llega antes que el cálculo. También es lo contrario y se ve igual de bien: el agarre apretado hasta el punto en que se nota desde fuera. Aquí lo que se mide no es lo que se tiene, es lo que cuesta soltarlo."
+  },
+  "cinco-de-oros": {
+    "derecha": "En el Cinco de Oros dos figuras cruzan la nieve, una de ellas con muletas, por debajo de una vidriera encendida con cinco monedas. Nadie levanta la vista. La carta describe la carencia vivida a la intemperie, que es material y también de compañía, y coloca a propósito el refugio a un metro y fuera del campo de visión. Hay ayuda cerca y no se está mirando ahí.",
+    "invertida": "El Cinco de Oros invertido es la cabeza que empieza a levantarse. La vidriera sigue encendida y ahora se ve: alguien pregunta, alguien abre, y el frío deja de ser lo único que hay. También aparece antes, cuando la ayuda ya se ofreció y todavía no se acepta, porque aceptarla obliga a contar cómo se llegó hasta ahí. Lo que aquí se retrasa es entrar."
+  },
+  "seis-de-oros": {
+    "derecha": "El Seis de Oros reparte monedas a dos figuras arrodilladas y en la otra mano sostiene una balanza. Da, y mide al dar. Esta carta describe un intercambio real y desigual: alguien está arriba y alguien abajo, y el gesto vale igual aunque la posición no sea la misma. Lo que se mide aquí es cuánto, y quién decide el cuánto.",
+    "invertida": "El Seis de Oros invertido reparte con la balanza torcida. La ayuda sigue siendo ayuda y ha empezado a comprar algo: se da esperando, se recibe debiendo, y la desigualdad que era circunstancial se instala como norma. También es dar hasta quedarse en el sitio del que se arrodilla. Aquí lo que se desequilibra no es la cantidad, es quién sostiene la balanza."
+  },
+  "siete-de-oros": {
+    "derecha": "El Siete de Oros se apoya en la azada y mira el arbusto donde han salido siete monedas, sin tocar ninguna. Lo sembrado va a su ritmo y ese ritmo no se acelera trabajando más: lo que toca ahora es mirar el conjunto y ver si esto merece otra temporada o si el terreno pide otra cosa. Evaluar también es trabajo de campo.",
+    "invertida": "El Siete de Oros invertido mira la cosecha y no decide. Se cuentan las monedas una y otra vez. Se compara con lo sembrado, y cada repaso deja el mismo resultado que el anterior. También es arrancar antes de tiempo por no soportar la espera. Aquí lo bloqueado no es la paciencia; es el balance que habría que hacer con ella."
+  },
+  "ocho-de-oros": {
+    "derecha": "El Ocho de Oros está clavando una moneda con el cincel, con seis ya colgadas en el poste. Lleva horas. Se le nota en la postura. La primera de las ocho era peor que la última, y ese es el argumento entero de la carta: aquí no se avanza por talento, se avanza por repetición. El oficio es lo que queda después de muchas piezas.",
+    "invertida": "El Ocho de Oros invertido repite sin mejorar. La mano sigue haciendo el gesto y hace tiempo que no aprende nada: se produce cantidad, y la pieza número veinte sale igual que la número tres. También es el detalle perseguido tan de cerca que la obra no llega a darse por terminada. Aquí lo bloqueado no es la constancia, es que no está llevando a ninguna parte."
+  },
+  "nueve-de-oros": {
+    "derecha": "El Nueve de Oros pasea por un viñedo con nueve monedas y un halcón encapuchado posado en el guante, con la casa al fondo. No hay nadie más en la lámina y no falta nadie. Lo que describe esta carta es el disfrute de lo conseguido por uno mismo, con el añadido de que se sabe de dónde salió cada cosa. Estar a gusto a solas no es lo mismo que estar solo.",
+    "invertida": "El Nueve de Oros invertido guarda el jardín para dentro. Lo conseguido sigue ahí y ha dejado de disfrutarse a la vista: se prescinde de compañía para no tener que explicar el precio que costó, o se duda de que lo propio sea de verdad propio. También es la independencia defendida con tanta fuerza que se parece a una trinchera. Aquí lo que se encierra es el gusto."
+  },
+  "diez-de-oros": {
+    "derecha": "En el Diez de Oros hay un patio con un anciano, dos perros, una pareja y un niño, y diez monedas repartidas por la lámina como un árbol. Tres generaciones en el mismo sitio, y lo que se ve no es un golpe de suerte sino una casa que lleva tiempo en pie. Lo que dura más que una persona se construye de otra manera.",
+    "invertida": "El Diez de Oros invertido tiene la casa y no el patio. Lo construido sigue en pie y ha dejado de repartirse: se discute lo que se hereda, se sostiene una estructura que ya no acoge a nadie, se paga el mantenimiento de algo que nadie quiere, o se levanta sin pensar en quién viene detrás. Aquí lo bloqueado es que pase de uno al siguiente."
+  },
+  "sota-de-oros": {
+    "derecha": "La Sota de Oros sostiene una moneda con las dos manos y la mira de cerca, de pie en un campo recién arado. No la gasta ni la enseña: la estudia. Esta carta describe el principio de algo concreto, unos estudios o un primer trabajo o la primera vez que el esfuerzo se convierte en algo que se toca. Empezar por lo pequeño y real es la manera lenta y la que sirve.",
+    "invertida": "La Sota de Oros invertida tiene la moneda en la mano y no empieza. Se estudia el asunto una vez más, se pide otra opinión, se espera a estar preparada: el campo está arado y la semilla sigue en el bolsillo. También es empezar muchas cosas pequeñas y no sostener ninguna el tiempo que pide aprenderla. Lo que aquí se retrasa es el primer surco."
+  },
+  "caballo-de-oros": {
+    "derecha": "El Caballo de Oros está parado sobre un campo arado, con un caballo pesado y negro que no se mueve, y una moneda sostenida delante. Es el único de los cuatro que no galopa. Va al paso. No brilla, no adelanta a nadie y no se cae del caballo, y al final del campo está antes que los que salieron corriendo. Lo aburrido, sostenido mucho tiempo, gana.",
+    "invertida": "El Caballo de Oros invertido se ha parado del todo. El método sigue siendo bueno y ha dejado de llevar a ninguna parte: se repite el procedimiento porque es el procedimiento, el campo lleva tiempo sin cambiar de aspecto, y la lentitud se usa de excusa para no arriesgar. Aquí lo bloqueado no es el paso, es que no va hacia nada."
+  },
+  "reina-de-oros": {
+    "derecha": "La Reina de Oros está sentada en un jardín, con una moneda en el regazo y un conejo pasando a sus pies. No explica el cuidado, lo ejecuta: mira que haya comida, techo y ropa limpia, y arregla lo que está roto antes de hablar de ello. Esta carta describe el sostén que se nota en las cosas y no en las palabras. Lo práctico también es una forma de querer.",
+    "invertida": "La Reina de Oros invertida cuida hasta no quedarse nada. Sigue mirando que a los demás les falte poco y hace tiempo que no mira lo suyo. Lo práctico se ha vuelto el único idioma, y resolver problemas ajenos sirve para no sentarse con los propios. También es el cuidado que empieza a controlar, porque quien provee decide. Aquí sobra provisión y falta reparto."
+  },
+  "rey-de-oros": {
+    "derecha": "El Rey de Oros está sentado entre parras, con toros tallados en el trono y un castillo detrás. Sostiene la moneda sin apretarla. Lo que tiene se hizo despacio y se administra con criterio, que son las dos razones por las que sigue ahí. Una fortuna rápida y una fortuna vieja no se parecen en nada.",
+    "invertida": "El Rey de Oros invertido mide todo en lo que vale. El criterio que construyó la casa se ha extendido a sitios donde no sirve: se administra a la gente, se calcula el rendimiento de lo que no rinde, y la prosperidad deja de ser medio para ser marcador. También es el dominio que ya no suelta ni un tramo del mando. Aquí sobra cuenta y falta para qué."
   }
 }

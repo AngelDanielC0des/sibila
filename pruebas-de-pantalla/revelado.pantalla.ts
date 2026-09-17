@@ -15,8 +15,23 @@ import { esperarAQueSeAsiente, medirDesbordeHorizontal } from "./apoyo/pantalla"
 
 const CARTA_ESCRITA = "/es/lectura?carta=la-torre&orientacion=derecha";
 const CARTA_INVERTIDA = "/es/lectura?carta=la-torre&orientacion=invertida";
-/* El Loco tiene núcleo pero todavía no tiene significado base escrito. */
-const CARTA_SIN_TEXTO = "/es/lectura?carta=el-loco&orientacion=derecha";
+
+/*
+ * El estado vacío se ejerce por **idioma sin corpus**, no por carta sin
+ * escribir.
+ *
+ * La primera versión apuntaba a El Loco, que entonces no tenía texto. Al
+ * completarse los 156 significados base del español la prueba se cayó sola: no
+ * quedaba ninguna carta sin escribir a la que apuntar. Era una prueba con fecha
+ * de caducidad, y el propio avance del corpus la caducó.
+ *
+ * El portugués todavía no tiene ni un fichero, así que `cargarCorpus` devuelve
+ * capas vacías y el repositorio responde `sin-significado-base` para cualquier
+ * carta. Eso seguirá siendo cierto hasta que exista corpus en portugués, y
+ * cuando exista habrá que traer aquí el idioma que siga vacío — que es
+ * exactamente la conversación que conviene tener ese día.
+ */
+const CARTA_SIN_TEXTO = "/pt/leitura?carta=la-torre&orientacion=derecha";
 
 test("la posición se nombra antes de voltear", async ({ page }) => {
   await page.goto(CARTA_ESCRITA);
@@ -69,10 +84,15 @@ test("una carta sin significado escrito lo dice y no rompe la lectura", async ({
 }) => {
   await page.goto(CARTA_SIN_TEXTO);
   await esperarAQueSeAsiente(page);
-  await page.getByRole("button", { name: /Voltea la carta/ }).click();
+  await page.getByRole("button", { name: /Vira a carta/ }).click();
 
-  await expect(page.getByText(/todavía no está escrito/)).toBeVisible();
-  await expect(page.getByText("El Loco").first()).toBeVisible();
+  /*
+   * Lo que se comprueba es que la pieza que falta es **situación de dominio** y
+   * no una excepción: la carta se revela igual, con su nombre, y el hueco del
+   * texto se explica en el idioma del visitante.
+   */
+  await expect(page.getByText(/ainda não está escrito/)).toBeVisible();
+  await expect(page.getByText("La Torre").first()).toBeVisible();
 });
 
 test("se voltea con el teclado y el foco no se pierde", async ({ page }) => {
