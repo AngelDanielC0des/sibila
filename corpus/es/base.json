@@ -143,8 +143,60 @@
     "derecha": "El Rey de Bastos está sentado con salamandras y leones en el trono, y el palo apoyado como quien no lo necesita para apoyarse. Su trabajo no es empujar: es decir hacia dónde, con la claridad suficiente para que otros se pongan en marcha solos. Aquí la visión llega antes que el plan y el plan la sigue. Dirigir bien consiste sobre todo en no cambiar de rumbo cada semana.",
     "invertida": "El Rey de Bastos invertido dirige de más. La visión sigue siendo buena y se ha vuelto exigencia. Se marca el rumbo cada día, se corrige a quien ya iba bien, y el empuje que ponía a la gente en marcha ahora la deja quieta esperando orden. También es el rumbo defendido cuando el terreno ya cambió. Aquí sobra mando y falta escucha."
   },
+  "as-de-copas": {
+    "derecha": "Del As de Copas sale una mano con una copa que rebosa por cinco lados a la vez, y encima baja una paloma. No hay que llenar nada, viene lleno: la carta describe algo que se ofrece, un afecto o una apertura, y que no pide méritos antes. Lo único que queda por hacer es alargar la mano.",
+    "invertida": "El As de Copas invertido tiene la copa llena y volcada hacia dentro. Lo que se ofrecía sigue ahí y no llega a entrar: se agradece de boca y se aparta, porque recibir obliga a algo que ahora mismo pesa. También es el sentir que se nota y no se deja salir. Aquí no falta afecto; falta el gesto de aceptarlo."
+  },
+  "dos-de-copas": {
+    "derecha": "En el Dos de Copas dos figuras se acercan de frente y cruzan sus copas a la misma altura. Nadie se inclina. Lo que hay aquí se parece más a un pacto que a un flechazo: dos que se reconocen y deciden lo mismo al mismo tiempo, y eso vale igual para un vínculo que para un trato de trabajo. Un acuerdo entre iguales se nota en la altura de las manos.",
+    "invertida": "El Dos de Copas invertido tiene el encuentro y no el acuerdo. Las copas se levantan a alturas distintas. Uno pone más, el otro recibe más, y el trato que parecía entre iguales se ha desnivelado sin que nadie lo dijera. También es el reconocimiento que no llega a decirse en voz alta. Aquí lo bloqueado no es el afecto, es el pacto."
+  },
+  "tres-de-copas": {
+    "derecha": "El Tres de Copas junta a tres figuras en corro, con las copas arriba y fruta a los pies. La alegría de esta carta no funciona a solas: necesita a quien estaba cerca y quiere que se note. Es una carta corta, porque un brindis dura lo que dura. Lo que se celebra en compañía se celebra dos veces.",
+    "invertida": "El Tres de Copas invertido alarga el brindis más de la cuenta. La celebración pasa de acompañar a tapar: se sale otra vez para no volver a casa, y lo que era compañía empieza a ser ruido alrededor. También es la alegría repartida tanto hacia fuera que no queda nada para el corro pequeño. Aquí sobra fiesta y falta la conversación de después."
+  },
   "cuatro-de-copas": {
     "derecha": "Tres copas delante y una cuarta que se ofrece, y la mirada puesta en otra parte. El Cuatro de Copas no habla de carencia sino de hartazgo: hay algo disponible y no lo estás viendo, precisamente porque ya tienes suficiente de algo parecido. El desinterés aquí no es descanso, es una puerta que se cierra sola.",
     "invertida": "El Cuatro de Copas invertido es el momento en que la mirada vuelve. Lo que se ofrecía seguía ahí todo el tiempo, y de pronto se ve: no porque haya cambiado, sino porque se ha agotado el hartazgo. También puede ser la sacudida que rompe la apatía desde fuera, sin permiso. El descanso terminó."
+  },
+  "cinco-de-copas": {
+    "derecha": "El Cinco de Copas mira tres copas volcadas en el suelo y no gira la cabeza, aunque detrás queden dos en pie y el puente hacia el castillo siga donde estaba. La carta no dice que la pérdida sea pequeña: dice que el recuento está incompleto. Hay una parte que se ve y otra que está a la espalda.",
+    "invertida": "El Cinco de Copas invertido empieza a girar la cabeza. Lo derramado sigue derramado y ya no ocupa toda la vista: aparecen las dos copas que quedaban, aunque todavía sin ganas de levantarlas. También es el duelo que se corta antes de tiempo y se declara superado por comodidad. Lo que aquí se retrasa no es la pérdida, es mirar lo que queda."
+  },
+  "seis-de-copas": {
+    "derecha": "En el Seis de Copas una figura pequeña le da a otra una copa llena de flores, en un pueblo viejo y tranquilo. Lo de antes vuelve, y vuelve sin factura: un olor, una casa, alguien que reaparece con la misma cara. Esta carta describe la memoria que alimenta, no la que ata. Hay pasado que sigue dando de comer.",
+    "invertida": "El Seis de Copas invertido se queda a vivir en lo de antes. La memoria deja de alimentar y pasa a ocupar: se compara todo con aquello, y el eco mejora cada vez que suena; también puede ser lo contrario, cortar de golpe con lo anterior para no notar cuánto pesa. Aquí el pasado no consuela, sustituye."
+  },
+  "siete-de-copas": {
+    "derecha": "En el Siete de Copas hay siete copas flotando en una nube. Dentro de cada una hay una cosa distinta: una cara, una joya, un dragón, una figura tapada. Todas parecen igual de posibles desde donde está la silueta que las mira. Varias no existen fuera de esa nube. Aquí no falta imaginación, falta poner un pie en una.",
+    "invertida": "El Siete de Copas invertido deshace la nube. Las opciones se quedan en las que tienen suelo y el número baja de golpe, lo que alivia y decepciona a partes iguales. También es el momento anterior, cuando mirar las siete se ha vuelto el plan: se elige no elegir, y el catálogo se disfruta más que cualquier camino. Aquí lo bloqueado es el primer paso."
+  },
+  "ocho-de-copas": {
+    "derecha": "El Ocho de Copas se va de espaldas, de noche, dejando ocho copas apiladas y ninguna rota. Ahí está lo difícil de esta carta: no se huye de un desastre, se deja algo que funcionaba y ya no basta. Nadie le echa. Nadie le aplaude. Irse cuando todavía está bien es la decisión que menos se entiende desde fuera.",
+    "invertida": "El Ocho de Copas invertido tiene el pie fuera y no acaba de irse. Las copas siguen apiladas y siguen sin bastar, pero marcharse sin un motivo presentable parece un capricho, así que se espera a que algo se rompa y justifique la salida. También es volver por costumbre. Aquí lo que falta no es el motivo; es darse permiso."
+  },
+  "nueve-de-copas": {
+    "derecha": "El Nueve de Copas está sentado de brazos cruzados delante de nueve copas puestas en fila sobre un mantel, y lo que quería lo tiene, y se ha parado a disfrutarlo sin pedir perdón por ello. Es una carta ancha y algo satisfecha de sí misma, y en su justa medida eso no es un defecto. Darse por servido también hay que saberlo.",
+    "invertida": "El Nueve de Copas invertido se queda en la silla. Lo conseguido se convierte en todo el horizonte: se repite el mismo gusto hasta que deja de saber, y el bienestar propio ocupa el sitio de cualquier otra cosa. También es la satisfacción enseñada para que se vea, más que disfrutada. Aquí sobra copa y falta hambre."
+  },
+  "diez-de-copas": {
+    "derecha": "En el Diez de Copas hay un arco de diez copas en el cielo, dos figuras con los brazos levantados y dos criaturas bailando al lado. No es la euforia de un día. Es lo que queda cuando la casa del fondo lleva años en pie. Esta carta describe una plenitud que incluye a otros y se sostiene en lo corriente. Lo compartido durante mucho tiempo pesa distinto.",
+    "invertida": "El Diez de Copas invertido guarda la plenitud puertas adentro. El arco sigue ahí y sólo lo ve quien vive en la casa: por fuera se enseña otra cosa, o no se enseña nada, y lo bueno se vuelve privado hasta para quien lo tiene. También aparece cuando la foto se mantiene y el vínculo se ha ido quedando sin dentro."
+  },
+  "sota-de-copas": {
+    "derecha": "La Sota de Copas levanta una copa de la que asoma un pez, y no le parece raro. Así funciona esta carta: lo que llega es pequeño, inesperado y se acepta sin pedirle explicaciones. Puede ser una propuesta, una intuición o una ternura que aparece sin aviso. Tomarse en serio algo así de tonto es justo lo que hace falta.",
+    "invertida": "La Sota de Copas invertida ve el pez y mira hacia otro lado. Lo que llegaba se contesta con una broma, o se guarda para más tarde, o se mide antes de sentirlo: la sensibilidad está y no encuentra la puerta. También es el gesto ofrecido con tanta cautela que nadie lo recibe. Aquí lo bloqueado es decirlo."
+  },
+  "caballo-de-copas": {
+    "derecha": "El Caballo de Copas no galopa. Su caballo camina, lleva el casco alado y la copa extendida como única arma, y no carga contra nada. Lo suyo es la propuesta: acercarse despacio y ofrecer algo, sabiendo que puede no ser aceptado. Hay algo de idealización en esa manera de llegar, y también es lo que la hace bonita.",
+    "invertida": "El Caballo de Copas invertido ofrece más de lo que hay. La copa se extiende con mucho gesto y poco fondo: se promete una versión de uno mismo que todavía no existe, o se enamora del ofrecimiento más que de quien lo recibe. También es la propuesta que se retira en cuanto se acepta. Aquí lo que sobra es puesta en escena."
+  },
+  "reina-de-copas": {
+    "derecha": "La Reina de Copas está sentada a la orilla con una copa cerrada entre las manos, mirándola. Es la única del palo que tiene tapa, y eso es la carta entera: lo que guarda dentro no se le cae encima a nadie, y sostiene lo de otros sin quedárselo, que es la parte difícil de cuidar. Hondura no es lo mismo que desbordarse.",
+    "invertida": "La Reina de Copas invertida se queda sin tapa. Lo que sentía dentro empieza a salir sobre quien esté cerca, o al contrario: se cierra tanto que nadie llega, y las dos cosas nacen del mismo sitio. También es cuidar de otros hasta perder el propio contorno, confundiendo hondura con cargar. Aquí el límite es lo que falta."
+  },
+  "rey-de-copas": {
+    "derecha": "El Rey de Copas tiene el trono sobre el agua y el agua está movida, con un barco escorado a un lado y un pez saltando al otro. Él no se moja. No es frialdad: es haber pasado por ahí las veces suficientes para no reaccionar a la primera ola. Aquí la calma no viene de que el mar esté quieto.",
+    "invertida": "El Rey de Copas invertido guarda el oleaje dentro. Por fuera sigue la misma calma, la misma voz medida, la misma mano firme. Por debajo, el trono lleva tiempo mojándose. También es la serenidad usada para no tener que decir nada, que se parece mucho a la madurez y no es lo mismo. Aquí lo que no se ve es lo que está pasando."
   }
 }
