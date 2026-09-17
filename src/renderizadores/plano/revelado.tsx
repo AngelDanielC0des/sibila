@@ -38,6 +38,8 @@ import estilos from "./revelado.module.css";
 export type TextosDeRevelado = {
   readonly instruccion: string;
   readonly accionDeVoltear: string;
+  /** Por qué la carta no responde mientras gira. */
+  readonly volteando: string;
   /** Encabezado del panel: el nombre de la carta, con su orientación si procede. */
   readonly encabezadoDelPanel: string;
   readonly sinSignificado: string;
@@ -125,8 +127,23 @@ export function Revelado({
           carta={estaRevelada ? carta : undefined}
           orientacion={orientacion}
           estaRevelada={estaRevelada}
-          alPulsar={estaRevelada ? undefined : voltear}
+          /*
+           * `alPulsar` se mantiene **durante todo el volteo** y sólo se retira
+           * al terminar. No es un detalle: su ausencia vuelve la carta
+           * contenido en lugar de botón, y `Carta` cambia de `button` a `div`.
+           * React no transforma un elemento en otro, lo desmonta y monta uno
+           * nuevo — y el nuevo nace ya a 180°, sin nada desde donde animar.
+           *
+           * El resultado era un volteo instantáneo con la transición de 0,6 s
+           * declarada y sin correr nunca. Medido: 180° a los 133 ms.
+           *
+           * Durante el giro el bloqueo se hace con `motivoDeBloqueo`, que es
+           * como lo hace el sistema de diseño: sigue siendo un botón, sigue
+           * siendo alcanzable, y dice por qué no responde.
+           */
+          alPulsar={fase === "revelada" ? undefined : voltear}
           etiquetaDeAccion={textos.accionDeVoltear}
+          motivoDeBloqueo={fase === "volteando" ? textos.volteando : undefined}
         />
       </div>
 

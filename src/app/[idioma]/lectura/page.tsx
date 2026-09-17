@@ -189,6 +189,7 @@ export default async function PaginaDeLectura({
         textos={{
           instruccion: t("voltear"),
           accionDeVoltear: t("voltear"),
+          volteando: t("volteando"),
           encabezadoDelPanel: encabezado,
           sinSignificado: t("sinSignificado"),
         }}

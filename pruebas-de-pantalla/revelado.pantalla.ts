@@ -95,6 +95,50 @@ test("una carta sin significado escrito lo dice y no rompe la lectura", async ({
   await expect(page.getByText("La Torre").first()).toBeVisible();
 });
 
+/*
+ * El volteo estuvo declarado y sin correr nunca: la transición decía 0,6 s y la
+ * carta llegaba a 180° a los 133 ms. La causa era que al empezar a girar se le
+ * quitaba `alPulsar`, `Carta` dejaba de ser `button` para ser `div`, y React
+ * montaba un elemento nuevo que nacía ya girado.
+ *
+ * Es un fallo que **no se ve en una captura** y que ninguna aserción de
+ * contenido habría cazado: el resultado final es idéntico, sólo falta el camino.
+ * Por eso se mide el camino.
+ */
+test("el volteo recorre la curva en lugar de saltar", async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.goto(CARTA_ESCRITA);
+  await esperarAQueSeAsiente(page);
+
+  const giro = () =>
+    page.evaluate(() => {
+      const interior = document.querySelector("[class*='interior']");
+      if (interior === null) {
+        return null;
+      } else {
+        const matriz = getComputedStyle(interior).transform;
+        const primera = /matrix3d\(([-\d.e]+)|matrix\(([-\d.e]+)/.exec(matriz);
+        if (primera === null) {
+          return 0;
+        } else {
+          const coseno = Number.parseFloat(primera[1] ?? primera[2] ?? "1");
+          return (Math.acos(Math.max(-1, Math.min(1, coseno))) * 180) / Math.PI;
+        }
+      }
+    });
+
+  await page.getByRole("button", { name: /Voltea la carta/ }).click();
+  await page.waitForTimeout(120);
+  const aMitad = await giro();
+
+  /* A un quinto de la duración no puede estar ya en el otro lado. */
+  expect(aMitad).not.toBeNull();
+  expect(aMitad ?? 180).toBeLessThan(170);
+
+  await page.waitForTimeout(900);
+  expect(await giro()).toBeCloseTo(180, 0);
+});
+
 test("se voltea con el teclado y el foco no se pierde", async ({ page }) => {
   await page.goto(CARTA_ESCRITA);
   await esperarAQueSeAsiente(page);

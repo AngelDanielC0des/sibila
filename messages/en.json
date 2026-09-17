@@ -94,7 +94,8 @@
       "siguiente": "Next card",
       "sinSignificado": "This meaning isn't written yet. Come back when the corpus reaches it.",
       "encabezadoDerecha": "{carta}",
-      "encabezadoInvertida": "{carta}, reversed"
+      "encabezadoInvertida": "{carta}, reversed",
+      "volteando": "The card is turning"
     },
     "sintesis": {
       "titulo": "What they say together",

@@ -94,7 +94,8 @@
       "siguiente": "Siguiente carta",
       "sinSignificado": "Este significado todavía no está escrito. Vuelve cuando el corpus lo alcance.",
       "encabezadoDerecha": "{carta}",
-      "encabezadoInvertida": "{carta}, invertida"
+      "encabezadoInvertida": "{carta}, invertida",
+      "volteando": "La carta se está volteando"
     },
     "sintesis": {
       "titulo": "Lo que dicen juntas",

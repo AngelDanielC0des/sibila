@@ -23,7 +23,8 @@
     "pruebas:pantalla:ui": "playwright test --ui",
     "verificar": "npm run typecheck && npm run lint && npm run lint:css && npm run test && npm run validar:nucleos",
     "prepare": "husky",
-    "corpus": "node --experimental-strip-types --no-warnings scripts/avance-corpus.mts"
+    "corpus": "node --experimental-strip-types --no-warnings scripts/avance-corpus.mts",
+    "corpus:leer": "node --experimental-strip-types --no-warnings scripts/leer-corpus.mts"
   },
   "dependencies": {
     "gsap": "^3.15.0",
