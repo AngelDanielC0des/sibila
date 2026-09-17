@@ -167,3 +167,29 @@ test("una ruta inexistente dentro de un idioma devuelve 404 localizado", async (
   expect(respuesta?.status()).toBe(404);
   await expect(page.locator("html")).toHaveAttribute("lang", "es");
 });
+
+/*
+ * El slug traducido es una promesa de `CLAUDE.md`: la palabra clave tiene que
+ * estar en la URL de cada mercado, y eso lo hace el proxy reescribiendo al slug
+ * interno. Si el proxy no corre, la ruta traducida cae en el comodín y devuelve
+ * 404 **sin que nada más se rompa**, que es como estuvo roto hasta que esta
+ * prueba existió: la portada iba bien porque `/pt` es un segmento real, y las
+ * demás rutas traducidas todavía no tenían página donde notarse.
+ */
+test.describe("los slugs traducidos llegan a su página", () => {
+  const TRADUCCIONES = [
+    { idioma: "es", ruta: "/es/lectura?carta=la-torre" },
+    { idioma: "pt", ruta: "/pt/leitura?carta=la-torre" },
+    { idioma: "en", ruta: "/en/reading?carta=la-torre" },
+  ];
+
+  for (const { idioma, ruta } of TRADUCCIONES) {
+    test(ruta, async ({ page }) => {
+      const respuesta = await page.goto(ruta);
+
+      expect(respuesta?.status()).toBe(200);
+      await expect(page.locator("html")).toHaveAttribute("lang", idioma);
+      await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+    });
+  }
+});
